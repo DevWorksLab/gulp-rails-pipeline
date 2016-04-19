@@ -1,0 +1,27 @@
+/* 
+ Ellipsis line mixin for turning long text in lines into ellipsis 
+
+ $width   - The width of the text before ellipsis. Best to set a % value
+
+ Compatibility untested
+*/
+@define-mixin ellipsis-line $width{
+	width: $width;
+	text-overflow: ellipsis;
+	overflow: hidden;
+	white-space: nowrap;
+}
+/* 
+ Creates clearfix effects
+
+ Compatibility untested
+*/
+@define-mixin clearfixable $x{
+  &:after, &:before{
+    content: " ";
+    display: table;
+  }
+  &:after{
+    clear: both;
+  }
+}

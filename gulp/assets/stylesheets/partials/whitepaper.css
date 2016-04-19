@@ -1,0 +1,208 @@
+#whitepaper {
+
+	.nav-toggle span, .nav-toggle span:after, .nav-toggle span:before {
+		background: $text-color;
+	}
+
+  #whitepaper2 {
+    height: auto;
+    margin-bottom: 50px;
+
+    h1 {
+      text-align: center;
+    }
+  }
+
+  #bio3 {
+    height: auto;
+    margin-bottom: 100px;
+    margin-top: 100px;
+    border: 0;
+  }
+
+  .gotham-lead {
+    font-family: "Gotham-Book";
+    font-weight: 500;
+    font-size: 2.2em;
+    color: #4a4a4a;
+    line-height: 28px;
+    letter-spacing: 1.23px;
+    text-align: center;
+    text-transform: uppercase;
+  }
+
+  .white-paper-button {
+    font-weight: 700;
+    border-style: none;
+    background-color: #e2603e;
+    color: white;
+    padding-bottom: 12px;
+    padding-top: 12px;
+    line-height: 12px;
+    text-transform: uppercase;
+    letter-spacing: 2.16px;
+    font-size: 9px;
+    text-align: center;
+    width: 100%;
+    display: inline-block;
+    margin-top: 60px;
+  }
+
+  #section-two {
+    padding-top: 20px;
+  }
+
+  .white-paper-button:hover {
+    opacity: .9;
+  }
+
+  .image-carousel-shadow {
+    box-shadow: 1px 2px 7px 4px rgba(0,0,0,.2);
+    border: 0;
+    margin: 10px;
+  }
+
+
+
+/*banners*/
+/*some of these images names are formatted differently or are png instead of jpg --  warning*/
+
+	#friendship1 {
+		height: 600px;
+    background-image: url(../images/white_papers/friendship_groups_2/lead1.jpg);
+    background-size: cover;
+    width: 100%;
+    background-position-y: 74px;
+    background-repeat: no-repeat;
+	}
+
+  #friendship-groups1 {
+    height: 600px;
+    background-image: url(../images/white_papers/friendship_groups_1/1_5.2_LeadImg.jpg);
+    background-size: cover;
+    width: 100%;
+    background-position-y: 74px;
+    background-repeat: no-repeat;
+  }
+
+  #digital-diary1 {
+    height: 600px;
+    background-image: url(../images/white_papers/digital_diary/1_5.3LeadImg.jpg);
+    background-size: cover;
+    width: 100%;
+    background-position-y: 74px;
+    background-repeat: no-repeat;
+  }
+
+  #retail1 {
+    height: 600px;
+    background-image: url(../images/white_papers/retail_ethnography/5.6leadimg.jpg);
+    background-size: cover;
+    width: 100%;
+    background-position-y: 74px;
+    background-repeat: no-repeat;
+  }
+
+  #uxstrategy1 {
+    height: 600px;
+    background-image: url(../images/white_papers/ux_strategy/leadimg.jpg);
+    background-size: cover;
+    width: 100%;
+    background-position-y: 74px;
+    background-repeat: no-repeat;
+  }
+
+  #journeymaps1 {
+    height: 600px;
+    background-image: url(../images/white_papers/journey_maps/5.5leadimg.jpg);
+    background-size: cover;
+    width: 100%;
+    background-position-y: 74px;
+    background-repeat: no-repeat;
+  }
+
+  .container {
+
+    /*forms*/
+    #mc_embed_signup_scroll {
+
+      text-align: center;
+      padding-bottom: 100px;
+
+      .mc-field-group {
+        margin: 20px;
+        display: inline-block
+      }
+
+      label {
+      cursor: pointer;
+      display: block;
+      font-family: "Gotham A", "Gotham B";
+      font-weight: 200;
+      font-style: normal;
+      text-transform: uppercase;
+      color: #4a4a4a;
+      font-size: 9px;
+      line-height: 12px;
+      letter-spacing: 2.22px;
+      margin-bottom: 4px;
+      text-align: left;
+      padding-top: 26px;
+      }
+
+      input {
+        display: block;
+        font-size: 1.2em;
+        line-height: 18px;
+        font-family: "Sentinel A", "Sentinel B";
+        letter-spacing: 1px;
+        height: 24px;
+        width: 320px;
+        border: 1px solid #ccc;
+      }
+
+      input[type="submit"] {
+        background-color: #6cc8b9;
+        border: 0 none;
+        font-family: "Gotham A", "Gotham B";
+        font-weight: 500;
+        font-size: 9px;
+        line-height: 2px;
+        font-style: normal;
+        letter-spacing: 2.16px;
+        text-align: center;
+        text-shadow: none;
+        text-transform: uppercase;
+        color: #fff;
+        cursor: pointer;
+        display: inline-block;
+        padding: 20px;
+        opacity: .8;
+        width: 500px;
+        margin-top: 40px;
+      }
+
+      input[type="submit"]:hover  {
+        opacity: 1;
+      }
+
+      input:focus { 
+        outline: none !important;
+        border-color: rgba(113, 158, 206, 0.7);
+        box-shadow: 0 0 6px #719ECE;
+      }
+
+    }
+
+    form h2 {
+      padding-left: 28px;
+      text-transform: uppercase;
+      font-family: "Gotham A", "Gotham B";
+      font-weight: 400;
+      font-size: 1.4em;
+      line-height: 22px;
+      letter-spacing: 3.07px;
+    }
+  }
+
+}

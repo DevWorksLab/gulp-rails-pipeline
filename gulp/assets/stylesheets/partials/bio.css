@@ -1,0 +1,220 @@
+#bio {
+
+	.nav-toggle span, .nav-toggle span:after, .nav-toggle span:before {
+		background: $text-color;
+	}
+
+  #bio2 {
+    text-align: center;
+    height: auto;
+    margin-bottom: 100px;
+    margin-top: 100px;
+    border: 0;
+
+    img {
+      width: 50px;
+    }
+  }
+
+  #bio3 {
+    height: auto;
+    margin-bottom: 100px;
+    margin-top: 100px;
+    border: 0;
+  }
+
+
+
+/*banners*/
+/*some of these images names are formatted differently or are png instead of jpg --  warning*/
+
+	#matt1 {
+		height: 600px;
+    background-image: url(../images/people/matt_karp/MattLead.jpg);
+    background-size: cover;
+    width: 100%;
+    background-position-y: 74px;
+    background-repeat: no-repeat;
+	}
+
+  #scottp1 {
+    height: 600px;
+    background-image: url(../images/people/scott_pobiner/scottplead.jpg);
+    background-size: cover;
+    width: 100%;
+    background-position-y: 74px;
+    background-repeat: no-repeat;
+  }
+
+  #dan1 {
+    height: 600px;
+    background-image: url(../images/people/dan_sennet/danLead.jpg);
+    background-size: cover;
+    width: 100%;
+    background-position-y: 74px;
+    background-repeat: no-repeat;
+  }
+
+  #ken1 {
+    height: 600px;
+    background-image: url(../images/people/ken_moran/kenlead.jpg);
+    background-size: cover;
+    width: 100%;
+    background-position-y: 74px;
+    background-repeat: no-repeat;
+  }
+
+  #scott1 {
+    height: 600px;
+    background-image: url(../images/people/scott_iverson/scottlead.jpg);
+    background-size: cover;
+    width: 100%;
+    background-position-y: 74px;
+    background-repeat: no-repeat;
+  }
+
+  #jack1 {
+    height: 600px;
+    background-image: url(../images/people/jack_cole/jacklead.jpg);
+    background-size: cover;
+    width: 100%;
+    background-position-y: 74px;
+    background-repeat: no-repeat;
+  }
+
+  #christo1 {
+    height: 600px;
+    background-image: url(../images/people/christo_claassens/christo_banner.jpg);
+    background-size: cover;
+    width: 100%;
+    background-position-y: 74px;
+    background-repeat: no-repeat;
+  }
+
+  #tomas1 {
+    height: 600px;
+    background-image: url(../images/people/tomas_christensen/tomaslead.jpg);
+    background-size: cover;
+    width: 100%;
+    background-position-y: 74px;
+    background-repeat: no-repeat;
+  }
+
+  #anne1 {
+    height: 600px;
+    background-image: url(../images/people/anne_boremans/annelead.jpg);
+    background-size: cover;
+    width: 100%;
+    background-position-y: 74px;
+    background-repeat: no-repeat;
+  }
+
+  #jess1 {
+    height: 600px;
+    background-image: url(../images/people/jessica_bates/jesslead.jpg);
+    background-size: cover;
+    width: 100%;
+    background-position-y: 74px;
+    background-repeat: no-repeat;
+  }
+
+    #emily1 {
+    height: 600px;
+    background-image: url(../images/people/emily_chu/emilylead.jpg);
+    background-size: cover;
+    width: 100%;
+    background-position-y: 74px;
+    background-repeat: no-repeat;
+  }
+
+  #ryan1 {
+    height: 600px;
+    background-image: url(../images/people/ryan_horgan/ryanlead.jpg);
+    background-size: cover;
+    width: 100%;
+    background-position-y: 74px;
+    background-repeat: no-repeat;
+  }
+
+  #abigail1 {
+    height: 600px;
+    background-image: url(../images/people/abigail_muir/abbylead.jpg);
+    background-size: cover;
+    width: 100%;
+    background-position-y: 74px;
+    background-repeat: no-repeat;
+  }
+
+  #nick1 {
+    height: 600px;
+    background-image: url(../images/people/nick_reiter/nicklead.jpg);
+    background-size: cover;
+    width: 100%;
+    background-position-y: 74px;
+    background-repeat: no-repeat;
+  }
+
+  #sean1 {
+    height: 600px;
+    background-image: url(../images/people/sean_echevarria/seanlead.jpg);
+    background-size: cover;
+    width: 100%;
+    background-position-y: 74px;
+    background-repeat: no-repeat;
+  }
+
+  #jeannie1 {
+    height: 600px;
+    background-image: url(../images/people/jeannie_kinnett/jeannielead.jpg);
+    background-size: cover;
+    width: 100%;
+    background-position-y: 74px;
+    background-repeat: no-repeat;
+  }
+
+  #leigh1 {
+    height: 600px;
+    background-image: url(../images/people/leigh_altschuler/leighlead.jpg);
+    background-size: cover;
+    width: 100%;
+    background-position-y: 74px;
+    background-repeat: no-repeat;
+  }
+
+   #lois1 {
+    height: 600px;
+    background-image: url(../images/people/lois_siegel/loislead.jpg);
+    background-size: cover;
+    width: 100%;
+    background-position-y: 74px;
+    background-repeat: no-repeat;
+  }
+
+  #jesse1 {
+    height: 600px;
+    background-image: url(../images/people/jesse_mcbride/JesseLead.png);
+    background-size: cover;
+    width: 100%;
+    background-position-y: 74px;
+    background-repeat: no-repeat;
+  }
+
+  #kimber1 {
+    height: 600px;
+    background-image: url(../images/people/kimber_gregorakis/kimber_banner.jpg);
+    background-size: cover;
+    width: 100%;
+    background-position-y: 74px;
+    background-repeat: no-repeat;
+  }
+
+  #alyce1 {
+    height: 600px;
+    background-image: url(../images/people/alyce_green/alyce_banner.jpg);
+    background-size: cover;
+    width: 100%;
+    background-position-y: 74px;
+    background-repeat: no-repeat;
+  }
+
+}

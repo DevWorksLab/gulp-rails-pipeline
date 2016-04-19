@@ -1,0 +1,344 @@
+#uxhires1 {
+	position: relative;
+	text-align: center;
+	width: 100%;
+	height: 100vh;
+	background-color: transparent;
+	background: url(../images/uxhires/uxhiresbanner.png);
+	background-repeat: no-repeat;
+	background-size: cover;
+	min-height: 600px;
+
+	.logo-wrapper {
+		width: 100%;
+		margin-top: 12%;
+	}
+
+	.heading {
+		width: 70%;
+		margin: 3em auto 0;
+		
+		h1 {
+			color: #fff;
+			font-size: 5.5em;
+			letter-spacing: 0;
+			line-height: 90px;
+			line-height: 9em;
+			font-weight: 700;
+		}
+
+		span {
+			text-decoration: underline;
+		}
+	}
+}
+
+#uxhires2 {
+	height: 650px;
+	padding-top: 10%;
+}
+
+.section-center {
+	width: 56pc;
+	margin-left: auto;
+	margin-right: auto;
+	padding-right: 25px;
+	padding-left: 25px;
+
+	&.center {
+		text-align: center;
+	}
+
+	&.hidden {
+		overflow: hidden;
+	}
+
+	&.wider {
+		width: 90%;
+	}
+}
+
+#uxhires3 {
+	height: 700px;
+	padding-top: 7%;
+	background: #F9F9F9;
+	overflow: hidden;
+	
+	.uxwrapper {
+		float: left;
+		width: 33.333333%;
+		padding-right: 3em;
+
+		.ux-img {
+			width: 300px;
+		}
+
+		.ux-head {
+			color: #6C8143;
+			margin-top: 3em;
+			font-size: 12px;
+			text-transform: uppercase;
+			font-weight: 600;
+			text-align: center;
+		}
+
+		.ux-subhead {
+			margin: 0.7em auto;
+			font-size: 1.4em;
+			font-family: "Sentinel A", "Sentinel B";
+			text-align: center;
+		}
+
+		a {
+			font-weight: 600;
+			color: rgba(0, 0, 0, 0.75);
+			text-decoration: underline;
+		}
+	}
+}
+
+#uxhires4{
+	height: 700px;
+	overflow: hidden;
+	position: relative;
+
+	& img {
+    position: absolute;
+    top: 7em;
+    right: 0px;
+    width: 33%;
+  }
+
+  .section-center {
+		width: 56pc;
+		margin-left: auto;
+		margin-right: auto;
+		padding-right: 25px;
+		padding-left: 25px;
+	}
+
+	a {
+		font-weight: 600;
+		color: rgba(0, 0, 0, 0.75);
+		text-decoration: underline;
+	}
+}
+
+#uxhires5 {
+	height: 500px;
+	background: #F9F9F9;
+	overflow: hidden;
+	padding-top: 5%;
+
+	.section-center {
+		width: 56pc;
+		margin-left: auto;
+		margin-right: auto;
+		padding-right: 25px;
+		padding-left: 25px;
+
+		h3 {
+			font-weight: 400;
+			font-size: 2.5em;
+			text-align: left;
+ 		}
+
+	}
+
+  .contain-testimonial {
+  	width: 56pc;
+  	margin: 0 auto; 
+  	text-align: left;
+
+	  p {
+	  	font-style: italic;
+	  	display: inline-block;
+	  	padding-right: 5em;
+	  	border-right: 1px solid #CCC;
+	  	margin-top: 1em;
+	  }
+
+	  img {
+	  	display: inline-block;
+	  	padding-left: 5em;
+	  	width: 135px;
+	  }
+	}
+}
+
+#uxhires6 {
+	height: 700px;
+	overflow: hidden;
+	position: relative;
+
+	& img {
+    position: absolute;
+    top: 9em;
+    right: 0px;
+    width: 33%;
+  }
+
+  .bucket-inner {
+  	padding-top: 160px;
+  }
+
+  a {
+		font-weight: 600;
+		color: rgba(0, 0, 0, 0.75);
+		text-decoration: underline;
+	}
+}
+
+#uxhires7 {
+	height: 500px;
+	background: #F9F9F9;
+	overflow: hidden;
+	padding-top: 10%;
+
+	.section-center {
+		width: 56pc;
+		margin-left: auto;
+		margin-right: auto;
+		padding-right: 25px;
+		padding-left: 25px;
+
+		h3 {
+			font-weight: 400;
+			font-size: 2.5em;
+			text-align: left;
+ 		}
+
+	}
+
+  .contain-testimonial {
+  	width: 56pc;
+  	margin: 0 auto; 
+  	text-align: left;
+
+	  p {
+	  	font-style: italic;
+	  	display: inline-block;
+	  	padding-right: 5em;
+	  	border-right: 1px solid #CCC;
+	  	margin-top: 1em;
+	  }
+
+	  img {
+	  	display: inline-block;
+	  	padding-left: 5em;
+	  	width: 135px;
+	  }
+	}
+}
+
+#uxhires8 {
+	height: 500px;
+	padding-top: 8%;
+	position: relative;
+
+	h2 {
+		font-size: 4em;
+		color: #787574;
+	}
+	
+	.related-container {
+		width: 100%;
+		margin: 5em auto 0;
+		overflow: hidden; 
+		position: relative;
+		height: 35em;
+
+		.related-box {
+			width: 33.333333%;
+			float: left;
+			height: 100%;
+			padding: 0 2em;
+
+			&.first {
+				background: #485F2E;
+			}
+
+			&.second {
+				background: #9CCC66;
+			}
+
+			&.third {
+				background-image: url("../images/uxhires/leap-into-ux.png");
+				background-repeat: no-repeat;
+				background-size: cover;
+				background-position: 0 -75px;
+			}
+
+			p {
+				color: white;
+		    font-weight: 500;
+		    font-size: 12px;
+		    font-family: "Gotham A", "Gotham B";
+				text-align: left;
+				width: 90%;
+				margin: 10em auto 0;
+			}
+
+			h3 {
+				color: white;
+		    font-weight: 700;
+		    font-size: 2em;
+		    font-family: "Gotham A", "Gotham B";
+				text-align: left;
+				width: 90%;
+				margin: 1em auto 0;
+			}
+		}
+	}
+}
+
+#uxhires9 {
+	height: auto;
+	background: #F9F9F9;
+
+	.job-listing {
+		margin-bottom: 5em;
+		
+		&:last-child {
+			padding-bottom: 10em;
+		}
+	}
+
+	h3 {
+		color: #AFE093;
+		text-transform: uppercase;
+		font-size: 1.4em;
+	}
+
+	h1 {
+		font-weight: 600;
+		margin-bottom: 1em;
+	}
+
+	p {
+		margin-top: 0;
+	}
+
+	a {
+		font-weight: 600;
+		color: rgba(0, 0, 0, 0.75);
+		text-decoration: underline;
+		font-size: 2em;
+	}
+}
+
+.green-lead {
+  font-size: 3em;
+  color: #ABD278;
+  line-height: 40px;
+
+  &.m-bottom {
+  	margin-bottom: 7em;
+  }
+}
+
+
+
+
+
+    

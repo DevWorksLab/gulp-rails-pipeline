@@ -1,0 +1,48 @@
+/*! Helper classes */
+.h{
+  &-fl{ float: left; }
+  &-fr{ float: right; }
+  &-caps{ text-transform: uppercase; }
+  &-fullwidth{ width: 100%; }
+  &-inline-block{ display: inline-block; }
+  &-invisible{ visibility: hidden; }
+  &-ghost{ display: none; }
+  &-txtcenter{ text-align: center; }
+  &-txtleft{ text-align: left; }
+  &-txtright{ text-align: right; }
+  &-pad10{ padding: 10px; }
+  &-pad20{ padding: 20px; }
+  &-mtop10{ margin-top: 10px; }
+  &-mtop20{ margin-top: 20px; }
+  &-mtop50{ margin-top: 50px; }
+  &-mtop100{ margin-top: 100px; }
+  &-mbottom100{ margin-bottom: 100px; }
+  &-mbottom50{ margin-bottom: 50px; }
+  &-clearnone{ clear: none !important; }
+  &-orange-color{color:$orange;}
+  &-green-color{color: #7C7B2C;}
+  &-research-color{color:$research;}
+  &-design-color{color:$design;}
+  &-staffing-color{color:$staffing;}
+  &-reframe-color{color:$reframe;}
+    &-research-bgcolor{background-color:$research;}
+  &-design-bgcolor{background-color:$design;}
+  &-staffing-bgcolor{background-color:$staffing;}
+  &-reframe-bgcolor{background-color:$reframe;}
+  &-dark-bgcolor{background-color:$section-dark;}
+  &-light-bgcolor{background-color:$section-light;}
+  &-middle-block{
+    display: block;
+    margin: 0 auto;
+  }
+  &-clearfix{
+    &:after, &:before{
+      content: " ";
+      display: table;
+    }
+    &:after{
+      clear: both;
+    }
+  }
+}
+

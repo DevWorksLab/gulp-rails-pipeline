@@ -1,0 +1,185 @@
+#home {
+
+  .nav-toggle span, .nav-toggle span:after, .nav-toggle span:before {
+    background: $white;
+  }
+
+  p {
+    font-family: "Sentinel A", "Sentinel B";
+    font-size: 2.8em;
+  }
+
+  .bucket-inner {
+    lost-center: 495px;
+    float: left;
+    padding-top: 200px;
+    padding-left: 0px;
+
+    .h-design-color {
+      color: #B2B03F;
+    }
+  }
+
+  #home1 {
+      background-repeat: no-repeat;
+      position: relative;
+      text-align: center;
+      width: 100%;
+      height: 100vh;
+      background-color: transparent;
+      background: url("../images/home/homebanner.jpg");
+      background-repeat: no-repeat;
+      background-size: cover;
+      min-height: 600px;
+  }
+
+  #home2 {
+      height: 700px;
+      padding-top: 150px;
+  }
+
+  #home3 {
+      height: 700px;
+      background: url("../images/home/staffing1.jpg");
+      background-size: cover;
+      background-repeat: no-repeat;
+      background-position: bottom;
+      position: relative;
+  }
+
+  #home4 {
+    height: 700px;
+    position: relative;
+    overflow: hidden;
+    background-color: $section-dark;
+    position: relative;
+
+    & img {
+      position: absolute;
+      top: 80px;
+      right: -371px;
+      width: 66%;
+      height: auto;
+      min-width: 675px;
+      max-width: 1249px;
+      left: inherit;
+    }
+
+  }
+
+  #home5 {
+    height: 700px;
+    overflow: hidden;
+    background-color: #F9F9F9;
+    position: relative;
+
+    & img {
+      position: absolute;
+      top: 80px;
+      right: -371px;
+      width: 66%;
+      height: auto;
+      min-width: 675px;
+      max-width: 1249px;
+      left: inherit;
+    }
+
+  }
+
+  #home6 {
+    height: 700px;
+    overflow: hidden;
+    position: relative;
+
+    & img {
+      position: absolute;
+      top: 5pc;
+      right: -37px;
+      width: 42%;
+      height: auto;
+      min-width: 320px;
+      max-width: 1249px;
+      left: inherit;
+    }
+  }
+
+  .orange-lead {
+    font-size: 25px;
+    color: #f36531;
+    line-height: 40px;
+  }
+
+  .motivate-header {
+    position: absolute;
+    top: 26%;
+    left: 0;
+    right: 0;
+    color: var(--white);
+    font-size: 6.8em;
+    letter-spacing: 0;
+    line-height: 9em;
+    font-weight: 300;
+  }
+
+  nav li.active-branch a {
+    color: #42423f !important;
+  }
+
+  nav li.active-branch a:after {
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 2px;
+    bottom: 0;
+    left: 0;
+    background-color: #42423f;
+    visibility: visible;
+  }
+
+  #buy-now-more-link {
+    border-radius: 1px;
+    background-color: #6bc7bc;
+    font-size: 1.1em;
+    line-height: 1.2em;
+    letter-spacing: 2px;
+    font-weight: 500;
+    color: $white;
+    opacity: .9;
+    text-transform: uppercase;
+    padding: 21px;
+    white-space: nowrap;
+    display: block;
+    width: 180px;
+    font-style: normal;
+    text-align: center;
+    margin-top: 20px;
+    text-decoration: none;
+  }
+
+  .arrow-container {
+    width: 100%; 
+    height: 5em; 
+    margin: 6.5em auto 0;
+
+    &.m-top {
+      margin: 14em auto 0;
+    }
+
+    a {
+      width: 40px;
+      display: inline-block;
+    }
+  }
+
+  .h-arrow {
+    height: 18px; 
+    width: 18px;
+    -webkit-animation-duration: 1.5s;
+    animation-duration: 1.5s;
+  }
+
+
+nav li>a:before {
+  background-color: $white;
+}
+}

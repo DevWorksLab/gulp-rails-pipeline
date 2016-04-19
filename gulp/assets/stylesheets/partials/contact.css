@@ -1,0 +1,154 @@
+#contact {
+
+  .nav-toggle span, .nav-toggle span:after, .nav-toggle span:before {
+    background: $white;
+  }
+
+  #contact1 {
+      position: relative;
+      text-align: center;
+      width: 100%;
+      height: 439px;
+      background-color: $orange;
+      min-height: 439px;
+  }
+
+  p {
+    font-size: 2.0em;
+    line-height: 23px;
+    font-family: Sentinel-Light;
+    font-size: 16px;
+    color: #42423f;
+    letter-spacing: 0;
+  }
+
+  .half a {
+  	text-decoration: underline;
+  }
+
+   h1 {
+    font-weight: 500;
+    position: relative;
+    top: 100px;
+    left: 0;
+    right: 0;
+    text-transform: none;
+    font-family: Gotham-Bold;
+    font-size: 40px;
+    font-size: 4em;
+    color: #fff;
+    letter-spacing: 1px;
+    line-height: 50px;
+	}
+
+	.hero-button {
+		font-weight: 600;
+    text-transform: uppercase;
+    background-color: #e2603e;
+    color: #fff;
+    padding: 2pc;
+    font-size: 15px;
+    letter-spacing: 3px;
+    text-align: center;
+    margin-top: 140px;
+    position: static;
+
+	}
+
+	iframe {
+		pointer-events: none;
+	}
+
+
+  nav li>a:before {
+    background-color: $white;
+  }
+
+  #mc_embed_signup_scroll {
+
+    div{
+      margin: 0 30px;
+    }
+
+    label {
+      cursor: pointer;
+      display: block;
+      font-family: Gotham-Light;
+      font-style: normal;
+      text-transform: uppercase;
+      color: #4a4a4a;
+      font-size: 11px;
+      line-height: 12px;
+      letter-spacing: 2.22px;
+      margin-bottom: 4px;
+      text-align: left;
+      padding-top: 26px;
+    }
+
+    input {
+      display: block;
+      font-size: 1.2em;
+      line-height: 18px;
+      font-family: Sentinel-Light;
+      font-style: italic;
+      letter-spacing: 1px;
+      height: 24px;
+      width: 300px;
+      border: 1px solid #ccc;
+    }
+
+    input[type="submit"] {
+      background-color: #6cc8b9;
+      border: 0 none;
+      font-family: Gotham-Medium;
+      font-size: 9px;
+      line-height: 2px;
+      font-style: normal;
+      letter-spacing: 2.16px;
+      text-align: center;
+      text-shadow: none;
+      text-transform: uppercase;
+      color: #fff;
+      cursor: pointer;
+      display: inline-block;
+      opacity: .8;
+      margin-top: 2em;
+      width: 8em;
+      padding: 1.5em;
+    }
+
+    input[type="submit"]:hover  {
+      opacity: 1;
+    }
+
+    input:focus { 
+      outline: none !important;
+      border-color: rgba(113, 158, 206, 0.7);
+      box-shadow: 0 0 6px #719ECE;
+    }
+
+    .message {
+      padding: 1.5em 0.5em 4em;
+    }
+
+  }
+
+  form h2 {
+    padding-left: 28px;
+    text-transform: uppercase;
+    font-family: Gotham-Book;
+    font-weight: 500;
+    font-size: 1.4em;
+    line-height: 22px;
+    letter-spacing: 3.07px;
+  }
+
+}
+
+
+
+
+
+
+
+

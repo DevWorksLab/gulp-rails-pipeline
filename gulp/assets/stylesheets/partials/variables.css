@@ -1,0 +1,50 @@
+/*:root{
+	--bgColor: #F36531;
+	--black: #000;
+	--white: #fff;
+	--text-color: #42423F;
+	--color-two: #5D7BC1;
+	--color-three: #9753AA;
+	--rootFont: 62.5%;
+	--fontSize: 1.2em;
+	--buttonColor: #6CC8B9;
+	--buttonHover: color(#6CC8B9 lightness(80%));
+	--containerWidth: 1100px;
+
+	--footerColor: #F2F0EF;
+	--footerLink: #B980DA;
+	--footerLinkHover: color(#B980DA blackness(30%));
+	--fontOne: "Gotham";
+	--fontTwo: "Sentinel";
+}*/
+
+/*@custom-media --small-viewport (max-width: 30em);
+@custom-media --tablet-portrait (min-width: 768px);
+@custom-media --tablet-landscape (min-width: 1024px);
+@custom-media --tablet-wide (min-width: 1075px);
+@custom-media --iphone-portrait (min-width: 320px);
+@custom-media --iphone-landscape (min-width: 568px);
+@custom-media --android-landscape (min-width: 480px);
+@custom-media --laptop (min-width: 1170px);
+
+@custom-selector :--general html, button, input, select, textarea;*/
+
+/*  Color Variables */
+$orange: #F36531;
+$darkorange: #99330e;
+$mint: #6CC8B9;
+$darkgrey: #42423F;
+$greydark: #787574;
+$grey2: #9D9896;
+$grey3: #D6D7D9;
+$grey4: #F6F6F6;
+$white: #FFFFFF;
+$sun: #FFC928;
+$design: #E8E654;
+$staffing: #9CCC65;
+$research: #BC6DA3;
+$reframe: #6CC8B9;
+$section-light: #F6F6F6;
+$section-dark: #F6F6F6;
+$text-color: #42423F;
+$header-color: #4a4a4a;
