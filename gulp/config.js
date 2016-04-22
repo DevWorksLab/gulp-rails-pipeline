@@ -15,6 +15,10 @@ module.exports = {
       imagePath: '/assets/images' // Used by the image-url helper
     }
   },
+  js: {
+    src: sourceFiles + "/javascripts/**/*.{js}",
+    dest: publicAssets + "/javascripts",
+  },
   images: {
     src: sourceFiles + "/images/**",
     dest: publicAssets + "/images"
