@@ -27,7 +27,7 @@
       width: 100%;
       height: 100vh;
       background-color: transparent;
-      background: url("../images/home/homebanner.jpg");
+      background: url("/assets/images/home/homebanner.jpg");
       background-repeat: no-repeat;
       background-size: cover;
       min-height: 600px;
@@ -40,7 +40,7 @@
 
   #home3 {
       height: 700px;
-      background: url("../images/home/staffing1.jpg");
+      background: url("/assets/images/home/staffing1.jpg");
       background-size: cover;
       background-repeat: no-repeat;
       background-position: bottom;
