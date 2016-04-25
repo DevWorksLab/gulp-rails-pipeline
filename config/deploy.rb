@@ -44,7 +44,7 @@ namespace :deploy do
   desc "Run npm install"
   task :npm_install do
     on roles(:app) do
-      execute "bash -c '. /home/deploy/.nvm/nvm.sh && cd #{release_path} && npm install'"
+      execute "bash -c '. /home/railsapps/.nvm/nvm.sh && cd #{release_path} && npm install'"
     end
   end
 
