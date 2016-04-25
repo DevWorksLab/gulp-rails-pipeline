@@ -44,6 +44,11 @@ module.exports = {
       dest: publicAssets + '/javascripts',
       outputName: 'global.js',
       extensions: ['.js','.coffee']
+    },{
+      entries: sourceFiles + '/javascripts/waypointspackage.coffee',
+      dest: publicAssets + '/javascripts',
+      outputName: 'waypointspackage.js',
+      extensions: ['.js','.coffee']
     }]
   }
 };

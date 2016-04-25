@@ -5,8 +5,7 @@
 // and will be compiled with Gulp and Browserify
 //
 //= require jquery
-//= require jquery_ujs
-//= require turbolinks
 //
 // Pull compiled from /public/assets/javascripts
+//= require waypointspackage
 //= require global

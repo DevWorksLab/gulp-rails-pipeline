@@ -1,15 +1,32 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <title>Motivate Design</title>
+  <title><%= yield :page_title %> | Motivate Design</title>
   <link rel="stylesheet" media="all" type="text/css" href="https://cloud.typography.com/6298852/7403152/css/fonts.css">
   <%= stylesheet_link_tag 'application' %>
   <%= javascript_include_tag 'application' %>
-  <%= csrf_meta_tags %>
-</head>
-<body>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/waypoints/2.0.5/waypoints.min.js"></script>
+  <%= javascript_include_tag 'main' %>
 
-<%= yield %>
+  <%= csrf_meta_tags %>
+  <meta name="description" content="<%= yield :meta_desc %>">
+
+</head>
+<body id="<%= yield :body_id %>">
+<!--[if lt IE 8]>
+<p class="browserupgrade">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
+<![endif]-->
+
+  <div class="container">
+
+    <section id="<%= yield :section_id %>">
+
+      <%= render partial: 'shared/nav' %>
+
+      <%= yield %>
+
+    </div>
+    <%= render partial: 'shared/footer' %>
 
 </body>
 </html>

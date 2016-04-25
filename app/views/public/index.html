@@ -1,17 +1,11 @@
-<title>Home</title>
-<meta name="description" content="Motivate Design is a User Experience staffing, research and design shop. Disruptive thinking. Happy humans. New York, NY">
+<%- content_for :page_title do %>Home<%- end %>
 
-</head>
-<body id="home">
-<!--[if lt IE 8]>
-<p class="browserupgrade">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
-<![endif]-->
+<%- content_for :meta_desc do %>Motivate Design is a User Experience staffing, research and design shop. Disruptive thinking. Happy humans. New York, NY<%- end %>
 
-<div class="container">
+<%- content_for :body_id do %>home<%- end %>
 
-  <section id="home1">
+<%- content_for :section_id do %>home1<%- end %>
 
-    <%= render partial: 'shared/nav' %>
 
     <h1 class="wp1 hidden-load page-center motivate-header">Motivate Design is a <b>User Experience</b> staffing, research and design shop
 
@@ -107,4 +101,3 @@
 
 
 
-</div> <!-- container end -->

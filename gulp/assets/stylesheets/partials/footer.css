@@ -10,7 +10,7 @@ footer {
 
   #social-links p, #social-links a {
     font-family: "Sentinel A", "Sentinel B";
-    font-size: 1.0em;
+    font-size: 1.0rem;
     color: $text-color;
     line-height: 14px;
     text-decoration: none;
@@ -35,7 +35,7 @@ footer {
   }
 
   #mc_embed_signup_scroll input[type=email] {
-    font-size: 1.2em;
+    font-size: 1.2rem;
     line-height: 18px;
     font-family: "Sentinel A", "Sentinel B";
     font-weight: 200;
@@ -72,7 +72,7 @@ footer {
 
   .italic-lead {
     color: #787574;
-    font-size: 1.6em !important;
+    font-size: 1.6rem !important;
     line-height: 14px;
     font-style: italic;
   }

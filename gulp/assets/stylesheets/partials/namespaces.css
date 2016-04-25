@@ -11,7 +11,7 @@
 .o{
   &-container{
   	width: 100%;
-  	max-width: var(--containerWidth);
+  	max-width: 1100px;
   	margin: 0 auto;
   }
 }

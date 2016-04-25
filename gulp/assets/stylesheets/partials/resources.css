@@ -38,12 +38,12 @@
 
       h5 {
         color: white;
-        font-size: 1em;
+        font-size: 1rem;
       }
 
       h1 {
         color: white;
-        font-size: 8em;
+        font-size: 8rem;
         line-height: 95px;
       }
     }
@@ -114,7 +114,7 @@
 
   h3 {
     color: $greydark;
-    font-size: 2.5em;
+    font-size: 2.5rem;
     line-height: 32px;
   }
 
@@ -127,7 +127,7 @@
     background-position-y: 41%;
 
     & h1 {
-      font-size: 3.5em;
+      font-size: 3.5rem;
       letter-spacing: 5.4px;
       line-height: 64px;
       font-weight: 300;
@@ -139,7 +139,7 @@
     }
 
     & a {
-      font-size: 1.2em;
+      font-size: 1.2rem;
       color: #42423f;
       list-style-type: none;
       position: absolute;
@@ -152,7 +152,7 @@
 
   .more-link {
     font-family: "Gotham A", "Gotham B";
-    font-size: 2.8em;
+    font-size: 2.8rem;
     color: $text-color;
     line-height: 37px;
     text-decoration: underline;
@@ -170,7 +170,7 @@
     background-color: $reframe;
     border: 0 none;
     font-size: 9px;
-    font-size: 1.4em;
+    font-size: 1.4rem;
     line-height: 2px;
     letter-spacing: 2.16px;
     text-align: center;

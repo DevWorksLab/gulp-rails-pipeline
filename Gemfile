@@ -8,3 +8,5 @@ gem 'jquery-rails'
 gem 'turbolinks'
 gem 'sqlite3', group: :development
 gem 'pg', group: :production # For heroku
+gem 'pry'
+

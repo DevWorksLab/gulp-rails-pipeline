@@ -17,12 +17,21 @@
     padding-top: 48px;
   }
 
+  .clear{
+    clear: both;
+  }
+
 	figure {
+    position: relative;
+    float: left;
+    width: 50%;
 		display: block;
+    padding: 0;
+    margin: 0;
 		
 		& p {
       font-family: "Gotham A", "Gotham B";
-      font-size: 5.0em;
+      font-size: 5.0rem;
       color: $white;
       letter-spacing: 1.25px;
       line-height: 38px;
@@ -36,12 +45,16 @@
 		}
 	}
 
+  .rec-image{
+    display: block;
+    width: 100%;
+  }
+
 	.overlay-wrapper {
     position: relative;
     overflow: hidden;
-    float: left;
     transition: all 300ms ease-in-out;
-    width: 50vw;
+    width: 100%;
     height: 50vh;
 	}
 
@@ -59,7 +72,7 @@
     padding: 0;
 
     li {
-      font-size: 1em;
+      font-size: 1rem;
       color: #787574;
       letter-spacing: 1.25px;
       line-height: 11px;
@@ -116,7 +129,7 @@
         font-family: "Gotham A", "Gotham B";
         font-weight: 500;
         font-size: 18px;
-        font-size: 1.8em;
+        font-size: 1.8rem;
         color: #fff;
         letter-spacing: .85px;
         line-height: 18px;
@@ -133,27 +146,27 @@
 	}
 
 	.about-img1 {
-	  background: url("../images/about/about01.jpg");
+	  background: url("/assets/images/about/about01.jpg");
     background-size: cover;
 	}
 
 	.about-img2 {
-    background: url("../images/about/about02.jpg");
+    background: url("/assets/images/about/about02.jpg");
     background-size: cover;
 	}
 
 	.about-img3 {
-	  background: url("../images/about/about03.jpg");
+	  background: url("/assets/images/about/about03.jpg");
     background-size: cover;
 	}
 
 	.about-img4 {
-	  background: url("../images/about/about04.jpg");
+	  background: url("/assets/images/about/about04.jpg");
     background-size: cover;
 	}
 
 	.more-link {
-    font-size: 1.4em;
+    font-size: 1.4rem;
     line-height: 16px;
     letter-spacing: 1px;
     font-weight: 500;
@@ -185,7 +198,7 @@
 	.about-button-text {
     font-family: "Gotham A", "Gotham B";
     font-weight: 300;
-    font-size: 2.0em;
+    font-size: 2.0rem;
     color: #fff;
     letter-spacing: 1.36px;
     line-height: 28px;
@@ -201,7 +214,7 @@
 
   
   .overlay-wrapper {
-  width: 50%;
+  width: 100%;
   height: 50vh;
   transition: all 300ms ease-in-out;
   }
@@ -209,7 +222,6 @@
   .overlay-wrapper {
     position: relative;
     overflow: hidden;
-    float: left;
   }
 
   .overlay-wrapper .overlay {

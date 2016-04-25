@@ -14,7 +14,7 @@
   }
 
   p {
-    font-size: 2.0em;
+    font-size: 2.0rem;
     line-height: 23px;
     font-family: Sentinel-Light;
     font-size: 16px;
@@ -35,7 +35,7 @@
     text-transform: none;
     font-family: Gotham-Bold;
     font-size: 40px;
-    font-size: 4em;
+    font-size: 4rem;
     color: #fff;
     letter-spacing: 1px;
     line-height: 50px;
@@ -87,7 +87,7 @@
 
     input {
       display: block;
-      font-size: 1.2em;
+      font-size: 1.2rem;
       line-height: 18px;
       font-family: Sentinel-Light;
       font-style: italic;
@@ -112,9 +112,9 @@
       cursor: pointer;
       display: inline-block;
       opacity: .8;
-      margin-top: 2em;
-      width: 8em;
-      padding: 1.5em;
+      margin-top: 2rem;
+      width: 8rem;
+      padding: 1.5rem;
     }
 
     input[type="submit"]:hover  {
@@ -128,7 +128,7 @@
     }
 
     .message {
-      padding: 1.5em 0.5em 4em;
+      padding: 1.5em 0.5em 4rem;
     }
 
   }
@@ -138,7 +138,7 @@
     text-transform: uppercase;
     font-family: Gotham-Book;
     font-weight: 500;
-    font-size: 1.4em;
+    font-size: 1.4rem;
     line-height: 22px;
     letter-spacing: 3.07px;
   }

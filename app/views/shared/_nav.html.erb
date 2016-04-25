@@ -5,21 +5,26 @@
   <% end %>
   <a class="nav-toggle" href="#"><span></span></a>
 </div>
-<nav class="header-nav">
+<nav id="<%= yield :nav_id %>" class="header-nav">
   <div class="menu-wrapper">
     <ul style="max-width: 56pc;">
       <li class="nav-link-wrapper">
-        <%= link_to root_path do %>
-          <%= image_tag gulp_asset_path("/images/misc/logos/svg/MOTIVATE_LOGO_WHITE.svg"), id: "logo" %>
+        <%= link_to root_path, id: "logo-anchor" do %>
+          <%- if params[:action] == "about" %>
+            <%= image_tag gulp_asset_path("/images/misc/logos/svg/motivate_logo_main.svg"), id: "logo" %>
+          <%- else %>
+            <%= image_tag gulp_asset_path("/images/misc/logos/svg/MOTIVATE_LOGO_WHITE.svg"), id: "logo" %>
+          <%- end %>
         <% end %>
       </li>
       <li class="nav-link-wrapper"><a href="/work.html">Work</a></li>
-      <li class="nav-link-wrapper"><a href="/about.html">About</a></li>
-      <li class="nav-link-wrapper"><a href="/people.html">People</a></li>
-      <li class="nav-link-wrapper"><a href="/resources.html">Resources</a></li>
+      <li class="nav-link-wrapper"><%= link_to "About", about_path %></li>
+      <li class="nav-link-wrapper"><%= link_to "People", people_path %></li>
+      <li class="nav-link-wrapper"><%= link_to "Resources", resources_path %></li>
       <li class="nav-link-wrapper"><a href="https://medium.com/@MotivateDesign" target="_blank">Blog</a></li>
       <!-- <li class="nav-link-wrapper"><a href="/uxhires.html">UX Hires</a></li> -->
       <li class="nav-link-wrapper"><a href="/contact.html">Contact</a></li>
     </ul>
   </div>
 </nav>
+
