@@ -1,0 +1,12 @@
+/*
+ * This is a manifest file that'll be compiled into application.css, which will include all the files
+ * listed below.
+ *
+ * Use this file to include any stylesheet assets from installed gems. All other css is compiled with
+ * libsass with Gulp.
+ *
+ * Pull compiled from /public/assets/stylesheets
+ *= require admin/bootstrap_and_overrides
+ *= require lte-rails
+ *= require AdminLTE/skins/skin-blue
+*/

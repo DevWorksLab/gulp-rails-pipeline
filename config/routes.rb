@@ -5,4 +5,9 @@ Rails.application.routes.draw do
   get 'people', to: 'public#people', as: :people
   get 'resources', to: 'public#resources', as: :resources
   get 'contact', to: 'public#contact', as: :contact
+
+  namespace :admin do
+    root 'dashboard#index'
+    
+  end
 end
