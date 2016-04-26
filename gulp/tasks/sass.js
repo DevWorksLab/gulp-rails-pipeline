@@ -26,6 +26,7 @@ var source = require('vinyl-source-stream');
 var browserify = require('browserify');
 var nunjucksRender = require('gulp-nunjucks-render');
 var data = require('gulp-data');
+var processor = postcss();
 
 gulp.task('sass', function () {
     var processors = [
@@ -47,7 +48,7 @@ gulp.task('sass', function () {
     .pipe(sourcemaps.init())
     .pipe(sass(config.settings))
     .on('error', handleErrors)
-    .pipe(postcss(processors))
+    .pipe(processors.forEach(processor.use.bind(processor)))
     .pipe(sourcemaps.write())
     .pipe(gulp.dest(config.dest))
     .pipe(browserSync.reload({stream:true}));
