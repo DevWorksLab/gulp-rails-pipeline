@@ -8,4 +8,5 @@
 //
 // Pull compiled from /public/assets/javascripts
 //= require twitter/bootstrap
+//= require admin/bootstrap
 //= require admin/admin

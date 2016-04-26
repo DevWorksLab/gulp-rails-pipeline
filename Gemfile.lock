@@ -184,6 +184,7 @@ GEM
       actionpack (> 4, < 5.1)
       activemodel (> 4, < 5.1)
     slop (3.6.0)
+    spring (1.7.1)
     sprockets (2.12.3)
       hike (~> 1.2)
       multi_json (~> 1.0)
@@ -243,7 +244,7 @@ DEPENDENCIES
   rspec-rails (~> 3.0)
   sass-rails (~> 5.0)
   simple_form
-  sprockets
+  spring
   therubyracer
   turbolinks
   twitter-bootstrap-rails
