@@ -4,7 +4,7 @@ var sass         = require('gulp-sass');
 var sourcemaps   = require('gulp-sourcemaps');
 var handleErrors = require('../util/handleErrors');
 var config       = require('../config').sass;
-var autoprefixer = require('gulp-autoprefixer');
+var autoprefixer = require('autoprefixer');
 
 var postcss = require('gulp-postcss');
 var cssImport = require('postcss-import');
@@ -26,7 +26,6 @@ var source = require('vinyl-source-stream');
 var browserify = require('browserify');
 var nunjucksRender = require('gulp-nunjucks-render');
 var data = require('gulp-data');
-var processor = postcss();
 
 gulp.task('sass', function () {
     var processors = [
@@ -48,7 +47,7 @@ gulp.task('sass', function () {
     .pipe(sourcemaps.init())
     .pipe(sass(config.settings))
     .on('error', handleErrors)
-    .pipe(processors.forEach(processor.use.bind(processor)))
+    .pipe(postcss(processors))
     .pipe(sourcemaps.write())
     .pipe(gulp.dest(config.dest))
     .pipe(browserSync.reload({stream:true}));
