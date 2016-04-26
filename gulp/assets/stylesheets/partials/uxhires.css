@@ -4,7 +4,7 @@
 	width: 100%;
 	height: 100vh;
 	background-color: transparent;
-	background: url(../images/uxhires/uxhiresbanner.png);
+	background: url(/assets/images/uxhires/uxhiresbanner.png);
 	background-repeat: no-repeat;
 	background-size: cover;
 	min-height: 600px;
@@ -16,14 +16,14 @@
 
 	.heading {
 		width: 70%;
-		margin: 3em auto 0;
+		margin: 3rem auto 0;
 		
 		h1 {
 			color: #fff;
-			font-size: 5.5em;
+			font-size: 5.5rem;
 			letter-spacing: 0;
 			line-height: 90px;
-			line-height: 9em;
+			line-height: 9rem;
 			font-weight: 700;
 		}
 
@@ -67,7 +67,7 @@
 	.uxwrapper {
 		float: left;
 		width: 33.333333%;
-		padding-right: 3em;
+		padding-right: 3rem;
 
 		.ux-img {
 			width: 300px;
@@ -75,7 +75,7 @@
 
 		.ux-head {
 			color: #6C8143;
-			margin-top: 3em;
+			margin-top: 3rem;
 			font-size: 12px;
 			text-transform: uppercase;
 			font-weight: 600;
@@ -83,8 +83,8 @@
 		}
 
 		.ux-subhead {
-			margin: 0.7em auto;
-			font-size: 1.4em;
+			margin: 0.7rem auto;
+			font-size: 1.4rem;
 			font-family: "Sentinel A", "Sentinel B";
 			text-align: center;
 		}
@@ -104,7 +104,7 @@
 
 	& img {
     position: absolute;
-    top: 7em;
+    top: 7rem;
     right: 0px;
     width: 33%;
   }
@@ -139,7 +139,7 @@
 
 		h3 {
 			font-weight: 400;
-			font-size: 2.5em;
+			font-size: 2.5rem;
 			text-align: left;
  		}
 
@@ -153,14 +153,14 @@
 	  p {
 	  	font-style: italic;
 	  	display: inline-block;
-	  	padding-right: 5em;
+	  	padding-right: 5rem;
 	  	border-right: 1px solid #CCC;
-	  	margin-top: 1em;
+	  	margin-top: 1rem;
 	  }
 
 	  img {
 	  	display: inline-block;
-	  	padding-left: 5em;
+	  	padding-left: 5rem;
 	  	width: 135px;
 	  }
 	}
@@ -173,7 +173,7 @@
 
 	& img {
     position: absolute;
-    top: 9em;
+    top: 9rem;
     right: 0px;
     width: 33%;
   }
@@ -204,7 +204,7 @@
 
 		h3 {
 			font-weight: 400;
-			font-size: 2.5em;
+			font-size: 2.5rem;
 			text-align: left;
  		}
 
@@ -218,14 +218,14 @@
 	  p {
 	  	font-style: italic;
 	  	display: inline-block;
-	  	padding-right: 5em;
+	  	padding-right: 5rem;
 	  	border-right: 1px solid #CCC;
-	  	margin-top: 1em;
+	  	margin-top: 1rem;
 	  }
 
 	  img {
 	  	display: inline-block;
-	  	padding-left: 5em;
+	  	padding-left: 5rem;
 	  	width: 135px;
 	  }
 	}
@@ -237,22 +237,22 @@
 	position: relative;
 
 	h2 {
-		font-size: 4em;
+		font-size: 4rem;
 		color: #787574;
 	}
 	
 	.related-container {
 		width: 100%;
-		margin: 5em auto 0;
+		margin: 5rem auto 0;
 		overflow: hidden; 
 		position: relative;
-		height: 35em;
+		height: 35rem;
 
 		.related-box {
 			width: 33.333333%;
 			float: left;
 			height: 100%;
-			padding: 0 2em;
+			padding: 0 2rem;
 
 			&.first {
 				background: #485F2E;
@@ -263,7 +263,7 @@
 			}
 
 			&.third {
-				background-image: url("../images/uxhires/leap-into-ux.png");
+				background-image: url("/assets/images/uxhires/leap-into-ux.png");
 				background-repeat: no-repeat;
 				background-size: cover;
 				background-position: 0 -75px;
@@ -276,17 +276,17 @@
 		    font-family: "Gotham A", "Gotham B";
 				text-align: left;
 				width: 90%;
-				margin: 10em auto 0;
+				margin: 10rem auto 0;
 			}
 
 			h3 {
 				color: white;
 		    font-weight: 700;
-		    font-size: 2em;
+		    font-size: 2rem;
 		    font-family: "Gotham A", "Gotham B";
 				text-align: left;
 				width: 90%;
-				margin: 1em auto 0;
+				margin: 1rem auto 0;
 			}
 		}
 	}
@@ -297,22 +297,22 @@
 	background: #F9F9F9;
 
 	.job-listing {
-		margin-bottom: 5em;
+		margin-bottom: 5rem;
 		
 		&:last-child {
-			padding-bottom: 10em;
+			padding-bottom: 10rem;
 		}
 	}
 
 	h3 {
 		color: #AFE093;
 		text-transform: uppercase;
-		font-size: 1.4em;
+		font-size: 1.4rem;
 	}
 
 	h1 {
 		font-weight: 600;
-		margin-bottom: 1em;
+		margin-bottom: 1rem;
 	}
 
 	p {
@@ -323,17 +323,17 @@
 		font-weight: 600;
 		color: rgba(0, 0, 0, 0.75);
 		text-decoration: underline;
-		font-size: 2em;
+		font-size: 2rem;
 	}
 }
 
 .green-lead {
-  font-size: 3em;
+  font-size: 3rem;
   color: #ABD278;
   line-height: 40px;
 
   &.m-bottom {
-  	margin-bottom: 7em;
+  	margin-bottom: 7rem;
   }
 }
 
