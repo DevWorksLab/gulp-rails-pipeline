@@ -8,6 +8,12 @@ Rails.application.routes.draw do
 
   namespace :admin do
     root 'dashboard#index'
-    
+
   end
+
+  namespace :uxhires do
+    root 'jobs#uxhires'
+    resources :jobs
+  end
+
 end

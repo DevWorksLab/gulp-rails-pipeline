@@ -1,0 +1,1 @@
+alte = require './app'
