@@ -1,25 +1,30 @@
 <!DOCTYPE html>
 <html>
 <head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <title><%= yield :page_title %> | Motivate Design</title>
   <link rel="stylesheet" media="all" type="text/css" href="https://cloud.typography.com/6298852/7403152/css/fonts.css">
   <%= stylesheet_link_tag 'admin/application' %>
   <%= javascript_include_tag 'admin/application' %>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/waypoints/2.0.5/waypoints.min.js"></script>
   <%= javascript_include_tag 'main' %>
-
+  <meta content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" name="viewport">
   <%= csrf_meta_tags %>
   <meta name="description" content="<%= yield :meta_desc %>">
 
 </head>
-<body>
+<body class="hold-transition skin-blue sidebar-mini">
 <!--[if lt IE 8]>
 <p class="browserupgrade">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
 <![endif]-->
+  <div class="wrapper">
+    <%= render :partial => 'layouts/admin/header_and_sidebar' %>
+    <div class="content-wrapper">
 
+      <%= yield %>
 
-  <%= yield %>
-
-
+    </div>
+    <%= render :partial => 'layouts/admin/footer' %>
+  </div>
 </body>
 </html>
