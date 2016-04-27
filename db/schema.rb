@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20160427113502) do
+ActiveRecord::Schema.define(version: 20160427130657) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -25,21 +25,21 @@ ActiveRecord::Schema.define(version: 20160427113502) do
     t.string   "twitter"
     t.string   "title"
     t.string   "snippet"
-    t.string   "header_pic"
-    t.string   "profile_pic"
     t.string   "skill_one"
-    t.string   "skill_one_icon"
     t.string   "skill_one_blurb"
     t.string   "skill_two"
-    t.string   "skill_two_icon"
     t.string   "skill_two_blurb"
     t.string   "skill_three"
-    t.string   "skill_three_icon"
     t.string   "skill_three_blurb"
     t.datetime "created_at",                       null: false
     t.datetime "updated_at",                       null: false
     t.integer  "priority"
     t.boolean  "active",            default: true
+    t.string   "header_pic"
+    t.string   "profile_pic"
+    t.string   "skill_one_icon"
+    t.string   "skill_two_icon"
+    t.string   "skill_three_icon"
   end
 
 end
