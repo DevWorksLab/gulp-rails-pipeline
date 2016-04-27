@@ -14,6 +14,7 @@ gem 'pg', '~> 0.15'
 gem 'pry'
 # Form Helper
 gem 'simple_form'
+gem 'friendly_id', '~> 5.1.0'
 
 # Image Management
 gem 'carrierwave'

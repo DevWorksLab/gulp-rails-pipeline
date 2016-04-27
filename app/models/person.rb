@@ -14,6 +14,9 @@ class Person < ActiveRecord::Base
   mount_uploader :skill_two_icon, IconUploader
   mount_uploader :skill_three_icon, IconUploader
 
+  extend FriendlyId
+  friendly_id :first_name, use: [:slugged, :finders]
+
   def full_name
     "#{self.first_name} " + "#{self.last_name}"
   end
