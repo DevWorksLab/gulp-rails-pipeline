@@ -36,8 +36,11 @@ class Admin::PeopleController < AdminController
 
   end
 
-  def activation_toggle
-
+  def toggle_activation
+    @person = Person.find(params[:person_id])
+    toggle = @person.active ? false : true
+    @person.update(active: toggle)
+    redirect_to admin_people_path
   end
 
   private
