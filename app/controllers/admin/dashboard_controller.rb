@@ -1,6 +1,4 @@
-class Admin::DashboardController < ApplicationController
-  layout "admin"
-  before_filter :authenticate
+class Admin::DashboardController < AdminController
 
   def index
   end

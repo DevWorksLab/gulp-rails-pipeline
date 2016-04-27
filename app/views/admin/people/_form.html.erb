@@ -1,0 +1,94 @@
+<div class="row">
+  <!-- left column -->
+  <div class="col-md-12">
+    <!-- general form elements -->
+    <div class="box box-primary">
+      <div class="box-header with-border">
+        <h3 class="box-title">Form</h3>
+      </div>
+      <!-- /.box-header -->
+      <!-- form start -->
+      <%= simple_form_for [:admin, @person] do |f| %>
+        <div class="box-body">
+          <div class="form-group">
+            <%= f.input :priority, placeholder: "Enter Priority For Appearance on Index", input_html: {class: "form-control", min: 0, value: @person.id ? @person.priority : Person.count + 1} %>
+          </div>
+          <div class="form-group">
+            <%= f.input :first_name, placeholder: "Enter First Name", input_html: {class: "form-control"} %>
+          </div>
+          <div class="form-group">
+            <%= f.input :last_name, placeholder: "Enter Last Name", input_html: {class: "form-control"} %>
+          </div>
+          <div class="form-group">
+            <%= f.input :title, placeholder: "Enter Title", input_html: {class: "form-control"} %>
+          </div>
+          <div class="form-group">
+            <%= f.input :profile_pic, as: :file %>
+
+            <p class="help-block">Upload Inner Profile Pic Here</p>
+          </div>
+          <div class="form-group">
+            <%= f.input :email, placeholder: "Enter Email", input_html: {class: "form-control"} %>
+          </div>
+          <div class="form-group">
+            <%= f.input :linkedin, placeholder: "Enter Linkedin URL", input_html: {class: "form-control"} %>
+          </div>
+          <div class="form-group">
+            <%= f.input :twitter, placeholder: "Enter Twitter URL", input_html: {class: "form-control"} %>
+          </div>
+          <div class="form-group">
+            <%= f.input :email, placeholder: "Enter Email", input_html: {class: "form-control"} %>
+          </div>
+          <div class="form-group">
+            <%= f.input :snippet, placeholder: "Enter Profile Snippet", input_html: {class: "form-control"} %>
+          </div>
+          <div class="form-group">
+            <%= f.input :bio, placeholder: "Enter Profile Bio", input_html: {class: "form-control"} %>
+          </div>
+          <div class="form-group">
+            <%= f.input :skill_one, placeholder: "Enter Skill One", input_html: {class: "form-control"} %>
+          </div>
+          <div class="form-group">
+            <%= f.input :skill_one_blurb, placeholder: "Enter Skill One Blurb", input_html: {class: "form-control"} %>
+          </div>
+          <div class="form-group">
+            <%= f.input :skill_one_icon, as: :file %>
+
+            <p class="help-block">Icon for Skill One.</p>
+          </div>
+          <div class="form-group">
+            <%= f.input :skill_two, placeholder: "Enter Skill Two", input_html: {class: "form-control"} %>
+          </div>
+          <div class="form-group">
+            <%= f.input :skill_two_blurb, placeholder: "Enter Skill Two Blurb", input_html: {class: "form-control"} %>
+          </div>
+          <div class="form-group">
+            <%= f.input :skill_two_icon, as: :file %>
+
+            <p class="help-block">Icon for Skill Two.</p>
+          </div>
+          <div class="form-group">
+            <%= f.input :skill_three, placeholder: "Enter Skill Three", input_html: {class: "form-control"} %>
+          </div>
+          <div class="form-group">
+            <%= f.input :skill_three_blurb, placeholder: "Enter Skill Three Blurb", input_html: {class: "form-control"} %>
+          </div>
+          <div class="form-group">
+            <%= f.input :skill_three_icon, as: :file %>
+
+            <p class="help-block">Icon for Skill Three.</p>
+          </div>
+          <div class="form-group">
+            <%= f.input :header_pic, as: :file %>
+
+            <p class="help-block">Upload Inner Banner Pic Here</p>
+          </div>
+        </div>
+        <!-- /.box-body -->
+
+        <div class="box-footer">
+          <button type="submit" class="btn btn-primary">Submit</button>
+        </div>
+      <% end %>
+    </div>
+    <!-- /.box -->
