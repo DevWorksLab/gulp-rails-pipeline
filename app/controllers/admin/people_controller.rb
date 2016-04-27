@@ -2,7 +2,8 @@ class Admin::PeopleController < AdminController
   before_action :set_person, only: [:show, :edit, :update, :destroy]
 
   def index
-    @people = Person.all
+    people_array = Person.order_by_active
+    @people = people_array.each_slice(3).to_a
   end
 
   def new
@@ -10,7 +11,6 @@ class Admin::PeopleController < AdminController
   end
 
   def create
-    binding.pry
     @person = Person.new(person_params)
     if @person.save
       flash[:notice] = "#{@person.full_name} has been succesfully created"
@@ -33,6 +33,10 @@ class Admin::PeopleController < AdminController
   end
 
   def destroy
+
+  end
+
+  def activation_toggle
 
   end
 

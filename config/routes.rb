@@ -8,7 +8,9 @@ Rails.application.routes.draw do
 
   namespace :admin do
     root 'dashboard#index'
-    resources :people
+    resources :people do
+      get 'activate', to: 'people#toggle_activation', as: :toggle_activation
+    end
   end
 
   namespace :uxhires do

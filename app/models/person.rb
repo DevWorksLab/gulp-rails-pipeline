@@ -4,6 +4,10 @@ class Person < ActiveRecord::Base
   :skill_one_blurb, :skill_two, :skill_two_icon, :skill_two_blurb, :skill_three,
   :skill_three_icon, :skill_three_blurb, presence: true
 
+  scope :active, -> { where(active: true) }
+  scope :order_by_active, -> { order(:active => "desc" , :priority => "asc") }
+
+
   mount_uploader :profile_pic, AvatarUploader
   mount_uploader :header_pic, AvatarUploader
   mount_uploader :skill_one_icon, IconUploader
@@ -11,7 +15,7 @@ class Person < ActiveRecord::Base
   mount_uploader :skill_three_icon, IconUploader
 
   def full_name
-    "#{self.first_name} + #{self.last_name}"
+    "#{self.first_name} " + "#{self.last_name}"
   end
 
 end

@@ -12,7 +12,6 @@
 
 <!-- Main content -->
 <section class="content">
-
   <!-- Your Page Content Here -->
   <div class="row">
     <div class="col-md-6">
@@ -25,32 +24,57 @@
     </div>
   </div>
   <br>
-  <div class="row">
-    <div class="col-md-4">
-      <!-- Widget: user widget style 1 -->
-      <div class="box box-widget widget-user-2">
-        <!-- Add the bg color to the header using any of the bg-* classes -->
-        <div class="widget-user-header bg-yellow">
-          <div class="widget-user-image">
-            <img class="img-circle" src="../dist/img/user7-128x128.jpg" alt="User Avatar">
+  <% @people.each do |row| %>
+    <div class="row">
+      <% row.each do |person| %>
+        <div class="col-md-4">
+          <!-- Widget: user widget style 1 -->
+          <div class="box box-widget widget-user-2">
+            <!-- Add the bg color to the header using any of the bg-* classes -->
+            <div class="widget-user-header bg-yellow">
+              <div class="widget-user-image">
+                <%= image_tag person.profile_pic, class: "img-circle" %>
+                <!-- <img class="img-circle" src="../dist/img/user7-128x128.jpg" alt="User Avatar"> -->
+              </div>
+              <!-- /.widget-user-image -->
+              <h3 class="widget-user-username"><%= person.full_name %></h3>
+              <h5 class="widget-user-desc"><%= person.title %></h5>
+            </div>
+            <div class="box-footer no-padding">
+              <ul class="nav nav-stacked">
+                <li>
+                  <%= link_to admin_person_toggle_activation_path(person) do %>
+                    <% if person.active %>
+                      <div class= "bg-green color-palette" style= "text-align: center;">
+                        Active
+                      </div>
+                    <% else %>
+                      <div class= "bg-red color-palette" style= "text-align: center;">
+                        Inactive
+                      </div>
+                    <% end %>
+                  <% end %>
+                </li>
+                <li>
+                  <%= link_to edit_admin_person_path(person), style: "text-align: center;" do %>
+                    Edit
+                  <% end %>
+                </li>
+                <li>
+                  <%= link_to admin_person_path(person), method: "delete", data: {confirm: "Are You Sure You Want to Delete?"}, style: "text-align: center;" do %>
+                    Delete
+                  <% end %>
+                </li>
+                <li><a href="#">Order <span class="pull-right badge bg-blue"><%= person.priority %></span></a></li>
+              </ul>
+            </div>
           </div>
-          <!-- /.widget-user-image -->
-          <h3 class="widget-user-username">Nadia Carmichael</h3>
-          <h5 class="widget-user-desc">Lead Developer</h5>
+          <!-- /.widget-user -->
         </div>
-        <div class="box-footer no-padding">
-          <ul class="nav nav-stacked">
-            <li><a href="#">Projects <span class="pull-right badge bg-blue">31</span></a></li>
-            <li><a href="#">Tasks <span class="pull-right badge bg-aqua">5</span></a></li>
-            <li><a href="#">Completed Projects <span class="pull-right badge bg-green">12</span></a></li>
-            <li><a href="#">Followers <span class="pull-right badge bg-red">842</span></a></li>
-          </ul>
-        </div>
-      </div>
-      <!-- /.widget-user -->
+      <% end %>
+        <!-- /.col -->
     </div>
-    <!-- /.col -->
-  </div>
-  <!-- /.row -->
+    <!-- /.row -->
+  <% end %>
 </section>
 <!-- /.content -->
