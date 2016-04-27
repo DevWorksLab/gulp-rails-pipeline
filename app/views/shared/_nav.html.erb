@@ -7,7 +7,7 @@
 </div>
 <nav id="<%= yield :nav_id %>" class="header-nav">
   <div class="menu-wrapper">
-    <ul style="max-width: 56pc;">
+    <ul style="max-width: 65pc;">
       <li class="nav-link-wrapper">
         <%= link_to root_path, id: "logo-anchor" do %>
           <%- if params[:action] == "about" %>
@@ -22,7 +22,7 @@
       <li class="nav-link-wrapper"><%= link_to "People", people_path %></li>
       <li class="nav-link-wrapper"><%= link_to "Resources", resources_path %></li>
       <li class="nav-link-wrapper"><a href="https://medium.com/@MotivateDesign" target="_blank">Blog</a></li>
-      <!-- <li class="nav-link-wrapper"><a href="/uxhires.html">UX Hires</a></li> -->
+      <li class="nav-link-wrapper"><a href="/uxhires.html">UX Hires</a></li>
       <li class="nav-link-wrapper"><a href="/contact.html">Contact</a></li>
     </ul>
   </div>

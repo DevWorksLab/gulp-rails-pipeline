@@ -1,21 +1,13 @@
-{% include "partials/_head.html" %}
+<%- content_for :page_title do %>UxHires<%- end %>
 
-  <title>UX Hires</title>
-  <meta name="description" content="">
+<%- content_for :meta_desc do %>Through research, design and staffing, we work with clients to solve brand, product or service problems and create delightful user experiences.<%- end %>
 
-</head>
-	<body id="home">
-		<!--[if lt IE 8]>
-    <p class="browserupgrade">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
-    <![endif]-->
+<%- content_for :body_id do %>home<%- end %>
 
-    <div class="container">
-
-      <section id="uxhires1">
-        {% include "partials/_nav.html" %}
+<%- content_for :section_id do %>uxhires1<%- end %>
         
         <div class="logo-wrapper">
-          <img src="images/uxhires/uxhireslogo.svg" alt="UX Hires Logo">
+          <%= image_tag gulp_asset_path("/images/uxhires/uxhireslogo.svg"), alt: "ux hires logo" %>
         </div>
 
         <div class="heading">
@@ -26,7 +18,7 @@
         </div>
         <div class="arrow-container m-top">
           <a href="#uxhires2">
-            <img src="/images/misc/arrows/arrow.svg", class="h-arrow animated bounce infinite", alt="Down arrow">
+            <%= image_tag gulp_asset_path("/images/misc/arrows/arrow.svg"), class: "h-arrow animated bounce infinite", alt: "Down arrow" %>
           </a>
         </div>
       </section>
@@ -44,7 +36,7 @@
           <h2 class="green-lead m-bottom">We specialize in hiring UX professionals at any level
           </h2>
           <div class="uxwrapper">
-            <img src="images/uxhires/ux-designers.png" alt="" class="ux-img">
+            <%= image_tag gulp_asset_path("/images/uxhires/ux-designers.png"), class: "ux-img", alt: "ux-img" %>
             <div class="ux-head">
               UX Designer
             </div>
@@ -54,7 +46,7 @@
             </div>
           </div>
           <div class="uxwrapper">
-            <img src="images/uxhires/ux-researchers.png" alt="" class="ux-img">
+            <%= image_tag gulp_asset_path("/images/uxhires/ux-researchers.png"), class: "ux-img", alt: "ux-img" %>
             <div class="ux-head">
               UX Researcher
             </div>
@@ -64,7 +56,7 @@
             </div>
           </div>
           <div class="uxwrapper">
-            <img src="images/uxhires/ui-designers.png" alt="" class="ux-img">
+            <%= image_tag gulp_asset_path("/images/uxhires/ui-designers.png"), class: "ux-img", alt: "ux-img" %>
             <div class="ux-head">
               Visual/UI Designer
             </div>
@@ -90,7 +82,7 @@
         </div>
 
         <div class="image-wrap">
-          <img class="hidden-load wp4" src="images/uxhires/briefcase.png" alt="">
+          <%= image_tag gulp_asset_path("/images/uxhires/briefcase.png"), class: "hidden-load wp4", alt: "ux-img" %>
         </div>
       </section>
 
@@ -103,7 +95,7 @@
             <p>
               Suzanne Logan, Sr. Manager of Corporate Recruiting
             </p>
-            <img src="images/uxhires/yodle.png" alt="">
+            <%= image_tag gulp_asset_path("/images/uxhires/yodle.png")%>
           </div>
         </div>
       </section>
@@ -122,7 +114,7 @@
         </div>
 
         <div class="image-wrap">
-          <img class="hidden-load wp6" src="images/uxhires/find-talent.png" alt="">
+          <%= image_tag gulp_asset_path("/images/uxhires/find-talent.png")%>
         </div>
         
       </section>
@@ -204,6 +196,5 @@
           </div>
         </div>
       </section>
-    </div>
+    
 
-{% include "partials/_foot.html" %}
