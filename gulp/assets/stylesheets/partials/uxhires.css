@@ -9,6 +9,11 @@
 	background-size: cover;
 	min-height: 600px;
 
+	&.index {
+		background: #8AD562;
+		height: 100vh;
+	}
+
 	.logo-wrapper {
 		width: 100%;
 		margin-top: 12%;
@@ -337,6 +342,81 @@
   }
 }
 
+
+//UX hires jobs
+#uxhires-jobs {
+	
+	.nav-toggle span, .nav-toggle span:after, .nav-toggle span:before {
+    background: $white;
+  }
+
+  nav li>a:before {
+  	background-color: #fff;
+  }
+
+	#uxhires-jobs-wrapper {
+		#uxhires-jobs1 {
+			background: #8AD562;
+			height: 100%;
+			width: 100%;
+			position: relative;
+			text-align: center;
+			min-height: 600px;
+			margin: -30px 0;
+
+			.logo-wrapper {
+				width: 100%;
+				margin-top: 12%;
+				padding-bottom: 2rem;
+			}
+
+			.view-jobs {
+				display: block;
+				height: 180px;
+				padding-top: 4rem;
+				margin-top: 10rem;
+				background: #F6F6F6;
+
+				.nav-l {
+					width: 60%;
+					height: 100%;
+					float: left;
+					padding-top: 3.5rem;
+				}
+
+				.nav-r {
+					width: 40%;
+					height: 100%;
+					float: right;
+					padding-top: 3.5rem;
+				}
+
+				.clear {
+					clear: both;
+				}
+
+				a {
+					font-weight: 500;
+					font-size: 16px;
+				}
+
+				.p-right {
+					padding-right: 5rem;
+				}
+			}
+		}
+
+		#uxhires-jobs2 {
+			height: 1000px;
+			padding-top: 3rem;
+			background: white;
+
+
+
+
+		}
+	}
+}
 
 
 
