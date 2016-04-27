@@ -354,6 +354,12 @@
   	background-color: #fff;
   }
 
+  p {
+    font-family: "Sentinel A", "Sentinel B";
+    font-size: 20px;
+    line-height: 37px;
+  }
+
 	#uxhires-jobs-wrapper {
 		#uxhires-jobs1 {
 			background: #8AD562;
@@ -398,6 +404,7 @@
 				a {
 					font-weight: 500;
 					font-size: 16px;
+					color: rgba(0, 0, 0, 0.65);
 				}
 
 				.p-right {
@@ -407,13 +414,51 @@
 		}
 
 		#uxhires-jobs2 {
-			height: 1000px;
-			padding-top: 3rem;
+			padding: 10rem 0;
 			background: white;
 
+			.page-center {
+				h1 {
+					color: #9CDB76;
+					font-size: 22px;
+				}
+				h3 {
+					font-size: 16px;
+				}
+				h5 {
+					color: #6A8D54;
+					font-size: 14px;
+				}
 
+				ul {
+					li {
+						font-size: 14px;
+					}
+				}
 
+				button {
+					outline: none;
+					border: none;
+					background: #8AD562;
+					color: white;
+					font-weight: 700;
+					font-size: 14px;
+					padding: 15px 20px;
+					border-radius: 3px;
+					margin-top: 3rem;
+				}
+			}
+		}
+		
+		.more-roles-wrapper {
+			width: 100%;
+			background: #486F34;
 
+			.more-roles {
+				overflow: hidden;
+				width: 75%;
+				margin: 0 auto;
+			}
 		}
 	}
 }
