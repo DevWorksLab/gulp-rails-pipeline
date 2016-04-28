@@ -17,7 +17,10 @@ Rails.application.routes.draw do
 
   namespace :uxhires do
     root 'jobs#uxhires'
-    resources :jobs 
+    resources :jobs do
+      get 'apply', to: 'jobs#job_app', as: :apply
+    end
+
   end
 
 end
