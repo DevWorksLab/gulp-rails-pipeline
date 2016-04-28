@@ -440,39 +440,36 @@
 			padding: 10rem 0;
 			background: white;
 
-			.page-center {
-				max-width: 80%;
+			h1 {
+				color: #9CDB76;
+				font-size: 22px;
+			}
+			h3 {
+				font-size: 16px;
+			}
+			h5 {
+				color: #6A8D54;
+				font-size: 14px;
+			}
 
-				h1 {
-					color: #9CDB76;
-					font-size: 22px;
-				}
-				h3 {
-					font-size: 16px;
-				}
-				h5 {
-					color: #6A8D54;
+			ul {
+				li {
 					font-size: 14px;
-				}
-
-				ul {
-					li {
-						font-size: 14px;
-					}
-				}
-
-				button {
-					outline: none;
-					border: none;
-					background: #8AD562;
-					color: white;
-					font-weight: 700;
-					font-size: 14px;
-					padding: 15px 20px;
-					border-radius: 3px;
-					margin-top: 3rem;
 				}
 			}
+
+			button {
+				outline: none;
+				border: none;
+				background: #8AD562;
+				color: white;
+				font-weight: 700;
+				font-size: 14px;
+				padding: 15px 20px;
+				border-radius: 3px;
+				margin-top: 3rem;
+			}
+			
 		}
 
 		.more-roles {
