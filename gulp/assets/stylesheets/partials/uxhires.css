@@ -41,6 +41,10 @@
 #uxhires2 {
 	height: 650px;
 	padding-top: 10%;
+
+	&.white {
+		background: #fff;
+	}
 }
 
 .section-center {
@@ -556,8 +560,8 @@
 				}
 
 				.select-wrapper {
-					background: white url(http://i62.tinypic.com/15xvbd5.png) no-repeat 96% 0;
-					height: 29px;
+					background: white url(http://i62.tinypic.com/15xvbd5.png) no-repeat 96% 4px;
+					height: 40px;
 					overflow: hidden;
 					width: 240px;
 					-webkit-border-radius: 5px;
@@ -572,9 +576,10 @@
 						background: transparent;
 						border: none;
 						font-size: 14px;
-						height: 29px;
+						height: 40px;
 						padding: 5px;
 						width: 268px;
+						color: rgba(0, 0, 0, 0.65);
 					}
 				}
 
