@@ -403,14 +403,14 @@
 				background: #F6F6F6;
 
 				.nav-l {
-					width: 60%;
+					width: 42%;
 					height: 100%;
 					float: left;
 					padding-top: 3.5rem;
 				}
 
 				.nav-r {
-					width: 40%;
+					width: 30%;
 					height: 100%;
 					float: right;
 					padding-top: 3.5rem;
@@ -437,6 +437,8 @@
 			background: white;
 
 			.page-center {
+				max-width: 80%;
+
 				h1 {
 					color: #9CDB76;
 					font-size: 22px;
@@ -483,7 +485,7 @@
 
 			.right {
 				float: right;
-				width: 50%;
+				width: 45%;
 				text-align: center;
 				padding-top: 2rem;
 			}
@@ -533,7 +535,7 @@
 					height: 100%;
 
 					p {
-						padding-left: 3rem;
+						padding-left: 6.5rem;
 						font-weight: 500;
 						font-size: 20px;
 					}
