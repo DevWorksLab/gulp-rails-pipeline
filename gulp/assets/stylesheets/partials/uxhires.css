@@ -482,14 +482,14 @@
 
 			.left {
 				float: left;
-				width: 50%;
+				width: 52%;
 				text-align: center;
 				padding-top: 2rem;
 			}
 
 			.right {
 				float: right;
-				width: 50%;
+				width: 45%;
 				text-align: center;
 				padding-top: 2rem;
 			}
@@ -541,7 +541,7 @@
 					height: 100%;
 
 					p {
-						padding-left: 2.5rem;
+						padding-left: 6rem;
 						font-weight: 500;
 						font-size: 20px;
 					}
