@@ -17,7 +17,7 @@ Rails.application.routes.draw do
 
   namespace :uxhires do
     root 'jobs#uxhires'
-    resources :jobs
+    resources :jobs 
   end
 
 end
