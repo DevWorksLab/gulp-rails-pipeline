@@ -241,6 +241,10 @@
 	padding-top: 8%;
 	position: relative;
 
+	&.white {
+		background: #fff;
+	}
+
 	h2 {
 		font-size: 4rem;
 		color: #787574;
@@ -252,6 +256,10 @@
 		overflow: hidden; 
 		position: relative;
 		height: 35rem;
+
+		&.visible {
+			overflow: visible;
+		}
 
 		.related-box {
 			width: 33.333333%;
@@ -272,6 +280,15 @@
 				background-repeat: no-repeat;
 				background-size: cover;
 				background-position: 0 -75px;
+			}
+
+			&.fourth {
+				background: #ccc;
+			}
+
+			&.fifth {
+				background: #eee;
+				margin-bottom: 15rem;
 			}
 
 			p {
@@ -361,6 +378,8 @@
   }
 
 	#uxhires-jobs-wrapper {
+		background: #F9F9F9;
+
 		#uxhires-jobs1 {
 			background: #8AD562;
 			height: 100%;
@@ -449,15 +468,76 @@
 				}
 			}
 		}
-		
-		.more-roles-wrapper {
-			width: 100%;
-			background: #486F34;
 
-			.more-roles {
-				overflow: hidden;
-				width: 75%;
-				margin: 0 auto;
+		.more-roles {
+			overflow: hidden;
+			background: #486F34;
+			height: 60px;
+
+			.left {
+				float: left;
+				width: 35%;
+				text-align: center;
+				padding-top: 2rem;
+			}
+
+			.right {
+				float: right;
+				width: 50%;
+				text-align: center;
+				padding-top: 2rem;
+			}
+
+			a {
+				color: white;
+				font-weight: 600;
+				font-size: 16px;
+			}
+		}
+
+		#uxhires-jobs3 {
+			.job-wrapper {
+				height: 350px;
+				background: #fff;
+
+				&:nth-child(even) {
+					background: #F9F9F9;
+				}
+			
+				.role {
+					float: left;
+					width: 70%;
+					padding-left: 10%;
+					padding-top: 5rem;
+					height: 100%;
+
+					h3 {
+						font-size: 22px;
+						font-weight: 500;
+					}
+
+					p {
+						margin-top: 10px;
+					}
+
+					a {
+						text-decoration: underline;
+						font-weight: 700;
+					}
+				}
+
+				.loc {
+					float: right;
+					width: 30%;
+					padding-top: 5rem;
+					height: 100%;
+
+					p {
+						padding-left: 3rem;
+						font-weight: 500;
+						font-size: 20px;
+					}
+				}
 			}
 		}
 	}
