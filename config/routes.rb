@@ -4,8 +4,8 @@ Rails.application.routes.draw do
   get 'about', to: 'public#about', as: :about
   get 'resources', to: 'public#resources', as: :resources
   get 'contact', to: 'public#contact', as: :contact
-  resources :people, only: [:index, :show]
   get '/people/mona', to: 'people#mona', as: :mona_path
+  resources :people, only: [:index, :show]
 
 
   namespace :admin do
