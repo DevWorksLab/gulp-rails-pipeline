@@ -687,12 +687,6 @@
 }
 
 
-
-
-
-
-
-
 @media screen and (min-width: 601px) and (max-width: 1150px) {
 
 
@@ -701,6 +695,78 @@
 
 
 @media screen and (max-width:600px) {
+
+  /*uxhires sub-nav links*/
+  #uxhires-jobs-wrapper {
+    #uxhires-jobs1 {
+      .view-jobs {
+        .nav-l, .nav-r {
+          float: none !important;
+          width: 100% !important;
+        }
+
+        .nav-l {
+          height: auto !important;
+          padding-top: 0 !important;
+        }
+      }
+    }
+
+    #filter {
+      height: auto !important;
+      padding: 1rem 0 3rem !important;
+      text-align: center !important;
+
+      .select-wrapper {
+        margin-right: 0 !important;
+      }
+
+      button {
+        margin-left: 0 !important;
+        margin-top: 1rem !important;
+        width: 24rem !important;
+      }
+
+      input {
+        width: 24rem !important;
+        margin-top: 0 !important;
+      }
+    }
+
+    #uxhires-jobs3 {
+      .job-wrapper {
+        height: auto !important;
+
+        .role {
+          padding: 1rem !important;
+          width: 60% !important;
+        }
+
+        .loc {
+          width: 35% !important;
+          padding-top: 1rem !important;
+
+          p {
+            padding: 0 !important;
+          }
+        }
+      }
+    }
+
+    .more-roles {
+      height: 85px !important;
+    }
+
+    #uxhires-jobs2 {
+      .form-wrapper {
+        .ninety {
+          width: 90% !important;
+        }
+      }
+    }
+
+
+  }
 
 
   .logo-wrapper {
@@ -839,3 +905,19 @@
   }
 
 }
+
+@media screen and (max-width: 1215px) {
+  #uxhires-jobs3 {
+    .job-wrapper {
+      height: auto !important;
+    }
+  }
+}
+
+
+
+
+
+
+
+

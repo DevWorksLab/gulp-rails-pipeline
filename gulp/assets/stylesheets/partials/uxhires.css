@@ -458,6 +458,23 @@
 				}
 			}
 
+			label {
+				font-size: 14px;
+			}
+
+			input[type="file"] {
+				font-size: 14px;
+				font-weight: 300;
+
+				&.margin-b {
+					margin-bottom: 10px;
+				}
+			}
+
+			input[type="radio"] {
+				margin-bottom: 10px;
+			}
+
 			button {
 				outline: none;
 				border: none;
@@ -468,6 +485,27 @@
 				padding: 15px 20px;
 				border-radius: 3px;
 				margin-top: 3rem;
+			}
+
+			.form-wrapper {
+				width: 50%;
+
+				input[type="text"] {
+					padding: 5px 10px;
+					font-size: 16px;
+					border-radius: 3px;
+					border: 1px solid #ccc;
+					margin-bottom: 10px;
+					width: 44%;
+
+					&.margin-r {
+						margin-right: 5px;
+					}
+
+					&.full {
+						width: 90%;
+					}
+				}
 			}
 			
 		}
@@ -482,6 +520,10 @@
 				width: 52%;
 				text-align: center;
 				padding-top: 2rem;
+
+				&.less {
+					width: 49%;
+				}
 			}
 
 			.right {
@@ -512,7 +554,7 @@
 				.role {
 					float: left;
 					width: 70%;
-					padding-left: 20%;
+					padding-left: 18.5%;
 					padding-top: 5rem;
 					height: 100%;
 
@@ -556,7 +598,7 @@
 			}
 
 			.select-wrapper {
-				background: white url(http://i62.tinypic.com/15xvbd5.png) no-repeat 96% 4px;
+				background: white url(/assets/images/uxhires/down-arrow.png) no-repeat 94% 13px;
 				height: 40px;
 				overflow: hidden;
 				width: 240px;
@@ -572,6 +614,7 @@
 					background: transparent;
 					border: none;
 					font-size: 14px;
+					font-weight: 500;
 					height: 40px;
 					padding: 5px;
 					width: 268px;
@@ -581,7 +624,7 @@
 
 			input {
 				margin-top: 2rem;
-				width: 58rem;
+				width: 42rem;
 				padding: 10px;
 				border-radius: 3px;
 				outline: none;
