@@ -12,4 +12,8 @@ class Uxhires::JobsController < ApplicationController
 
   end
 
+  def job_app
+
+  end
+
 end

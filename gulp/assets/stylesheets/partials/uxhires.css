@@ -9,6 +9,11 @@
 	background-size: cover;
 	min-height: 600px;
 
+	&.index {
+		background: #8AD562;
+		height: 100vh;
+	}
+
 	.logo-wrapper {
 		width: 100%;
 		margin-top: 12%;
@@ -36,6 +41,10 @@
 #uxhires2 {
 	height: 650px;
 	padding-top: 10%;
+
+	&.white {
+		background: #fff;
+	}
 }
 
 .section-center {
@@ -236,6 +245,10 @@
 	padding-top: 8%;
 	position: relative;
 
+	&.white {
+		background: #fff;
+	}
+
 	h2 {
 		font-size: 4rem;
 		color: #787574;
@@ -247,6 +260,10 @@
 		overflow: hidden; 
 		position: relative;
 		height: 35rem;
+
+		&.visible {
+			overflow: visible;
+		}
 
 		.related-box {
 			width: 33.333333%;
@@ -267,6 +284,15 @@
 				background-repeat: no-repeat;
 				background-size: cover;
 				background-position: 0 -75px;
+			}
+
+			&.fourth {
+				background: #ccc;
+			}
+
+			&.fifth {
+				background: #eee;
+				margin-bottom: 15rem;
 			}
 
 			p {
@@ -337,6 +363,252 @@
   }
 }
 
+
+//UX hires jobs
+#uxhires-jobs {
+	
+	.nav-toggle span, .nav-toggle span:after, .nav-toggle span:before {
+    background: $white;
+  }
+
+  nav li>a:before {
+  	background-color: #fff;
+  }
+
+  p {
+    font-family: "Sentinel A", "Sentinel B";
+    font-size: 20px;
+    line-height: 37px;
+  }
+
+	#uxhires-jobs-wrapper {
+		background: #F9F9F9;
+
+		#uxhires-jobs1 {
+			background: #8AD562;
+			height: 100%;
+			width: 100%;
+			position: relative;
+			text-align: center;
+			min-height: 600px;
+			margin: -30px 0;
+
+			.logo-wrapper {
+				width: 100%;
+				margin-top: 12%;
+				padding-bottom: 2rem;
+			}
+
+			.view-jobs {
+				display: block;
+				height: 180px;
+				padding-top: 4rem;
+				margin-top: 10rem;
+				background: #F6F6F6;
+
+				.nav-l {
+					width: 50%;
+					height: 100%;
+					float: left;
+					padding-top: 3.5rem;
+				}
+
+				.nav-r {
+					width: 50%;
+					height: 100%;
+					float: right;
+					padding-top: 3.5rem;
+				}
+
+				.clear {
+					clear: both;
+				}
+
+				a {
+					font-weight: 500;
+					font-size: 16px;
+					color: rgba(0, 0, 0, 0.65);
+				}
+
+				.p-right {
+					padding-right: 5rem;
+				}
+			}
+		}
+
+		#uxhires-jobs2 {
+			padding: 10rem 0;
+			background: white;
+
+			h1 {
+				color: #9CDB76;
+				font-size: 22px;
+			}
+			h3 {
+				font-size: 16px;
+			}
+			h5 {
+				color: #6A8D54;
+				font-size: 14px;
+			}
+
+			ul {
+				li {
+					font-size: 14px;
+				}
+			}
+
+			button {
+				outline: none;
+				border: none;
+				background: #8AD562;
+				color: white;
+				font-weight: 700;
+				font-size: 14px;
+				padding: 15px 20px;
+				border-radius: 3px;
+				margin-top: 3rem;
+			}
+			
+		}
+
+		.more-roles {
+			overflow: hidden;
+			background: #486F34;
+			height: 60px;
+
+			.left {
+				float: left;
+				width: 52%;
+				text-align: center;
+				padding-top: 2rem;
+			}
+
+			.right {
+				float: right;
+				width: 45%;
+				text-align: center;
+				padding-top: 2rem;
+			}
+
+			a {
+				color: white;
+				font-weight: 600;
+				font-size: 16px;
+			}
+		}
+
+		#uxhires-jobs3 {
+			background: #fff;
+
+			.job-wrapper {
+				height: 350px;
+				background: #fff;
+
+				&:nth-child(even) {
+					background: #F9F9F9;
+				}
+			
+				.role {
+					float: left;
+					width: 70%;
+					padding-left: 20%;
+					padding-top: 5rem;
+					height: 100%;
+
+					h3 {
+						font-size: 22px;
+						font-weight: 500;
+					}
+
+					p {
+						margin-top: 10px;
+					}
+
+					a {
+						text-decoration: underline;
+						font-weight: 700;
+					}
+				}
+
+				.loc {
+					float: right;
+					width: 30%;
+					padding-top: 5rem;
+					height: 100%;
+
+					p {
+						padding-left: 6rem;
+						font-weight: 500;
+						font-size: 20px;
+					}
+				}
+			}
+		}
+		
+		#filter {
+			height: 300px;
+			background: #F6F6F6;
+			padding-top: 3.5rem;
+
+			h3 {
+				font-size: 16px;
+			}
+
+			.select-wrapper {
+				background: white url(http://i62.tinypic.com/15xvbd5.png) no-repeat 96% 4px;
+				height: 40px;
+				overflow: hidden;
+				width: 240px;
+				-webkit-border-radius: 5px;
+				-moz-border-radius: 5px;
+				border-radius: 5px;
+				display: inline-block;
+				color: rgba(0,0,0,0.85);
+				margin-right: 3rem;
+				border: 1px solid #ccc;
+
+				select {
+					background: transparent;
+					border: none;
+					font-size: 14px;
+					height: 40px;
+					padding: 5px;
+					width: 268px;
+					color: rgba(0, 0, 0, 0.65);
+				}
+			}
+
+			input {
+				margin-top: 2rem;
+				width: 58rem;
+				padding: 10px;
+				border-radius: 3px;
+				outline: none;
+				border: 1px solid #ccc;
+				color: rgba(0, 0, 0, 0.8);
+				font-size: 16px;
+			}
+
+			button {
+				padding: 10px 20px;
+				background: #8AD562;
+				color: white;
+				outline: none;
+				border: 1px solid #ccc;
+				border-radius: 3px;
+				font-size: 16px;
+				font-weight: 600;
+				margin-left: -5px;
+			}
+		}
+
+
+
+
+
+	}
+}
 
 
 
