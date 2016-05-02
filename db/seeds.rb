@@ -8,5 +8,6 @@
 
 Job.destroy_all
 
-cats = CatsOne.new(options: { page: 1 })
-cats.get_jobs
+Job.get_jobs
+
+Job.update_descriptions
