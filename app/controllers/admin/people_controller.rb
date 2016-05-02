@@ -29,11 +29,17 @@ class Admin::PeopleController < AdminController
   end
 
   def update
-
+    if @person.update(person_params)
+      flash[:notice] = "#{@person.full_name} has been succesfully updated"
+      redirect_to admin_people_path
+    else
+      render :edit
+    end
   end
 
   def destroy
-
+    @person.destroy
+    redirect_to admin_people_path
   end
 
   def toggle_activation

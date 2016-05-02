@@ -10,6 +10,7 @@ class Person < ActiveRecord::Base
 
   mount_uploader :profile_pic, AvatarUploader
   mount_uploader :header_pic, AvatarUploader
+  mount_uploader :other_image, AvatarUploader
   mount_uploader :skill_one_icon, IconUploader
   mount_uploader :skill_two_icon, IconUploader
   mount_uploader :skill_three_icon, IconUploader
