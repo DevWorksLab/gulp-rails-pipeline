@@ -1,0 +1,52 @@
+<%- content_for :page_title do %><%= @person.first_name %> <%= @person.last_name %><%- end %>
+
+<%- content_for :meta_desc do %><%= @person.first_name %> <%= @person.last_name %>, <%= @person.title %><%- end %>
+
+<%- content_for :body_id do %>bio<%- end %>
+
+<%- content_for :section_id do %><%= @person.first_name %>1<%- end %>
+
+<%- content_for :section_image do %><%= @person.header_pic.url %><%- end %>
+
+<%- content_for :nav_id do %>nav2<%- end %>
+
+        </section>
+        <h2 class="page-center h-mtop100 gotham-lead h-mbottom100"><%= @person.snippet %></h2>
+        <section id="bio2" class="page-center h-mtop100">
+            <div class="third"><%= image_tag @person.skill_one_icon.url, alt: "" %>
+                <h3><%= @person.skill_one %></h3>
+                <p><%= @person.skill_one_blurb %></p>
+            </div>
+            <div class="third"><%= image_tag @person.skill_two_icon.url, alt: "" %>
+                <h3><%= @person.skill_two %></h3>
+                <p><%= @person.skill_two_blurb %></p>
+            </div>
+            <div class="third"><%= image_tag @person.skill_three_icon.url, alt: "" %>
+                <h3><%= @person.skill_three %></h3>
+                <p><%= @person.skill_three_blurb %></p>
+            </div>
+        </section>
+        <section id="bio3" class="page-center h-mtop100">
+            <%= image_tag gulp_asset_path('/images/people/dan_sennet/danlower.jpg'), alt: "", title: "" %>
+            <h2 class="lead-text"><%= @person.first_name %> <%= @person.last_name %>, <%= @person.title %></h2>
+            <p><%= @person.bio %></p>
+            <div class="grey-social-icon">
+               
+                <%= link_to "mailto:"+ @person.email do %>
+                    <%= image_tag gulp_asset_path('/images/misc/circle_icons/icon_email2.svg'), alt: "Email Icon", width: "20", height: "auto" %>
+                  <%- end %>
+                  <%- if @person.linkedin %>
+                    <%= link_to @person.linkedin, target: "_blank" do %>
+                      <%= image_tag gulp_asset_path('/images/misc/circle_icons/icon_linkedin2.svg'), alt: "Linkedin Icon", width: "20", height: "auto" %>
+                    <%- end %>
+                  <%- end %>
+                  <%- if @person.twitter %>
+                    <%= link_to @person.twitter, target: "_blank" do %>
+                      <%= image_tag gulp_asset_path('/images/misc/circle_icons/icon_twitter2.svg'), alt: "Twitter Icon", width: "20", height: "auto" %>
+                    <%- end %>
+                  <%- end %>
+
+            </div>
+        </section>
+<!--     </div>
+    {% include "partials/_foot2.html" %} -->

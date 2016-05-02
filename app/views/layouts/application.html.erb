@@ -19,7 +19,7 @@
 
   <div class="container hidden">
 
-    <section id="<%= yield :section_id %>" class="<%= yield :section_class %>">
+    <section id="<%= yield :section_id %>" class="<%= yield :section_class %>", style="background-image: url(<%= yield :section_image %>);background-position-y: 74px;background-repeat: no-repeat;height: 600px;background-size: cover;width: 100%;">
 
       <%= render partial: 'shared/nav' %>
 

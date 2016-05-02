@@ -1,11 +1,7 @@
 class PeopleController < ApplicationController
 
   def index
-  end
-
-  def index
-    people_array = Person.active
-    @people = people_array.each_slice(3).to_a
+    @people = Person.active
   end
 
   def show

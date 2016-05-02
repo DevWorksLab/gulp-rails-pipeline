@@ -25,326 +25,48 @@
     <div class="people-image">
       <a href="/people/mona.html">
         <!-- photo -->
-        <img class="persons-photo" src="./images/people/thumbnails/monacircle.png" alt="mona.jpeg">
+        <%= image_tag gulp_asset_path('/images/people/thumbnails/monacircle.png'), class: "persons-photo", alt: "mona" %>
       </a>
     </div>
     <h3>MONA PATEL</h3>
     <p class="small-text"><span>CEO &amp; FOUNDER</span></p>
     <div class="people-icons">
-        <a href="mailto:mona@motivatedesign.com"><img width="20" height="auto" src="/images/misc/circle_icons/icon_email.svg" alt="Email Icon"></a>
-        <a href="https://www.linkedin.com/pub/mona-patel/4/58/2b"><img width="20" height="auto" src="/images/misc/circle_icons/icon_linkedin.svg" alt="linkedin Icon"></a>
-        <a href="https://twitter.com/monapatel"><img width="20" height="auto" src="/images/misc/circle_icons/icon_twitter.svg" alt="Twitter Icon"></a>
+        <a href="mailto:mona@motivatedesign.com"><%= image_tag gulp_asset_path('/images/misc/circle_icons/icon_email.svg'), alt: "Email Icon", width: "20", height: "auto" %></a>
+        <a href="https://www.linkedin.com/pub/mona-patel/4/58/2b"><%= image_tag gulp_asset_path('/images/misc/circle_icons/icon_linkedin.svg'), alt: "Linkedin Icon", width: "20", height: "auto" %></a>
+        <a href="https://twitter.com/monapatel"><%= image_tag gulp_asset_path('/images/misc/circle_icons/icon_twitter.svg'), alt: "Twitter Icon", width: "20", height: "auto" %></a>
     </div>
   </div>
 
-  <!-- <div class="third h-mbottom50">
-    <div class="people-image">
-      <a href="/people.html#comingsoon">
-        <img class="persons-photo" src="./images/people/thumbnails/SP_headshot.png" alt="scottp">
-      </a>
-    </div>
-    <h3>Scott Pobiner</h3>
-    <p class="small-text"><span>Vice President</span></p>
-    <div class="people-icons">
-        <a href="mailto:scott@motivatedesign.com"><img width="20" height="auto" src="/images/misc/circle_icons/icon_email.svg" alt="Email Icon"></a>
-        <a href="#"><img width="20" height="auto" src="/images/misc/circle_icons/icon_linkedin.svg" alt="linkedin Icon"></a>
-    </div>
-  </div> -->
+  <%- @people.each do |person| %>
+    <div class="third h-mbottom50">
+      <div class="people-image">
+        <%= link_to person_path(person) do %>
+          <!-- photo -->
+          <%= image_tag person.profile_pic.url, class: "persons-photo", alt: person.first_name %>
+        <%- end %>
+      </div>
+      <h3><%= person.first_name%> <%= person.last_name%></h3>
+      <p class="small-text"><span><%= person.title%></span></p>
+      <div class="people-icons">
+          <%= link_to "mailto:"+ person.email do %>
+            <%= image_tag gulp_asset_path('/images/misc/circle_icons/icon_email.svg'), alt: "Email Icon", width: "20", height: "auto" %>
+          <%- end %>
+          <%- if person.linkedin %>
+            <%= link_to person.linkedin, target: "_blank" do %>
+              <%= image_tag gulp_asset_path('/images/misc/circle_icons/icon_linkedin.svg'), alt: "Linkedin Icon", width: "20", height: "auto" %>
+            <%- end %>
+          <%- end %>
+          <%- if person.twitter %>
+            <%= link_to person.twitter, target: "_blank" do %>
+              <%= image_tag gulp_asset_path('/images/misc/circle_icons/icon_twitter.svg'), alt: "Twitter Icon", width: "20", height: "auto" %>
+            <%- end %>
+          <%- end %>
 
-          <div class="third h-mbottom50">
-    <div class="people-image">
-      <a href="/people/dan.html">
-        <!-- photo -->
-        <img class="persons-photo" src="./images/people/thumbnails/dan.jpg" alt="Dan">
-      </a>
+      </div>
     </div>
-    <h3>Dan Sennet</h3>
-    <p class="small-text"><span>VP, Finance</span></p>
-    <div class="people-icons">
-        <a href="mailto:dan@motivatedesign.com"><img width="20" height="auto" src="/images/misc/circle_icons/icon_email.svg" alt="Email Icon"></a>
-        <a href="https://www.linkedin.com/in/danielsennet"><img width="20" height="auto" src="/images/misc/circle_icons/icon_linkedin.svg" alt="linkedin Icon"></a>
-        <a href="https://twitter.com/sennetors"><img width="20" height="auto" src="/images/misc/circle_icons/icon_twitter.svg" alt="Twitter Icon"></a>
-    </div>
-  </div>
+  <%- end %>
 
-  <div class="third h-mbottom50">
-    <div class="people-image">
-      <a href="/people/ken.html">
-        <!-- photo -->
-        <img class="persons-photo" src="./images/people/thumbnails/kencircle.png" alt="ken">
-      </a>
-    </div>
-    <h3>Ken Moran</h3>
-    <p class="small-text"><span>VP, Operations</span></p>
-    <div class="people-icons">
-        <a href="mailto:ken@motivatedesign.com"><img width="20" height="auto" src="/images/misc/circle_icons/icon_email.svg" alt="Email Icon"></a>
-        <a href="https://www.linkedin.com/pub/ken-moran/6/921/316"><img width="20" height="auto" src="/images/misc/circle_icons/icon_linkedin.svg" alt="linkedin Icon"></a>
-    </div>
-  </div>
 
-          <div class="third h-mbottom50">
-    <div class="people-image">
-      <a href="/people/scott.html">
-        <!-- photo -->
-        <img class="persons-photo" src="./images/people/thumbnails/scottcircle.png" alt="scott">
-      </a>
-    </div>
-    <h3>SCOTT IVERSON</h3>
-    <p class="small-text"><span>DIRECTOR, CLIENT PARTNERSHIPS</span></p>
-    <div class="people-icons">
-        <a href="mailto:scott@motivatedesign.com"><img width="20" height="auto" src="/images/misc/circle_icons/icon_email.svg" alt="Email Icon"></a>
-        <a href="http://www.linkedin.com/in/scottiverson"><img width="20" height="auto" src="/images/misc/circle_icons/icon_linkedin.svg" alt="linkedin Icon"></a>
-    </div>
-  </div>
-
-  <div class="third h-mbottom50">
-    <div class="people-image">
-      <a href="/people/jack.html">
-        <!-- photo -->
-        <img class="persons-photo" src="./images/people/thumbnails/jackcircle.png" alt="jack">
-      </a>
-    </div>
-    <h3>Jack Cole</h3>
-    <p class="small-text"><span>DIRECTOR, UX DESIGN</span></p>
-    <div class="people-icons">
-        <a href="mailto:jack@motivatedesign.com"><img width="20" height="auto" src="/images/misc/circle_icons/icon_email.svg" alt="Email Icon"></a>
-        <a href="https://www.linkedin.com/pub/jack-cole/8/194/59"><img width="20" height="auto" src="/images/misc/circle_icons/icon_linkedin.svg" alt="linkedin Icon"></a>
-        <a href="https://twitter.com/jackwo14"><img width="20" height="auto" src="/images/misc/circle_icons/icon_twitter.svg" alt="Twitter Icon"></a>
-    </div>
-  </div>
-
-  <div class="third h-mbottom50">
-    <div class="people-image">
-      <a href="/people/christo.html">
-        <!-- photo -->
-        <img class="persons-photo" src="./images/people/thumbnails/christo1.jpg" alt="Christo">
-      </a>
-    </div>
-    <h3>CHRISTO CLAASSENS</h3>
-    <p class="small-text"><span>LEAD UX DESIGNER</span></p>
-    <div class="people-icons">
-        <a href="mailto:christo@motivatedesign.com"><img width="20" height="auto" src="/images/misc/circle_icons/icon_email.svg" alt="Email Icon"></a>
-        <a href="https://www.linkedin.com/in/brolloks"><img width="20" height="auto" src="/images/misc/circle_icons/icon_linkedin.svg" alt="linkedin Icon"></a>
-        <a href="https://twitter.com/brolloks1"><img width="20" height="auto" src="/images/misc/circle_icons/icon_twitter.svg" alt="Twitter Icon"></a>
-    </div>
-  </div>
-
-  <div class="third h-mbottom50">
-    <div class="people-image">
-      <a href="/people.html#comingsoon">
-        <!-- photo -->
-        <img class="persons-photo" src="./images/people/thumbnails/tomas_headshot.png" alt="tomas">
-      </a>
-    </div>
-    <h3>TOMAS CHRISTENSEN</h3>
-    <p class="small-text"><span>LEAD UX DESIGNER</span></p>
-    <div class="people-icons">
-        <a href="mailto:tomas@motivatedesign.com"><img width="20" height="auto" src="/images/misc/circle_icons/icon_email.svg" alt="Email Icon"></a>
-        <a href="https://www.linkedin.com/in/tomaschristensen"><img width="20" height="auto" src="/images/misc/circle_icons/icon_linkedin.svg" alt="linkedin Icon"></a>
-    </div>
-  </div>
-
-  <div class="third h-mbottom50">
-    <div class="people-image">
-      <a href="/people/anne.html">
-        <!-- photo -->
-        <img class="persons-photo" src="./images/people/thumbnails/annecircle.png" alt="anne">
-      </a>
-    </div>
-    <h3>ANNE BORREMANS</h3>
-    <p class="small-text"><span>SENIOR VISUAL DESIGNER</span></p>
-    <div class="people-icons">
-        <a href="mailto:anne@motivatedesign.com"><img width="20" height="auto" src="/images/misc/circle_icons/icon_email.svg" alt="Email Icon"></a>
-        <a href="https://www.linkedin.com/in/anneborremans"><img width="20" height="auto" src="/images/misc/circle_icons/icon_linkedin.svg" alt="linkedin Icon"></a>
-
-    </div>
-  </div>
-
-  <div class="third h-mbottom50">
-    <div class="people-image">
-      <a href="/people.html#comingsoon">
-        <!-- photo -->
-        <img class="persons-photo" src="./images/people/thumbnails/jessicacircle.png" alt="jessica">
-      </a>
-    </div>
-    <h3>JESSICA BATES</h3>
-    <p class="small-text"><span>DIRECTOR OF RESEARCH PRACTICE</span></p>
-    <div class="people-icons">
-        <a href="mailto:jessica@motivatedesign.com"><img width="20" height="auto" src="/images/misc/circle_icons/icon_email.svg" alt="Email Icon"></a>
-        <a href="https://www.linkedin.com/pub/jessica-bates/30/4a5/8aa"><img width="20" height="auto" src="/images/misc/circle_icons/icon_linkedin.svg" alt="linkedin Icon"></a>
-    </div>
-  </div>
-
-  <div class="third h-mbottom50">
-    <div class="people-image">
-      <a href="people/matt.html">
-        <!-- photo -->
-        <img class="persons-photo" src="./images/people/thumbnails/mattcircle.png" alt="matt">
-      </a>
-    </div>
-    <h3>MATT KARP</h3>
-    <p class="small-text"><span>SENIOR DESIGN RESEARCHER</span></p>
-    <div class="people-icons">
-        <a href="mailto:dan@motivatedesign.com"><img width="20" height="auto" src="/images/misc/circle_icons/icon_email.svg" alt="Email Icon"></a>
-        <a href="https://www.linkedin.com/in/mattkarp2"><img width="20" height="auto" src="/images/misc/circle_icons/icon_linkedin.svg" alt="linkedin Icon"></a>
-        <a href="https://twitter.com/MattKarpx2"><img width="20" height="auto" src="/images/misc/circle_icons/icon_twitter.svg" alt="Twitter Icon"></a>
-    </div>
-  </div>
-
-  <div class="third h-mbottom50">
-    <div class="people-image">
-      <a href="/people/emily.html">
-        <!-- photo -->
-        <img class="persons-photo" src="./images/people/thumbnails/emilycircle.png" alt="emily">
-      </a>
-    </div>
-    <h3>EMILY CHU</h3>
-    <p class="small-text"><span>SENIOR DESIGN RESEARCHER</span></p>
-    <div class="people-icons">
-        <a href="mailto:emily@motivatedesign.com"><img width="20" height="auto" src="/images/misc/circle_icons/icon_email.svg" alt="Email Icon"></a>
-        <a href="https://www.linkedin.com/in/emchu16"><img width="20" height="auto" src="/images/misc/circle_icons/icon_linkedin.svg" alt="linkedin Icon"></a>
-        <a href="https://twitter.com/EmChu16"><img width="20" height="auto" src="/images/misc/circle_icons/icon_twitter.svg" alt="Twitter Icon"></a>
-    </div>
-  </div>
-
-  <div class="third h-mbottom50">
-    <div class="people-image">
-      <a href="/people/ryan.html">
-        <!-- photo -->
-        <img class="persons-photo" src="./images/people/thumbnails/ryancircle.png" alt="Ryan">
-      </a>
-    </div>
-    <h3>RYAN HORGAN</h3>
-    <p class="small-text"><span>DESIGN RESEARCHER</span></p>
-    <div class="people-icons">
-        <a href="mailto:ryan@motivatedesign.com"><img width="20" height="auto" src="/images/misc/circle_icons/icon_email.svg" alt="Email Icon"></a>
-        <a href="https://www.linkedin.com/in/ryanhorgan"><img width="20" height="auto" src="/images/misc/circle_icons/icon_linkedin.svg" alt="linkedin Icon"></a>
-        <a href="https://twitter.com/ryhorgan"><img width="20" height="auto" src="/images/misc/circle_icons/icon_twitter.svg" alt="Twitter Icon"></a>
-    </div>
-  </div>
-
-  <div class="third h-mbottom50">
-    <div class="people-image">
-      <a href="/people/abigail.html">
-        <!-- photo -->
-        <img class="persons-photo" src="./images/people/thumbnails/abbycircle.png" alt="Abigail">
-      </a>
-    </div>
-    <h3>ABIGAIL MUIR</h3>
-    <p class="small-text"><span>UX DESIGNER</span></p>
-    <div class="people-icons">
-        <a href="mailto:abby@motivatedesign.com"><img width="20" height="auto" src="/images/misc/circle_icons/icon_email.svg" alt="Email Icon"></a>
-        <a href="https://www.linkedin.com/pub/abigail-muir/50/6a/84"><img width="20" height="auto" src="/images/misc/circle_icons/icon_linkedin.svg" alt="linkedin Icon"></a>
-    </div>
-  </div>
-
-  <div class="third h-mbottom50">
-    <div class="people-image">
-      <a href="/people.html#comingsoon">
-        <!-- photo -->
-        <img class="persons-photo" src="./images/people/thumbnails/nickbio.png" alt="Nick">
-      </a>
-    </div>
-    <h3>NICK REITER</h3>
-    <p class="small-text"><span>UX DESIGNER</span></p>
-    <div class="people-icons">
-        <a href="mailto:nick@motivatedesign.com"><img width="20" height="auto" src="/images/misc/circle_icons/icon_email.svg" alt="Email Icon"></a>
-        <a href="https://www.linkedin.com/in/nick-reiter-a0138427"><img width="20" height="auto" src="/images/misc/circle_icons/icon_linkedin.svg" alt="linkedin Icon"></a>
-    </div>
-  </div>
-
-  <div class="third h-mbottom50">
-    <div class="people-image">
-      <a href="/people/sean.html">
-        <!-- photo -->
-        <img class="persons-photo" src="./images/people/thumbnails/SeanCircle.png" alt="Sean">
-      </a>
-    </div>
-    <h3>SEAN ECHEVARRIA</h3>
-    <p class="small-text"><span>MARKETING OPERATIONS MANAGER</span></p>
-    <div class="people-icons">
-        <a href="mailto:sean@motivatedesign.com"><img width="20" height="auto" src="/images/misc/circle_icons/icon_email.svg" alt="Email Icon"></a>
-        <a href="https://www.linkedin.com/in/specheva"><img width="20" height="auto" src="/images/misc/circle_icons/icon_linkedin.svg" alt="linkedin Icon"></a>
-        <a href="https://twitter.com/specheva"><img width="20" height="auto" src="/images/misc/circle_icons/icon_twitter.svg" alt="Twitter Icon"></a>
-    </div>
-  </div>
-
-  <div class="third h-mbottom50">
-    <div class="people-image">
-      <a href="/people.html#comingsoon">
-        <!-- photo -->
-        <img class="persons-photo" src="./images/people/thumbnails/jeannie_headshot.jpg" alt="jean">
-      </a>
-    </div>
-    <h3>JEANNIE KINNETT</h3>
-    <p class="small-text"><span>RESEARCH PRODUCER</span></p>
-    <div class="people-icons">
-        <a href="mailto:jeannie@motivatedesign.com"><img width="20" height="auto" src="/images/misc/circle_icons/icon_email.svg" alt="Email Icon"></a>
-        <a href="https://www.linkedin.com/in/jeanniekinnett"><img width="20" height="auto" src="/images/misc/circle_icons/icon_linkedin.svg" alt="linkedin Icon"></a>
-        <a href="https://twitter.com/hellojean"><img width="20" height="auto" src="/images/misc/circle_icons/icon_twitter.svg" alt="Twitter Icon"></a>
-    </div>
-  </div>
-
-  <div class="third h-mbottom50">
-    <div class="people-image">
-      <a href="/people/leigh.html">
-        <!-- photo -->
-        <img class="persons-photo" src="./images/people/thumbnails/leighcircle.png" alt="leigh">
-      </a>
-    </div>
-    <h3>LEIGH ALTSHULER</h3>
-    <p class="small-text"><span>MARKETING CONTENT MANAGER</span></p>
-    <div class="people-icons">
-        <a href="mailto:leigh@motivatedesign.com"><img width="20" height="auto" src="/images/misc/circle_icons/icon_email.svg" alt="Email Icon"></a>
-    </div>
-  </div>
-
-  <div class="third h-mbottom50">
-    <div class="people-image">
-      <a href="/people/lois.html">
-        <!-- photo -->
-        <img class="persons-photo" src="./images/people/thumbnails/loiscircle.png" alt="lois">
-      </a>
-    </div>
-    <h3>LOIS SIEGEL</h3>
-    <p class="small-text"><span>DIRECTOR, RECRUITING</span></p>
-    <div class="people-icons">
-        <a href="mailto:lois@motivatedesign.com"><img width="20" height="auto" src="/images/misc/circle_icons/icon_email.svg" alt="Email Icon"></a>
-        <a href="https://www.linkedin.com/pub/lois-siegel/1/227/b6"><img width="20" height="auto" src="/images/misc/circle_icons/icon_linkedin.svg" alt="linkedin Icon"></a>
-    </div>
-  </div>
-
-  <div class="third h-mbottom50">
-    <div class="people-image">
-      <a href="/people/jesse.html">
-        <!-- photo -->
-        <img class="persons-photo" src="./images/people/thumbnails/jessecircle.png" alt="jesse">
-      </a>
-    </div>
-    <h3>JESSE MCBRIDE</h3>
-    <p class="small-text"><span>SENIOR UX RECRUITER</span></p>
-    <div class="people-icons">
-        <a href="mailto:jesse@motivatedesign.com"><img width="20" height="auto" src="/images/misc/circle_icons/icon_email.svg" alt="Email Icon"></a>
-        <a href="https://www.linkedin.com/in/jessemcbride"><img width="20" height="auto" src="/images/misc/circle_icons/icon_linkedin.svg" alt="linkedin Icon"></a>
-        <a href="https://twitter.com/jesseuxhires"><img width="20" height="auto" src="/images/misc/circle_icons/icon_twitter.svg" alt="Twitter Icon"></a>
-    </div>
-  </div>
-
-  <div class="third h-mbottom50">
-    <div class="people-image">
-      <a href="/people/kimber.html">
-        <!-- photo -->
-        <img class="persons-photo" src="./images/people/thumbnails/kimberbio.jpg" alt="kimber">
-      </a>
-    </div>
-    <h3>KIMBER GREGORAKIS</h3>
-    <p class="small-text"><span>LEAD BUSINESS ANALYST</span></p>
-    <div class="people-icons">
-        <a href="mailto:kimber@motivatedesign.com"><img width="20" height="auto" src="/images/misc/circle_icons/icon_email.svg" alt="Email Icon"></a>
-        <a href="https://www.linkedin.com/pub/jack-cole/8/194/59"><img width="20" height="auto" src="/images/misc/circle_icons/icon_linkedin.svg" alt="linkedin Icon"></a>
-        <a href="https://twitter.com/jackwo14"><img width="20" height="auto" src="/images/misc/circle_icons/icon_twitter.svg" alt="Twitter Icon"></a>
-    </div>
-  </div>
 
   <!-- <div class="third h-mbottom50">
     <div class="people-image">
