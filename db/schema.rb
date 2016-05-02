@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20160427150404) do
+ActiveRecord::Schema.define(version: 20160502185638) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -28,6 +28,33 @@ ActiveRecord::Schema.define(version: 20160427150404) do
   add_index "friendly_id_slugs", ["slug", "sluggable_type"], name: "index_friendly_id_slugs_on_slug_and_sluggable_type", using: :btree
   add_index "friendly_id_slugs", ["sluggable_id"], name: "index_friendly_id_slugs_on_sluggable_id", using: :btree
   add_index "friendly_id_slugs", ["sluggable_type"], name: "index_friendly_id_slugs_on_sluggable_type", using: :btree
+
+  create_table "jobs", force: :cascade do |t|
+    t.integer  "catsone_id"
+    t.string   "title"
+    t.string   "location"
+    t.text     "description"
+    t.text     "notes"
+    t.integer  "recruiter_id"
+    t.integer  "owner_id"
+    t.string   "category_name"
+    t.boolean  "is_hot"
+    t.date     "start_date"
+    t.string   "salary"
+    t.string   "duration"
+    t.integer  "openings"
+    t.string   "external_id"
+    t.integer  "company_id"
+    t.string   "contact_id"
+    t.integer  "status_id"
+    t.string   "type"
+    t.json     "links"
+    t.json     "embedded"
+    t.string   "status"
+    t.datetime "created_at",    null: false
+    t.datetime "updated_at",    null: false
+    t.string   "company_name"
+  end
 
   create_table "people", force: :cascade do |t|
     t.string   "first_name"
@@ -54,6 +81,7 @@ ActiveRecord::Schema.define(version: 20160427150404) do
     t.string   "skill_two_icon"
     t.string   "skill_three_icon"
     t.string   "slug"
+    t.string   "other_image"
   end
 
   add_index "people", ["slug"], name: "index_people_on_slug", unique: true, using: :btree
