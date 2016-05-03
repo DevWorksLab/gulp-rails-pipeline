@@ -2,7 +2,7 @@ class JobFilter
 
   def initialize(params: nil, jobs: nil)
     @params = params
-    @moms = Job.active
+    @jobs = Job.active
   end
 
   def filter_result
@@ -11,35 +11,35 @@ class JobFilter
     filter_by_role
     filter_by_company_type
     filter_by_description
-    # @moms = @moms("years_experience BETWEEN (?) AND (?)", )
+    # @jobs = @jobs("years_experience BETWEEN (?) AND (?)", )
   end
 
   def filter_by_location
     unless @params[:location].blank?
-      @moms = @moms.where("location LIKE ?", @params[:location] )
+      @jobs = @jobs.where("location LIKE ?", @params[:location] )
     end
-    return @moms
+    return @jobs
   end
 
   def filter_by_role
     unless @params[:role].blank?
-      @moms = @moms.where("title LIKE ?", @params[:role] )
+      @jobs = @jobs.where("title LIKE ?", @params[:role] )
     end
-    return @moms
+    return @jobs
   end
 
   def filter_by_company_type
     unless @params[:company_type].blank?
-      @moms = @moms.where("company_type LIKE ?", @params[:company_type] )
+      @jobs = @jobs.where("company_type LIKE ?", @params[:company_type] )
     end
-    return @moms
+    return @jobs
   end
 
   def filter_by_description
     unless @params[:keywords].blank?
-      @moms = @moms.where("description LIKE ?", @params[:keywords] )
+      @jobs = @jobs.where("description LIKE ?", @params[:keywords] )
     end
-    return @moms
+    return @jobs
   end
 
 end
