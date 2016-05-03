@@ -1,6 +1,6 @@
 class JobFilter
 
-  def initialize(params: nil)
+  def initialize(params: nil, jobs: nil)
     @params = params
     @moms = Job.active
   end
