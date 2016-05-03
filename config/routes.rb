@@ -17,6 +17,7 @@ Rails.application.routes.draw do
 
   namespace :uxhires do
     root 'jobs#uxhires'
+    get '/refine', to: 'jobs#refine', as: :refine
     resources :jobs do
       get 'apply', to: 'jobs#job_app', as: :apply
     end

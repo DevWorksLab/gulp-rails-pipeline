@@ -29,32 +29,23 @@
 
   <section id="filter">
   	<div class="page-center">
-  		<h3>
-  			FILTER BY
-  		</h3>
-  		<div class="select-wrapper">
-	  		<select name="location" id="loc">
-	  			<option value="">
-	  				Location
-	  			</option>
-	  		</select>
-  		</div>
-  		<div class="select-wrapper">
-	  		<select name="type of role" id="type">
-	  			<option value="">
-	  				Type of Role
-	  			</option>
-	  		</select>
-	  	</div>
-	  	<div class="select-wrapper">
-	  		<select name="company type" id="company">
-	  			<option value="">
-	  				Company
-	  			</option>
-	  		</select>
-	  	</div>
-  		<input type="text", placeholder="Keywords">
-  		<button>Search</button>
+			<%= simple_form_for :search, url: uxhires_refine_path, method: "get" do |f| %>
+	  		<h3>
+	  			FILTER BY
+	  		</h3>
+				<div class="select-wrapper">
+					<%= f.input :location, collection: @active.pluck(:location).uniq, prompt: "Location", label: false, input_html: { id: "loc" }%>
+	  		</div>
+	  		<div class="select-wrapper">
+					<%= f.input :role, collection: @active.pluck(:title).uniq, label: false, prompt: "Type of Role", input_html: { id: "type" } %>
+		  	</div>
+		  	<div class="select-wrapper">
+					<%= f.input :type, collection: @active.pluck(:company_type).uniq, label: false, prompt: "Type of Company", input_html: { id: "company" } %>
+		  	</div>
+				<%= f.input :keywords, placeholder: "Keywords", label: false %>
+
+	  		<button>Search</button>
+			<% end %>
   	</div>
   </section>
 
