@@ -4,7 +4,14 @@ class Job < ActiveRecord::Base
 
 
   def self.update_listings
-    cats = CatsOne.new(options: { page: 1 })
+    cats = CatsOne.new(
+      options: {
+        page: 1,
+        display_column: ["id", "title", "description", "is_hot", "company",
+          "type", "tags", "location", "status", "extra_field203722",
+          "extra_field196083", "extra_field196086", "extra_field196089"],
+        rows_per_page: 50 }
+        )
     cats.get_jobs
   end
 

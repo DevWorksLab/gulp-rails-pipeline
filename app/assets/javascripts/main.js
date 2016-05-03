@@ -8,10 +8,15 @@ $(document).ready(function(){
           var target = $(this.hash);
           target = target.length ? target : $('[name=' + this.hash.slice(1) +']');
           if (target.length) {
-            $('html,body').animate({
-              scrollTop: target.offset().top
-            }, 1000);
-            return false;
+            if (target.attr('id') === "job-bar"){
+
+            }
+            else{
+              $('html,body').animate({
+                scrollTop: target.offset().top
+              }, 1000);
+              return false;
+            }
           }
         }
       });
@@ -213,17 +218,17 @@ $(document).ready(function(){
         $('.header-nav').toggleClass('open');
 
       });
-        
-        
+
+
 
     /***************** flex init ******************/
-      
+
           $('.flexslider').flexslider({
           animation: "slide",
-            prevText: "",          
+            prevText: "",
             nextText: ""
       });
-      
+
 
 
     /***************** svg to png ******************/
@@ -231,5 +236,3 @@ $(document).ready(function(){
       svgeezy.init(false, 'png');
 
 });
-
-

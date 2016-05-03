@@ -61,7 +61,6 @@ class CatsOne
     while i < last_page
       @options[:page] = 1 + i
       response = self.class.get("/get_joborders", query: @options)
-      binding.pry
       jobs_arr.push(response["response"]["item"])
       i += 1
     end
@@ -75,6 +74,7 @@ class CatsOne
   def get_job_descriptions
     response = self.class.get("/get_joborder", query: @options)
     jobs = response["response"]["result"]
+    binding.pry
     jobs.each do |job|
       record = Job.find_by_catsone_id(job["id"])
       description = job["description"]
