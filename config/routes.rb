@@ -1,6 +1,7 @@
 Rails.application.routes.draw do
 
   root 'public#index'
+  get 'work', to: 'public#work', as: :work
   get 'about', to: 'public#about', as: :about
   get 'resources', to: 'public#resources', as: :resources
   get 'contact', to: 'public#contact', as: :contact
