@@ -5,7 +5,7 @@
 <%- content_for :body_id do %>home<%- end %>
 
 <%- content_for :section_id do %>uxhires1<%- end %>
-        
+
         <div class="logo-wrapper">
           <%= image_tag gulp_asset_path("/images/uxhires/uxhireslogo.svg"), alt: "ux hires logo" %>
         </div>
@@ -42,7 +42,7 @@
             </div>
             <div class="ux-subhead">
               The architect who creates blueprints for exceptional experiences.
-              <a href="/uxhires/jobs">See openings.</a>
+              <%= link_to "See openings", uxhires_jobs_path %>
             </div>
           </div>
           <div class="uxwrapper">
@@ -52,7 +52,7 @@
             </div>
             <div class="ux-subhead">
               The design archeologist, uncovering user behaviors that power experiences. <br>
-              <a href="/uxhires/jobs">See openings.</a>
+              <%= link_to "See openings", uxhires_jobs_path %>
             </div>
           </div>
           <div class="uxwrapper">
@@ -62,7 +62,7 @@
             </div>
             <div class="ux-subhead">
               The craftsman that realizes the look and feel of a beautiful, intuitive experience.
-              <a href="/uxhires/jobs">See openings.</a>
+              <%= link_to "See openings", uxhires_jobs_path %>
             </div>
           </div>
         </div>
@@ -76,7 +76,7 @@
             </h3>
             <p>
               We match people to places based on experience, personality, and skill. <br>
-              <a href="/uxhires/jobs">See openings.</a>
+              <%= link_to "See openings", uxhires_jobs_path %>
             </p>
           </div>
         </div>
@@ -116,7 +116,7 @@
         <div class="image-wrap">
           <%= image_tag gulp_asset_path("/images/uxhires/find-talent.png"), class: "hidden-load wp6"%>
         </div>
-        
+
       </section>
 
 
@@ -140,22 +140,25 @@
             Related Links
           </h2>
           <div class="related-container">
+            <%= link_to uxhires_job_path(@featured) do %>
             <div class="related-box first">
-              <p>
-                Open Position
-              </p>
-              <h3>
-                Senior UX <br>
-                Researcher (SF)
-              </h3>
-            </div>
+                <p>
+                  Open Position
+                </p>
+                <h3>
+                  <%= @featured.title %>
+                  <br>
+                  <%= @featured.location %>
+                </h3>
+              </div>
+            <% end %>
             <div class="related-box second">
               <p>
                 Article
               </p>
               <h3>
                 How I accidentally <br>
-                became a UX <br> 
+                became a UX <br>
                 Designer
               </h3>
             </div>
@@ -176,25 +179,25 @@
       <section id="uxhires9">
         <div class="page-center p-top">
           <h3>More open positions</h3>
-          <div class="job-listing">
-            <h1>
-              Interaction/Motion Designer
-            </h1>
-            <p>
-              We are honored to represent our client, an emerging start-up who’s just launched (beta) video product is already garnering strong positive attention, in their search for an interaction designer. They are seeking a highly detailed-oriented designer who cares about every action a consumer takes when they engage with their product, from log-in to execution.
-              <a href="#">More info.</a>
-            </p>
-          </div>
-          <div class="job-listing">
+          <% @open.each do |posting| %>
+            <div class="job-listing">
+              <h1>
+                <%= posting.title %>
+              </h1>
+              <p>
+                <%= strip_tags(posting.description).truncate(300) if posting.description %>
+                <%= link_to "More info.", uxhires_job_path(posting) %>
+              </p>
+            </div>
+          <% end %>
+          <!-- <div class="job-listing">
             <h1>
               Senior UX Researcher
             </h1>
             <p>
-              Our client, (a successful 12 year-old SaaS based company located inside San Francisco), is seeking a User Experience Researcher to join their team and help them bring world-class user experiences to their customers. They have over 50 million users in countries around the world and are just getting started! 
+              Our client, (a successful 12 year-old SaaS based company located inside San Francisco), is seeking a User Experience Researcher to join their team and help them bring world-class user experiences to their customers. They have over 50 million users in countries around the world and are just getting started!
               <a href="#">More info.</a>
             </p>
-          </div>
+          </div> -->
         </div>
       </section>
-    
-

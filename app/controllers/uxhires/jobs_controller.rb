@@ -1,5 +1,5 @@
 class Uxhires::JobsController < ApplicationController
-  before_action :active_jobs, only: [:index, :refine]
+  before_action :active_jobs, only: [:uxhires, :index, :refine]
   before_action :set_nested_job, only: [:job_app, :apply]
 
   def uxhires
