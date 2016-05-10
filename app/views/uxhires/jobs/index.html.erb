@@ -9,7 +9,7 @@
 		</div>
 		<div class="view-jobs">
 			<div class="nav-l">
-				<a href="#">VIEW ALL JOBS</a>
+				<%= link_to "VIEW ALL JOBS", uxhires_jobs_path %>
 			</div>
 			<div class="nav-r">
 				<a href="#", class="p-right">REGISTER</a>
@@ -34,15 +34,15 @@
 	  			FILTER BY
 	  		</h3>
 				<div class="select-wrapper">
-					<%= f.input :location, collection: @active.pluck(:location).uniq, prompt: "Location", label: false, input_html: { id: "loc" }%>
+					<%= f.input :location, collection: @active.pluck(:location).uniq, prompt: "Location", label: false, required: false, input_html: { id: "loc" }%>
 	  		</div>
 	  		<div class="select-wrapper">
-					<%= f.input :role, collection: @active.pluck(:title).uniq, label: false, prompt: "Type of Role", input_html: { id: "type" } %>
+					<%= f.input :role, collection: @active.pluck(:title).uniq, label: false, prompt: "Type of Role", required: false, input_html: { id: "type" } %>
 		  	</div>
 		  	<div class="select-wrapper">
-					<%= f.input :type, collection: @active.pluck(:company_type).uniq, label: false, prompt: "Type of Company", input_html: { id: "company" } %>
+					<%= f.input :type, collection: @active.pluck(:company_type).uniq, label: false, prompt: "Type of Company", required: false, input_html: { id: "company" } %>
 		  	</div>
-				<%= f.input :keywords, placeholder: "Keywords", label: false %>
+				<%= f.input :keywords, placeholder: "Keywords", required: false, label: false %>
 
 	  		<button>Search</button>
 			<% end %>

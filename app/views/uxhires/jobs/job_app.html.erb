@@ -42,7 +42,11 @@
 						<% if @comment %>
 							<p><%= @comment %></p>
 						<% end %>
-						<%= f.input @name.to_sym, as: @input.to_sym, label: false, required: @required %>
+						<% if @input == "check_boxes" %>
+							<%= f.input @name.to_sym, as: @input.to_sym, collection: @answers, label: false %>
+						<% else %>
+							<%= f.input @name.to_sym, as: @input.to_sym, label: false, required: @required %>
+						<% end %>
 					</div>
 				<% end %>
 				<div class="submit-wrapper">

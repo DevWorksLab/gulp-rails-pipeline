@@ -12,6 +12,10 @@ module FormHelper
       @input = question["form"]["input"]["type"]
       @input = @input == "text" ? "string" : @input
       @name = question["form"]["input"]["id"]
+    elsif question_type == "__content__"
+      @name = [ 'field', question["id"] ].join("_")
+      @answers = question["answers"]["answer"].map{|answer| answer.values}
+      @input = "check_boxes" if question["type"] == "checkboxes"
     end
     @for = ["application", @name].join("_")
     @required_class = @required == true ? 'required' : "optional"
