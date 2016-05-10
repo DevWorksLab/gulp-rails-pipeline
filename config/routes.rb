@@ -20,6 +20,7 @@ Rails.application.routes.draw do
     get '/refine', to: 'jobs#refine', as: :refine
     resources :jobs do
       get 'apply', to: 'jobs#job_app', as: :apply
+      post 'apply', to: 'jobs#apply', as: :submit_app
     end
 
   end

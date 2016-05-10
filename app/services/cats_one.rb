@@ -2,6 +2,7 @@
 class CatsOne
   include HTTParty
   require 'json'
+  require 'open-uri'
   base_uri 'https://uxhires.catsone.com/api'
 
   def initialize(options: nil)
@@ -68,18 +69,23 @@ class CatsOne
   end
 
   def apply
-
+    response = self.class.post('/apply_joborder', query: @options )
   end
 
   def get_job_descriptions
     response = self.class.get("/get_joborder", query: @options)
     jobs = response["response"]["result"]
-    binding.pry
     jobs.each do |job|
       record = Job.find_by_catsone_id(job["id"])
       description = job["description"]
       record.update(description: description)
     end
+  end
+
+  # Call to get custom app form for each joborder
+  def get_application
+    # doc = Nokogiri::HTML(open("https://uxhires.catsone.com/api/get_joborder_applications?transaction_code=#{@options[:transaction_code]}&id=#{@options[:id]}&form=true"))
+    response = self.class.get('/get_joborder_applications', query: @options )
   end
 
   # def users
