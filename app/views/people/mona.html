@@ -1,17 +1,13 @@
-{% include "partials/_head2.html" %}
+<%- content_for :page_title do %>About<%- end %>
 
-  <title>About</title>
-  <meta name="description" content="Mona Patel, Founder and CEO at Motivate Design">
+<%- content_for :meta_desc do %>Mona Patel, Founder and CEO at Motivate Design<%- end %>
 
-</head>
-  <body id="mona">
-    <!--[if lt IE 8]>
-    <p class="browserupgrade">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
-    <![endif]-->
+<%- content_for :body_id do %>mona<%- end %>
 
-    <div class="container">
-      <section id="mona1"> 
-        {% include "partials/_nav3.html" %}
+<%- content_for :section_id do %>mona1<%- end %>
+
+<%- content_for :nav_id do %>nav3<%- end %>
+
       </section>
       <section id="mona2" class="page-center h-mtop100">
         <h2 class="gotham-lead h-mbottom100">Entrepreneur. CEO. User Experience Expert. Business leader. Speaker. Author. Mentor. Professor. Mom.</h2>
@@ -19,27 +15,27 @@
       <section id="mona3" class="page-center">
         <h3 class="mona-left-header">Contributes to</h3>
         <div id="featured-in" class="h-txtcenter">
-          <a href="http://www.fastcompany.com/3041047/the-6-excuses-preventing-you-from-designing-a-better-world"><img src="/images/people/mona_patel/fastco.png" width="144" alt="fastco" data-constrained="true"></a>&nbsp; 
+          <a href="http://www.fastcompany.com/3041047/the-6-excuses-preventing-you-from-designing-a-better-world"><%= image_tag gulp_asset_path('/images/people/mona_patel/fastco.png'), alt: "NYCDA_logo", width: "144", alt: "fastco", data: {constrained: "true"} %></a>&nbsp; 
 
-          <a href="http://www.forbes.com/sites/yec/2014/12/09/4-ways-to-help-your-startup-survive-and-grow/"><img src="/images/people/mona_patel/forbes.png" alt="forbes" width="98" data-constrained="true"></a>&nbsp; 
+          <a href="http://www.forbes.com/sites/yec/2014/12/09/4-ways-to-help-your-startup-survive-and-grow/"><%= image_tag gulp_asset_path('/images/people/mona_patel/forbes.png'), alt: "NYCDA_logo", width: "98", alt: "forbes", data: {constrained: "true"} %></a>&nbsp; 
 
-          <a href="http://www.huffingtonpost.com/mona-patel/women-business-when-lean-_b_5622364.html"><img style="width: 80px;" src="/images/people/mona_patel/hbr-category.png" alt="harvard_business_review" data-constrained="true" title="harvard_business_review"></a>&nbsp; 
+          <a href="http://www.huffingtonpost.com/mona-patel/women-business-when-lean-_b_5622364.html"><%= image_tag gulp_asset_path('/images/people/mona_patel/hbr-category.png'), title: "harvard_business_review", style: "width:80px;", data: {constrained: "true"} %></a>&nbsp; 
 
-          <a href="http://time.com/3754512/3-ways-find-forgotten-innovation/"><img src="/images/people/mona_patel/timelogo.png" alt="timelogo" width="56" data-constrained="true"></a> 
+          <a href="http://time.com/3754512/3-ways-find-forgotten-innovation/"><%= image_tag gulp_asset_path('/images/people/mona_patel/timelogo.png'), width: "56", alt: "timelogo", data: {constrained: "true"} %></a> 
 
-          <a href="http://time.com/3754512/3-ways-find-forgotten-innovation/"><img style="width: 80px;" src="/images/people/mona_patel/inc-logo.png" alt="inc logo" data-constrained="true" title="inc logo"></a>
+          <a href="http://time.com/3754512/3-ways-find-forgotten-innovation/"><%= image_tag gulp_asset_path('/images/people/mona_patel/inc-logo.png'), alt: "inc logo", style: "width:80px;", data: {constrained: "true"} %></a>
         </div>
         <h3 class="mona-left-header">Memberships and Affiliations</h3>
 
         <div id="memberships" class="h-txtcenter h-mbottom50">
 
-        <a href="https://yec.co/"><img src="/images/people/mona_patel/YEC.jpg" alt="YEC" width="120" height="auto"></a> 
+        <a href="https://yec.co/"><%= image_tag gulp_asset_path('/images/people/mona_patel/YEC.jpg'), alt: "YEC", width: "120", height: "auto" %></a> 
 
-        <a href="http://nycventurefellows.org/2015-fellows/#fellow24"><img src="/images/people/mona_patel/venturefellows.jpg" alt="venturefellows" width="120" height="auto"></a> 
+        <a href="http://nycventurefellows.org/2015-fellows/#fellow24"><%= image_tag gulp_asset_path('/images/people/mona_patel/venturefellows.jpg'), alt: "venturefellows", width: "120", height: "auto" %></a> 
 
-        <a href="http://www.inc.com/profile/motivate-design"><img src="/images/people/mona_patel/inc1.jpg" alt="inc1" width="120" height="auto"></a> 
+        <a href="http://www.inc.com/profile/motivate-design"><%= image_tag gulp_asset_path('/images/people/mona_patel/inc1.jpg'), alt: "inc1", width: "120", height: "auto" %></a> 
 
-        <a href="http://nycda.com/"><img src="/images/people/mona_patel/NYCDA_logo.png" alt="NYCDA_logo" width="140" title="NYCDA_logo"></a></div>
+        <a href="http://nycda.com/"><%= image_tag gulp_asset_path('/images/people/mona_patel/NYCDA_logo.png'), alt: "NYCDA_logo", width: "120", height: "auto" %></a></div>
 
         <div class="page-center">
           <div class="two-thirds"><hr></div>
@@ -53,7 +49,7 @@
         <div>
 
           <div class="half">
-            <div class="h-txtcenter expertise-icon-left"><img class="global-icon" width="80" height="auto" src="/images/people/mona_patel/icon1.svg" alt="icon" title="icon">
+            <div class="h-txtcenter expertise-icon-left"><%= image_tag gulp_asset_path('/images/people/mona_patel/icon1.svg'), class: "global-icon", width: "80", height: "auto", alt: "icon", title: "icon" %>
             <div class="expertise-space">
             <p style="text-align: center;">Design and Innovation <br> Strategy</p>
             </div>
@@ -61,7 +57,7 @@
           </div>
 
           <div class="half">
-            <div class="h-txtcenter expertise-icon-right"><img class="global-icon" width="80" height="auto" src="/images/people/mona_patel/icon2.svg" alt="icon" title="icon">
+            <div class="h-txtcenter expertise-icon-right"><%= image_tag gulp_asset_path('/images/people/mona_patel/icon2.svg'), class: "global-icon", width: "80", height: "auto", alt: "icon", title: "icon" %>
             <div class="expertise-space">
             <p style="text-align: center;">User/Customer <br> Holistic Experiences</p>
             </div>
@@ -73,7 +69,7 @@
         <div>
           
           <div class="third">
-            <div class="h-txtcenter"><img class="global-icon" width="80" height="auto" src="/images/people/mona_patel/icon3.svg" alt="icon" title="icon">
+            <div class="h-txtcenter"><%= image_tag gulp_asset_path('/images/people/mona_patel/icon3.svg'), class: "global-icon", width: "80", height: "auto", alt: "icon", title: "icon" %>
             <div class="expertise-space">
             <p style="text-align: center;">Future Research <br> Methodologies</p>
             </div>
@@ -81,7 +77,7 @@
           </div>
 
           <div class="third">
-            <div class="h-txtcenter"><img class="global-icon" width="80" height="auto" src="/images/people/mona_patel/icon4.svg" alt="icon" title="icon">
+            <div class="h-txtcenter"><%= image_tag gulp_asset_path('/images/people/mona_patel/icon4.svg'), class: "global-icon", width: "80", height: "auto", alt: "icon", title: "icon" %>
             <div class="expertise-space">
             <p style="text-align: center;">Startup Businesses</p>
             </div>
@@ -90,7 +86,7 @@
 
 
           <div class="third">
-            <div class="h-txtcenter"><img class="global-icon" width="80" height="auto" src="/images/people/mona_patel/icon5.svg" alt="icon" title="icon">
+            <div class="h-txtcenter"><%= image_tag gulp_asset_path('/images/people/mona_patel/icon5.svg'), class: "global-icon", width: "80", height: "auto", alt: "icon", title: "icon" %>
             <div class="expertise-space">
             <p style="text-align: center;">Entrepreneurship</p>
             </div>
@@ -171,15 +167,12 @@
         </div>
         
         <div class="h-mtop100 h-mbottom100">
-          <img src="/images/people/mona_patel/monainner.png" alt="mona" title="mona">
+          <%= image_tag gulp_asset_path('/images/people/mona_patel/monainner.png'), alt: "mona", title: "mona" %>
           <h2 class="lead-text">MONA PATEL, CEO AND FOUNDER</h2>
           <p>Mona combines positivity, timeless wisdom, sharp design thinking and a little bit of magic glitter to help you see around corners and realize a kind of success you didn’t necessarily expect. She started Motivate Design in 2009 to create a place where clients could get what they want, rather than what an agency needs to sell. She holds a M.S. in Marketing Communications from Boston University and a B.S. in Engineering Psychology from Tufts University.</p>
           <div class="grey-social-icon">
-            <a href="https://www.linkedin.com/in/monapatel1"><img width="20" height="auto" src="/images/misc/circle_icons/icon_linkedin2.svg" alt="LinkedinIcon_Gray">&nbsp;<a href="https://twitter.com/monapatel"><img width="20" height="auto" src="/images/misc/circle_icons/icon_twitter2.svg" alt="TwitterIcon_Gray"></a>
+            <a href="https://www.linkedin.com/in/monapatel1"><%= image_tag gulp_asset_path('/images/misc/circle_icons/icon_linkedin2.svg'), width: "20", height: "auto", alt: "LinkedinIcon_Gray" %>&nbsp;<a href="https://twitter.com/monapatel"><%= image_tag gulp_asset_path('/images/misc/circle_icons/icon_twitter2.svg'), width: "20", height: "auto", alt: "TwitterIcon_Gray" %></a>
           </div>
         </div>
       </section>
         
-    </div>
-
-      {% include "partials/_foot2.html" %}

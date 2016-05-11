@@ -2,7 +2,7 @@
 	
 	#mona1 {
 		height: 600px;
-    background-image: url(../images/people/mona_patel/MonaLead.jpg);
+    background-image: url("/assets/images/people/mona_patel/MonaLead.jpg");
     background-size: cover;
     width: 100%;
     background-position-y: 74px;

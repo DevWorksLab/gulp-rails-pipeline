@@ -25,7 +25,7 @@
 
   #casestudy3 {
     height: 768px;
-    background-image: url(../images/casestudies/trendsetter/photo_1.png);
+    background-image: url("/assets/images/casestudies/trendsetter/photo_1.png");
     background-size: cover;
     width: 100%;
     background-repeat: no-repeat;
@@ -188,7 +188,7 @@
 
   #jet3 {
     height: 768px;
-    background-image: url(../images/casestudies/jet/jet-bg2.png);
+    background-image: url("/assets/images/casestudies/jet/jet-bg2.png");
     background-size: cover;
     width: 100%;
     background-repeat: no-repeat;

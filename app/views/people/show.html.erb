@@ -6,9 +6,9 @@
 
 <%- content_for :section_id do %><%= @person.first_name %>1<%- end %>
 
-<%- content_for :section_image do %><%= @person.header_pic.url %><%- end %>
+<%- content_for :section_image do %>background-image: url(<%= @person.header_pic.url %>);background-position-y: 74px;background-repeat: no-repeat;height: 600px;background-size: cover;width: 100%;<%- end %>
 
-<%- content_for :nav_id do %>nav2<%- end %>
+<%- content_for :nav_id do %>nav3<%- end %>
 
         </section>
         <h2 class="page-center h-mtop100 gotham-lead h-mbottom100"><%= @person.snippet %></h2>
@@ -27,8 +27,8 @@
             </div>
         </section>
         <section id="bio3" class="page-center h-mtop100">
-            <%= image_tag gulp_asset_path('/images/people/dan_sennet/danlower.jpg'), alt: "", title: "" %>
-            <h2 class="lead-text"><%= @person.first_name %> <%= @person.last_name %>, <%= @person.title %></h2>
+            <%= image_tag @person.other_image.url, alt: "", title: "" %>
+            <h2 class="lead-text" style="text-transform:uppercase;"><%= @person.first_name %> <%= @person.last_name %>, <%= @person.title %></h2>
             <p><%= @person.bio %></p>
             <div class="grey-social-icon">
                
