@@ -9,7 +9,7 @@
 		</div>
 		<div class="view-jobs">
 			<div class="nav-l">
-				<a href="#">VIEW ALL JOBS</a>
+				<%= link_to "VIEW ALL JOBS", uxhires_jobs_path %>
 			</div>
 			<div class="nav-r">
 				<a href="#", class="p-right">REGISTER</a>
@@ -29,36 +29,27 @@
 
   <section id="filter">
   	<div class="page-center">
-  		<h3>
-  			FILTER BY
-  		</h3>
-  		<div class="select-wrapper">
-	  		<select name="location" id="loc">
-	  			<option value="">
-	  				Location
-	  			</option>
-	  		</select>
-  		</div>
-  		<div class="select-wrapper">
-	  		<select name="type of role" id="type">
-	  			<option value="">
-	  				Type of Role
-	  			</option>
-	  		</select>
-	  	</div>
-	  	<div class="select-wrapper">
-	  		<select name="company type" id="company">
-	  			<option value="">
-	  				Company
-	  			</option>
-	  		</select>
-	  	</div>
-  		<input type="text", placeholder="Keywords">
-  		<button>Search</button>
+			<%= simple_form_for :search, url: uxhires_refine_path, method: "get" do |f| %>
+	  		<h3>
+	  			FILTER BY
+	  		</h3>
+				<div class="select-wrapper">
+					<%= f.input :location, collection: @active.pluck(:location).uniq, prompt: "Location", label: false, required: false, input_html: { id: "loc" }%>
+	  		</div>
+	  		<div class="select-wrapper">
+					<%= f.input :role, collection: @active.pluck(:title).uniq, label: false, prompt: "Type of Role", required: false, input_html: { id: "type" } %>
+		  	</div>
+		  	<div class="select-wrapper">
+					<%= f.input :type, collection: @active.pluck(:company_type).uniq, label: false, prompt: "Type of Company", required: false, input_html: { id: "company" } %>
+		  	</div>
+				<%= f.input :keywords, placeholder: "Keywords", required: false, label: false %>
+
+	  		<button>Search</button>
+			<% end %>
   	</div>
   </section>
 
-  <div class="more-roles">
+  <div class="more-roles" id="job-bar">
 		<div class="left less">
 			<a href="#">JOB DESCRIPTION</a>
 		</div>
@@ -68,76 +59,25 @@
 	</div>
 
 	<section id="uxhires-jobs3">
-		<div class="job-wrapper">
-			<div class="role">
-				<h3>
-					Product Manager
-				</h3>
-				<p>
-					The Web Product Manager is responsible for identifying, championing and building web products and experiences that meet consumer and business needs. The primary goal of this position is to successfully lead cross-functional teams to develop solutions that achieve performance goals, transform the online automotive shopping experience and position CarMax as a best-in-class company online.
-					<a href="#">More info.</a>
-				</p>
+		<% @jobs.each do |job| %>
+			<div class="job-wrapper">
+				<div class="role">
+					<h3>
+						<%= job.title %>
+					</h3>
+					<p>
+						<%= "#{strip_tags(job.description).truncate(300)}" if job.description %>
+						<%= link_to "More info.", uxhires_job_path(job) %>
+					</p>
+				</div>
+				<div class="loc">
+					<p>
+						<%= job.location %>
+					</p>
+				</div>
 			</div>
-			<div class="loc">
-				<p>
-				San Francisco, CA
-				</p>
-			</div>
-		</div>
-		<div class="job-wrapper">
-			<div class="role">
-				<h3>
-					UX/UI Partner/Manager
-				</h3>
-				<p>
-					Our client, a small digital creative agency located near Fulton St./South Street Seaport, is looking to bring on a third partner to run their UX/UI design. They have been experiencing growth and now need a leader to establish best practices, oversee quality, manage the small team of designers and get hands-on about 50% of the time.
-					<a href="#">
-						More info.
-					</a>
-				</p>
-			</div>
-			<div class="loc">
-				<p>
-				New York, NY
-				</p>
-			</div>
-		</div>
-		<div class="job-wrapper">
-			<div class="role">
-				<h3>
-					iOS Developer
-				</h3>
-				<p>
-					Our client is a groundbreaking mobile-first story telling and commerce platform delivering the narrative web. They are democratizing mobile by providing a web-based native app alternative enabling unprecedented engagement, activation and conversion for brands, publishers and digital businesses.
-					<a href="#">
-						More info.
-					</a>
-				</p>
-			</div>
-			<div class="loc">
-				<p>
-					New York, NY
-				</p>
-			</div>
-		</div>
-		<div class="job-wrapper">
-			<div class="role">
-				<h3>
-					Interaction Designer
-				</h3>
-				<p>
-					As an Interaction Designer, you will work side-by-side on a team of designers, developers, and product owners to help define a world-class advertising technology transactional experience for our publisher and advertising industry customers.
-				</p>
-				<a href="#">
-					More info.
-				</a>
-			</div>
-			<div class="loc">
-				<p>
-					New York, NY
-				</p>
-			</div>
-		</div>		
+		<% end %>
+		<%= will_paginate @jobs,:container => false,:params => {:anchor => "job-bar"} %>
 	</section>
 
 	<section id="uxhires8", class=
@@ -162,7 +102,7 @@
           </p>
           <h3>
             How I accidentally <br>
-            became a UX <br> 
+            became a UX <br>
             Designer
           </h3>
         </div>
@@ -191,7 +131,7 @@
           </p>
           <h3>
             21 Podcasts That <br>
-            Will Change Your <br> 
+            Will Change Your <br>
             Life
           </h3>
         </div>
@@ -209,7 +149,7 @@
     </div>
   </section>
 
-	
+
 		<!-- End body and section -->
 	</div>
 </section>

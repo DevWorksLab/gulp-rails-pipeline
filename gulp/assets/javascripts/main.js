@@ -214,17 +214,17 @@ $(document).ready(function(){
     		$('.header-nav').toggleClass('open');
 
     	});
-        
-        
+
+
 
     /***************** flex init ******************/
-      
+
           $('.flexslider').flexslider({
         	animation: "slide",
-            prevText: "",          
+            prevText: "",
             nextText: ""
     	});
-      
+
 
 
     /***************** svg to png ******************/
@@ -232,5 +232,3 @@ $(document).ready(function(){
       svgeezy.init(false, 'png');
 
 });
-
-

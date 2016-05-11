@@ -9,7 +9,7 @@
 		</div>
 		<div class="view-jobs">
 			<div class="nav-l">
-				<a href="#">GO BACK TO VIEW ALL JOBS</a>
+				<%= link_to "GO BACK TO VIEW ALL JOBS", uxhires_jobs_path %>
 			</div>
 			<div class="nav-r">
 				<a href="#", class="p-right">REGISTER</a>
@@ -25,12 +25,13 @@
 				The Role
 			</h1>
 			<h3>
-				Product Designer | 
+				<%= @job.title %> |
 				<i>
-					New York, NY
+					<%= @job.location %>
 				</i>
 			</h3>
-			<p>
+			<%= sanitize( @job.description, tags: %w(br ul li) ) %>
+			<!-- <p>
 				Our client is a 20-person, 2 year-old stealth startup building the next generation of data-driven, marketing-centric business applications. Based in New York City, they have a world class team and are funded by several premier investment firms and
 				have fortune 500 clients.
 			</p>
@@ -57,14 +58,14 @@
 				<li>
 					conducting user research and integrating findings into design iterations
 				</li>
-			</ul>
+			</ul> -->
 			<button>
-				APPLY NOW
+				<%= link_to "APPLY NOW", uxhires_job_apply_path(@job) %>
 			</button>
 		</div>
 	</section>
 
-	
+
 	<div class="more-roles">
 		<div class="left">
 			<a href="#">MORE ROLES LIKE THIS</a>
@@ -144,7 +145,7 @@
 					New York, NY
 				</p>
 			</div>
-		</div>		
+		</div>
 	</section>
 
 	<section id="uxhires8", class=
@@ -169,7 +170,7 @@
           </p>
           <h3>
             How I accidentally <br>
-            became a UX <br> 
+            became a UX <br>
             Designer
           </h3>
         </div>
@@ -183,22 +184,24 @@
             Portfolios
           </h3>
         </div>
-        <div class="related-box fourth">
-          <p>
-            GET YOUR COPY
-          </p>
-          <h3>
-            Reframe by <br>
-            Mona Patel
-          </h3>
-        </div>
+				<%= link_to "http://www.readytoreframe.com/" do %>
+	        <div class="related-box fourth">
+	          <p>
+	            GET YOUR COPY
+	          </p>
+	          <h3>
+	            Reframe by <br>
+	            Mona Patel
+	          </h3>
+	        </div>
+				<% end %>
         <div class="related-box first">
           <p>
             Article
           </p>
           <h3>
             21 Podcasts That <br>
-            Will Change Your <br> 
+            Will Change Your <br>
             Life
           </h3>
         </div>

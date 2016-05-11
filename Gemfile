@@ -1,6 +1,7 @@
 source 'https://rubygems.org'
 
 gem 'rails', '4.2.0'
+gem "non-stupid-digest-assets"
 gem 'sass-rails', '~> 5.0'
 gem 'uglifier', '>= 1.3.0'
 gem 'coffee-rails', '~> 4.1.0'
@@ -19,6 +20,15 @@ gem 'friendly_id', '~> 5.1.0'
 # Image Management
 gem 'carrierwave'
 gem "mini_magick"
+
+# integrate catsone api
+gem 'httparty'
+
+# schedule cron tasks
+gem 'whenever', :require => false
+
+# pagination
+gem 'will_paginate', '~> 3.1.0'
 
 group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console
