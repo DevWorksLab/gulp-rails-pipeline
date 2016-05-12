@@ -1,6 +1,6 @@
 class Job < ActiveRecord::Base
 
-  scope :active, -> { where(status: "active") }
+  scope :active, -> { where(status: "active", public: true) }
 
 
   def self.update_listings
@@ -16,7 +16,7 @@ class Job < ActiveRecord::Base
   end
 
   def self.update_descriptions
-    jobs = Job.active
+    jobs = Job.all
     job_array = jobs.each_slice(50).to_a
     job_array.each do |cluster|
       ids = jobs.pluck(:catsone_id)

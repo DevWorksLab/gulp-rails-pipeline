@@ -21,6 +21,7 @@ class CatsOne
         status =  job["status"].split(' (').first.downcase
         # description = job["description"]
         location = job["location"]
+        hotness = job["is_hot"]  == "No" ? false : true
 
         # Do we need company and if so we need another call to get the name
         # lets try to limit calls by storing companies in DB
@@ -35,7 +36,8 @@ class CatsOne
             # description: description, in V2 api description is seperate call
             company_name: company,
             status: status,
-            location: location
+            location: location,
+            is_hot: hotness
             )
         else
           # Add Job To DB
@@ -46,7 +48,8 @@ class CatsOne
             # description: description, in V2 api description is seperate call
             company_name: company,
             status: status,
-            location: location
+            location: location,
+            is_hot: hotness
             )
         end
       end
@@ -78,7 +81,9 @@ class CatsOne
     jobs.each do |job|
       record = Job.find_by_catsone_id(job["id"])
       description = job["description"]
-      record.update(description: description)
+      public = job["public"]
+      status = job["status"].split(" ").first.downcase
+      record.update(status: status, description: description, public: public)
     end
   end
 
