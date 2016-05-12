@@ -39,6 +39,8 @@ class Uxhires::JobsController < ApplicationController
   def refine
     filter = JobFilter.new(params: params[:search], jobs: @active)
     @jobs = filter.filter_result.paginate(:page => params[:page], :per_page => 5)
+
+    render :index
   end
 
   private

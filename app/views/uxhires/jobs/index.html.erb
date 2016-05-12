@@ -29,7 +29,7 @@
 
   <section id="filter">
   	<div class="page-center">
-			<%= simple_form_for :search, url: uxhires_refine_path, method: "get" do |f| %>
+			<%= simple_form_for :search, url: uxhires_refine_path(:anchor => "job-bar"), method: "get" do |f| %>
 	  		<h3>
 	  			FILTER BY
 	  		</h3>
