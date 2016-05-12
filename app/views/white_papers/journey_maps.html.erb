@@ -1,18 +1,13 @@
-{% include "partials/_head2.html" %}
+<%- content_for :page_title do %>Journey Maps<%- end %>
 
-  <title>Journey Maps</title>
-  <meta name="description" content="In this white paper, we outline the whats, whys, and hows of customer journey mapping in order to enhance customer experiences.">
+<%- content_for :meta_desc do %>In this white paper, we outline the whats, whys, and hows of customer journey mapping in order to enhance customer experiences.<%- end %>
 
-</head>
-  <body id="whitepaper">
-    <!--[if lt IE 8]>
-    <p class="browserupgrade">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
-    <![endif]-->
+<%- content_for :body_id do %>whitepaper<%- end %>
 
-    <div class="container">
+<%- content_for :section_id do %>journeymaps1<%- end %>
 
-      <section id="journeymaps1"> 
-        {% include "partials/_nav3.html" %}
+<%- content_for :nav_id do %>nav3<%- end %>
+
       </section>
 
       <section id="whitepaper2" class="page-center h-mtop50">
@@ -26,13 +21,19 @@
         <div class="flexslider h-mbottom100">
           <ul class="slides">
             <li>
-            <div><img class="image-carousel-shadow" src="/images/white_papers/journey_maps/previewpage1.png" alt="whitepaper"></div>
+              <div>
+                <%= image_tag gulp_asset_path('/images/white_papers/journey_maps/previewpage1.png'), class: "image-carousel-shadow", alt: "whitepaper" %>
+              </div>
             </li>
             <li>
-            <div><img class="image-carousel-shadow" src="/images/white_papers/journey_maps/previewpage2.png" alt="whitepaper"></div>
+              <div>
+                <%= image_tag gulp_asset_path('/images/white_papers/journey_maps/previewpage2.png'), class: "image-carousel-shadow", alt: "whitepaper" %>
+              </div>
             </li>
             <li>
-            <div><img class="image-carousel-shadow" src="/images/white_papers/journey_maps/previewpage3.png" alt="whitepaper"></div>
+              <div>
+                <%= image_tag gulp_asset_path('/images/white_papers/journey_maps/previewpage3.png'), class: "image-carousel-shadow", alt: "whitepaper" %>
+              </div>
             </li>
           </ul>
         </div>
@@ -90,7 +91,4 @@
         </div>
           
       </section>
-        
-    </div>
 
-      {% include "partials/_foot2.html" %}

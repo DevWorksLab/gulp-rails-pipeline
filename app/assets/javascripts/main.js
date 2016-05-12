@@ -65,7 +65,6 @@ $(document).ready(function(){
 
     // $(document).ready(function() {
 
-        console.log("hello")
         $('#work').waypoint(function() {
             $(".nav-link-wrapper a:contains('Work')").addClass('active-branch');
         });

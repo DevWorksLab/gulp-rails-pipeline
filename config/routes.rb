@@ -8,6 +8,19 @@ Rails.application.routes.draw do
   get '/people/mona', to: 'people#mona', as: :mona
   resources :people, only: [:index, :show]
 
+  #case studies
+  get '/case-studies/jet', to: 'case_studies#jet', as: :jet
+  get '/case-studies/phhhoto', to: 'case_studies#phhhoto', as: :phhhoto
+  get '/case-studies/trendsetter', to: 'case_studies#trendsetter', as: :trendsetter
+
+  #white papers
+  get '/white-papers/digital-diary', to: 'white_papers#digital_diary', as: :digital_diary
+  get '/white-papers/the-ux-strategy-equation', to: 'white_papers#ux_strategy', as: :ux_strategy
+  get '/white-papers/journey-maps', to: 'white_papers#journey_maps', as: :journey_maps
+  get '/white-papers/retail-ethnography-in-practice', to: 'white_papers#retail_ethnography', as: :retail_ethnography
+  get '/white-papers/friendship-groups', to: 'white_papers#friendship_groups', as: :friendship_groups
+  get '/white-papers/new-techniques-for-design-research', to: 'white_papers#design_research', as: :design_research
+
 
   namespace :admin do
     root 'dashboard#index'
