@@ -23,7 +23,7 @@
   .gotham-lead {
     font-family: "Gotham-Book";
     font-weight: 500;
-    font-size: 2.2em;
+    font-size: 2.2rem;
     color: #4a4a4a;
     line-height: 28px;
     letter-spacing: 1.23px;
@@ -69,7 +69,7 @@
 
 	#friendship1 {
 		height: 600px;
-    background-image: url(../images/white_papers/friendship_groups_2/lead1.jpg);
+    background-image: url("/assets/images/white_papers/Friendship_Groups_2/lead1.jpg");
     background-size: cover;
     width: 100%;
     background-position-y: 74px;
@@ -78,7 +78,7 @@
 
   #friendship-groups1 {
     height: 600px;
-    background-image: url(../images/white_papers/friendship_groups_1/1_5.2_LeadImg.jpg);
+    background-image: url("/assets/images/white_papers/Friendship_Groups_1/1_5.2_LeadImg.jpg");
     background-size: cover;
     width: 100%;
     background-position-y: 74px;
@@ -87,7 +87,7 @@
 
   #digital-diary1 {
     height: 600px;
-    background-image: url(../images/white_papers/digital_diary/1_5.3LeadImg.jpg);
+    background-image: url("/assets/images/white_papers/Friendship_Groups_2/lead1.jpg");
     background-size: cover;
     width: 100%;
     background-position-y: 74px;
@@ -96,7 +96,7 @@
 
   #retail1 {
     height: 600px;
-    background-image: url(../images/white_papers/retail_ethnography/5.6leadimg.jpg);
+    background-image: url("/assets/images/white_papers/Retail_Ethnography/5.6LeadImg.jpg");
     background-size: cover;
     width: 100%;
     background-position-y: 74px;
@@ -105,7 +105,7 @@
 
   #uxstrategy1 {
     height: 600px;
-    background-image: url(../images/white_papers/ux_strategy/leadimg.jpg);
+    background-image: url("/assets/images/white_papers/UX_Strategy/leadimg.jpg");
     background-size: cover;
     width: 100%;
     background-position-y: 74px;
@@ -114,7 +114,7 @@
 
   #journeymaps1 {
     height: 600px;
-    background-image: url(../images/white_papers/journey_maps/5.5leadimg.jpg);
+    background-image: url("/assets/images/white_papers/Journey_Maps/5.5LeadImg.jpg");
     background-size: cover;
     width: 100%;
     background-position-y: 74px;
@@ -152,7 +152,7 @@
 
       input {
         display: block;
-        font-size: 1.2em;
+        font-size: 1.2rem;
         line-height: 18px;
         font-family: "Sentinel A", "Sentinel B";
         letter-spacing: 1px;
@@ -199,7 +199,7 @@
       text-transform: uppercase;
       font-family: "Gotham A", "Gotham B";
       font-weight: 400;
-      font-size: 1.4em;
+      font-size: 1.4rem;
       line-height: 22px;
       letter-spacing: 3.07px;
     }

@@ -1,18 +1,15 @@
-{% include "partials/_head2.html" %}
+<%- content_for :page_title do %>Retail Ethnography in Practice<%- end %>
 
-  <title>Retail Ethnography in Practice</title>
-  <meta name="description" content="In this white paper, Motivate Design highlights three approaches to retail ethnography research for personas creation - includes a checklist ">
+<%- content_for :meta_desc do %>In this white paper, Motivate Design highlights three approaches to retail ethnography research for personas creation - includes a checklist<%- end %>
 
-</head>
-  <body id="whitepaper">
-    <!--[if lt IE 8]>
-    <p class="browserupgrade">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
-    <![endif]-->
+<%- content_for :body_id do %>whitepaper<%- end %>
 
-    <div class="container">
+<%- content_for :section_id do %>retail1<%- end %>
 
-      <section id="retail1"> 
-        {% include "partials/_nav3.html" %}
+<%- content_for :nav_id do %>nav3<%- end %>
+
+
+
       </section>
 
       <section id="whitepaper2" class="page-center h-mtop50">
@@ -27,13 +24,19 @@ In this white paper, we highlight three tried-and-true approaches—in-store obs
         <div class="flexslider h-mbottom100">
           <ul class="slides">
             <li>
-            <div><img class="image-carousel-shadow" src="/images/white_papers/retail_ethnography/5.6PreviewPage1.png" alt="whitepaper"></div>
+              <div>
+                <%= image_tag gulp_asset_path('/images/white_papers/retail_ethnography/5.6PreviewPage1.png'), class: "image-carousel-shadow", alt: "whitepaper" %>
+              </div>
             </li>
             <li>
-            <div><img class="image-carousel-shadow" src="/images/white_papers/retail_ethnography/5.6PreviewPage2.png" alt="whitepaper"></div>
+              <div>
+                <%= image_tag gulp_asset_path('/images/white_papers/retail_ethnography/5.6PreviewPage2.png'), class: "image-carousel-shadow", alt: "whitepaper" %>
+              </div>
             </li>
             <li>
-            <div><img class="image-carousel-shadow" src="/images/white_papers/retail_ethnography/5.6PreviewPage3.png" alt="whitepaper"></div>
+              <div>
+                <%= image_tag gulp_asset_path('/images/white_papers/retail_ethnography/PreviewPage3.png'), class: "image-carousel-shadow", alt: "whitepaper" %>
+              </div>
             </li>
           </ul>
         </div>

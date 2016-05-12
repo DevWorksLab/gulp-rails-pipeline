@@ -9,7 +9,7 @@
     <ul style="max-width: 65pc;">
       <li class="nav-link-wrapper">
         <%= link_to root_path, id: "logo-anchor" do %>
-          <%- if params[:action] == "about" || params[:action] == "work" || params[:action] == "show" || params[:action] == "mona" %>
+          <%- if params[:action] == "about" || params[:action] == "work" || params[:action] == "show" || params[:action] == "mona" || params[:controller] == "case_studies" || params[:controller] == "white_papers" %>
             <%= image_tag gulp_asset_path("/images/misc/logos/svg/motivate_logo_main.svg"), id: "logo" %>
           <%- else %>
             <%= image_tag gulp_asset_path("/images/misc/logos/svg/MOTIVATE_LOGO_WHITE.svg"), id: "logo" %>

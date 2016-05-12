@@ -1,18 +1,14 @@
-{% include "partials/_head2.html" %}
+<%- content_for :page_title do %>The UX Strategy Equation<%- end %>
 
-  <title>The UX Strategy Equation</title>
-  <meta name="description" content="In this white paper, Motivate Design outlines how to use service design, lean UX and disruptive design thinking to craft experience strategies.">
+<%- content_for :meta_desc do %>In this white paper, Motivate Design outlines how to use service design, lean UX and disruptive design thinking to craft experience strategies.<%- end %>
 
-</head>
-  <body id="whitepaper">
-    <!--[if lt IE 8]>
-    <p class="browserupgrade">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
-    <![endif]-->
+<%- content_for :body_id do %>whitepaper<%- end %>
 
-    <div class="container">
+<%- content_for :section_id do %>uxstrategy1<%- end %>
 
-      <section id="uxstrategy1"> 
-        {% include "partials/_nav3.html" %}
+<%- content_for :nav_id do %>nav3<%- end %>
+
+
       </section>
 
       <section id="whitepaper2" class="page-center h-mtop50">
@@ -26,13 +22,19 @@
         <div class="flexslider h-mbottom100">
           <ul class="slides">
             <li>
-            <div><img class="image-carousel-shadow" src="/images/white_papers/ux_strategy/previewpage1.png" alt="whitepaper"></div>
+              <div>
+                <%= image_tag gulp_asset_path('/images/white_papers/ux_strategy/previewpage1.png'), class: "image-carousel-shadow", alt: "whitepaper" %>
+              </div>
             </li>
             <li>
-            <div><img class="image-carousel-shadow" src="/images/white_papers/ux_strategy/previewpage2.png" alt="whitepaper"></div>
+              <div>
+                <%= image_tag gulp_asset_path('/images/white_papers/ux_strategy/previewpage2.png'), class: "image-carousel-shadow", alt: "whitepaper" %>
+              </div>
             </li>
             <li>
-            <div><img class="image-carousel-shadow" src="/images/white_papers/ux_strategy/previewpage3.png" alt="whitepaper"></div>
+              <div>
+                <%= image_tag gulp_asset_path('/images/white_papers/ux_strategy/previewpage3.png'), class: "image-carousel-shadow", alt: "whitepaper" %>
+              </div>
             </li>
           </ul>
         </div>
@@ -72,7 +74,7 @@
   <div class="response" id="mce-success-response" style="display:none"></div>
   </div>    <!-- real people should not fill this in and expect good things - do not remove this or risk form bot signups-->
     <div style="position: absolute; left: -5000px;" aria-hidden="true"><input type="text" name="b_9efac6c29df6c152fd6ba03a1_ee5b62231a" tabindex="-1" value=""></div>
-    <div class="clear"><input type="submit" value="download" name="subscribe" id="mc-embedded-subscribe" class="button"></div>
+    <div class="clear"><input type="submit" value="Subscribe" name="subscribe" id="mc-embedded-subscribe" class="button"></div>
     </div>
 </form>
 </div>
@@ -82,6 +84,3 @@
           
       </section>
         
-    </div>
-
-      {% include "partials/_foot2.html" %}
