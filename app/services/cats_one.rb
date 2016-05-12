@@ -83,9 +83,6 @@ class CatsOne
       record = Job.find_by_catsone_id(job["id"])
       description = job["description"]
       public = job["public"]
-      # if record.title == "Senior UX Designer"
-      #   binding.pry
-      # end
       status = job["status"].split(" ").first.downcase
       record.update(status: status, description: description, public: public)
     end
