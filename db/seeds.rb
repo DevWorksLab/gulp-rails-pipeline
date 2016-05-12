@@ -8,6 +8,6 @@
 
 Job.destroy_all
 
-Job.get_jobs
+Job.update_listings
 
 Job.update_descriptions

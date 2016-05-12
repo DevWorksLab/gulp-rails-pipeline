@@ -28,6 +28,7 @@ class CatsOne
 
         # Check if job is in DB
         if job = Job.find_by_catsone_id(catsone_id)
+          puts "UPDATE JOB"
           # update
           job.update(
             title: title,
@@ -63,7 +64,7 @@ class CatsOne
     jobs_arr.push(response["response"]["item"])
     i = 1
     while i < last_page
-      @options[:page] = 1 + i
+      @options[:page_number] = 0 + i
       response = self.class.get("/get_joborders", query: @options)
       jobs_arr.push(response["response"]["item"])
       i += 1
@@ -82,6 +83,9 @@ class CatsOne
       record = Job.find_by_catsone_id(job["id"])
       description = job["description"]
       public = job["public"]
+      # if record.title == "Senior UX Designer"
+      #   binding.pry
+      # end
       status = job["status"].split(" ").first.downcase
       record.update(status: status, description: description, public: public)
     end
