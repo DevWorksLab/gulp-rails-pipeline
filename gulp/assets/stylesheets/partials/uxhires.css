@@ -249,6 +249,35 @@
 		background: #fff;
 	}
 
+	.paginate {
+		text-align: center;
+		position: absolute;
+		top: 0;
+		display: block;
+		width: 100%;
+		padding-top: 4rem;
+
+		.float-wrap {
+			overflow: hidden; 
+			margin: 0 auto; 
+			text-align: center;
+			display: inline-block;
+
+			span, em, a {
+				border: 1px solid #ECEEEF;
+				font-size: 16px;
+				padding: 8px 15px;
+				float: left;
+				color: #526B35;
+			}
+
+			.current {
+				background: #9CCC65;
+				color: white;
+			}
+		}
+	}
+
 	h2 {
 		font-size: 4rem;
 		color: #787574;
@@ -599,7 +628,8 @@
 
 			.select-wrapper {
 				background: white url(/assets/images/uxhires/down-arrow.png) no-repeat 94% 13px;
-				height: 40px;
+				height: 4
+				0px;
 				overflow: hidden;
 				width: 240px;
 				-webkit-border-radius: 5px;
@@ -622,15 +652,19 @@
 				}
 			}
 
-			input {
-				margin-top: 2rem;
-				width: 42rem;
-				padding: 10px;
-				border-radius: 3px;
-				outline: none;
-				border: 1px solid #ccc;
-				color: rgba(0, 0, 0, 0.8);
-				font-size: 16px;
+			.input-wrapper {
+				display: inline-block;
+
+				input {
+					margin-top: 2rem;
+					width: 42rem;
+					padding: 10px;
+					border-radius: 3px;
+					outline: none;
+					border: 1px solid #ccc;
+					color: rgba(0, 0, 0, 0.8);
+					font-size: 16px;
+				}
 			}
 
 			button {

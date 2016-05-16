@@ -32,11 +32,14 @@ Rails.application.routes.draw do
   namespace :uxhires do
     root 'jobs#uxhires'
     get '/refine', to: 'jobs#refine', as: :refine
-    resources :jobs do
+    resources :jobs, except: [:show] do
       get 'apply', to: 'jobs#job_app', as: :apply
       post 'apply', to: 'jobs#apply', as: :submit_app
     end
 
+    get '/jobs/:id', to: 'jobs#job_show', as: :job_show
+
   end
+
 
 end

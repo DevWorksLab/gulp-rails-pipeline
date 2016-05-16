@@ -5,16 +5,16 @@
 
 	<section id="uxhires-jobs1">
 		<div class="logo-wrapper">
-		  <%= image_tag gulp_asset_path("/images/uxhires/uxhireslogo.svg"), alt: "ux hires logo", style: "width: 250px;" %>
+		  <%= image_tag gulp_asset_path("/images/uxhires/uxhires-logo.png"), alt: "ux hires logo", style: "width: 250px;" %>
 		</div>
 		<div class="view-jobs">
 			<div class="nav-l">
 				<%= link_to "VIEW ALL JOBS", uxhires_jobs_path %>
 			</div>
-			<div class="nav-r">
+			<!-- <div class="nav-r">
 				<a href="#", class="p-right">REGISTER</a>
 				<a href="#">LOG IN</a>
-			</div>
+			</div> -->
 			<div class="clear"></div>
 		</div>
 	</section>
@@ -42,7 +42,9 @@
 		  	<div class="select-wrapper">
 					<%= f.input :type, collection: @active.pluck(:company_type).uniq, label: false, prompt: "Type of Company", required: false, input_html: { id: "company" } %>
 		  	</div>
-				<%= f.input :keywords, placeholder: "Keywords", required: false, label: false %>
+        <div class="input-wrapper">
+				  <%= f.input :keywords, placeholder: "Keywords", required: false, label: false %>
+        </div>
 
 	  		<button>Search</button>
 			<% end %>
@@ -77,11 +79,15 @@
 				</div>
 			</div>
 		<% end %>
-		<%= will_paginate @jobs,:container => false,:params => {:anchor => "job-bar"} %>
 	</section>
 
 	<section id="uxhires8", class=
 	"white">
+    <div class="paginate">
+      <div class="float-wrap">
+        <%= will_paginate @jobs,:container => false, :previous_label => image_tag(gulp_asset_path("/images/uxhires/double-left-arrows.png")), :next_label => image_tag(gulp_asset_path("/images/uxhires/double-right-arrows.png")), :params => {:anchor => "job-bar"} %>
+      </div>
+    </div>
     <div class="section-center center wider">
       <h2>
         Related Links

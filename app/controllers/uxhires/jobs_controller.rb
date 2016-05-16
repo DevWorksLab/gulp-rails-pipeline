@@ -1,5 +1,5 @@
 class Uxhires::JobsController < ApplicationController
-  before_action :active_jobs, only: [:uxhires, :index, :refine, :show]
+  before_action :active_jobs, only: [:uxhires, :index, :refine, :job_show]
   before_action :set_nested_job, only: [:job_app, :apply]
 
   def uxhires
@@ -9,9 +9,11 @@ class Uxhires::JobsController < ApplicationController
 
   def index
     @jobs = @active.paginate(:page => params[:page], :per_page => 5)
+
+    
   end
 
-  def show
+  def job_show
     @job = Job.find(params[:id])
     @open = @active.sample(4)
     @featured = @open.shift
