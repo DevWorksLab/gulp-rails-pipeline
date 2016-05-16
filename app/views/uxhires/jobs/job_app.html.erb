@@ -30,29 +30,33 @@
 					<%= @job.location %>
 				</i>
 			</h3>
-			<%= strip_tags( @job.description ).truncate(1000) %>
-
-			<%= simple_form_for :application, url: uxhires_job_submit_app_path(@job) do |f| %>
-				<% @form["response"]["item"]["questions"]["question"].each do |question| %>
-					<%= parse_question_type(question) %>
-					<div class="input-wrapper">
-						<label for=<%= @for %> class=<%= @required_class %>>
-							<%= @label %>
-						<label>
-						<% if @comment %>
-							<p><%= @comment %></p>
-						<% end %>
-						<% if @input == "check_boxes" %>
-							<%= f.input @name.to_sym, as: @input.to_sym, collection: @answers, label: false %>
-						<% else %>
-							<%= f.input @name.to_sym, as: @input.to_sym, label: false, required: @required %>
-						<% end %>
+			<p>
+			<%= sanitize(@job.description.truncate(500), tags: %w(br h5 ul li)) %>
+			</p>
+			
+			<div class="job-app-form">
+				<%= simple_form_for :application, html: {}, url: uxhires_job_submit_app_path(@job) do |f| %>
+					<% @form["response"]["item"]["questions"]["question"].each do |question| %>
+						<%= parse_question_type(question) %>
+						<div class="input-wrapper">
+							<label for=<%= @for %> class=<%= @required_class %>>
+								<%= @label %>
+							<label>
+							<% if @comment %>
+								<p><%= @comment %></p>
+							<% end %>
+							<% if @input == "check_boxes" %>
+								<%= f.input @name.to_sym, as: @input.to_sym, collection: @answers, label: false %>
+							<% else %>
+								<%= f.input @name.to_sym, as: @input.to_sym, label: false, required: @required %>
+							<% end %>
+						</div>
+					<% end %>
+					<div class="submit-wrapper">
+						<%= f.submit "Apply", class: "submit" %>
 					</div>
 				<% end %>
-				<div class="submit-wrapper">
-					<%= f.submit "Apply" %>
-				</div>
-			<% end %>
+			</div>
 
 			<!-- <%= simple_form_for @job, url: uxhires_job_submit_app_path(@job), method: "post" do |f| %>
 				<% @form["response"]["item"]["questions"]["question"].each do |question| %>

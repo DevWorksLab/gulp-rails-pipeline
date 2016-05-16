@@ -488,8 +488,13 @@
 			}
 
 			label {
-				font-size: 14px;
+				font-family: "Sentinel A" , "Sentinel B";
+				font-size: 20px;
+				line-height: 37px;
+				font-weight: 300;
+				color: #42423f;
 			}
+
 
 			input[type="file"] {
 				font-size: 14px;
@@ -503,6 +508,7 @@
 			input[type="radio"] {
 				margin-bottom: 10px;
 			}
+
 
 			button {
 				outline: none;
@@ -536,7 +542,49 @@
 					}
 				}
 			}
-			
+
+			.job-app-form {
+				width: 75%;
+				padding-top: 5rem;
+
+				input {
+					padding: 5px 10px;
+					font-size: 16px;
+					border-radius: 3px;
+					border: 1px solid #ccc;
+					margin-bottom: 10px;
+					width: 70%;
+
+					&.margin-r {
+						margin-right: 5px;
+					}
+
+					&.full {
+						width: 90%;
+					}
+				}
+
+				textarea {
+					width: 100%;    
+					margin-bottom: 20px;
+					margin-top: 10px;
+				}
+				
+				.submit-wrapper {
+					.submit {
+						outline: none;
+						border: none;
+						background: #8AD562;
+						color: white;
+						font-weight: 700;
+						font-size: 14px;
+						padding: 15px 20px;
+						border-radius: 3px;
+						margin-top: 3rem;
+					}	
+				}
+			}
+	
 		}
 
 		.more-roles {
@@ -665,6 +713,15 @@
 					color: rgba(0, 0, 0, 0.8);
 					font-size: 16px;
 				}
+
+				input[type="submit"] {
+					background: #9CCC65;
+				}
+
+				input[type="file"] {
+					font-size: 14px;
+					font-weight: 300;
+				}
 			}
 
 			button {
@@ -679,6 +736,8 @@
 				margin-left: -5px;
 			}
 		}
+
+
 
 
 
