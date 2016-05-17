@@ -1,10 +1,11 @@
 class Person < ActiveRecord::Base
-  validates :first_name, :last_name, :bio, :email, :linkedin, :twitter, :title,
-  :snippet, :skill_one,
-  :skill_one_blurb, :skill_two, :skill_two_blurb, :skill_three,
-  :skill_three_blurb, presence: true
+  validates :first_name, :last_name, presence: true
+  # :bio, :linkedin, :twitter, :title,
+  # :snippet, :skill_one,
+  # :skill_one_blurb, :skill_two, :skill_two_blurb, :skill_three,
+  # :skill_three_blurb, presence: true
 
-  scope :active, -> { where(active: true) }
+  scope :active, -> { where(active: true).order("priority asc") }
   scope :order_by_active, -> { order(:active => "desc" , :priority => "asc") }
 
 
