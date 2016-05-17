@@ -22,7 +22,7 @@
 	.heading {
 		width: 70%;
 		margin: 3rem auto 0;
-		
+
 		h1 {
 			color: #fff;
 			font-size: 5.5rem;
@@ -72,7 +72,7 @@
 	padding-top: 7%;
 	background: #F9F9F9;
 	overflow: hidden;
-	
+
 	.uxwrapper {
 		float: left;
 		width: 33.333333%;
@@ -156,7 +156,7 @@
 
   .contain-testimonial {
   	width: 56pc;
-  	margin: 0 auto; 
+  	margin: 0 auto;
   	text-align: left;
 
 	  p {
@@ -221,7 +221,7 @@
 
   .contain-testimonial {
   	width: 56pc;
-  	margin: 0 auto; 
+  	margin: 0 auto;
   	text-align: left;
 
 	  p {
@@ -258,8 +258,8 @@
 		padding-top: 4rem;
 
 		.float-wrap {
-			overflow: hidden; 
-			margin: 0 auto; 
+			overflow: hidden;
+			margin: 0 auto;
 			text-align: center;
 			display: inline-block;
 
@@ -282,11 +282,11 @@
 		font-size: 4rem;
 		color: #787574;
 	}
-	
+
 	.related-container {
 		width: 100%;
 		margin: 5rem auto 0;
-		overflow: hidden; 
+		overflow: hidden;
 		position: relative;
 		height: 35rem;
 
@@ -313,6 +313,7 @@
 				background-repeat: no-repeat;
 				background-size: cover;
 				background-position: 0 -75px;
+				clear: none;
 			}
 
 			&.fourth {
@@ -353,7 +354,7 @@
 
 	.job-listing {
 		margin-bottom: 5rem;
-		
+
 		&:last-child {
 			padding-bottom: 10rem;
 		}
@@ -395,7 +396,7 @@
 
 //UX hires jobs
 #uxhires-jobs {
-	
+
 	.nav-toggle span, .nav-toggle span:after, .nav-toggle span:before {
     background: $white;
   }
@@ -565,11 +566,11 @@
 				}
 
 				textarea {
-					width: 100%;    
+					width: 100%;
 					margin-bottom: 20px;
 					margin-top: 10px;
 				}
-				
+
 				.submit-wrapper {
 					.submit {
 						outline: none;
@@ -581,10 +582,10 @@
 						padding: 15px 20px;
 						border-radius: 3px;
 						margin-top: 3rem;
-					}	
+					}
 				}
 			}
-	
+
 		}
 
 		.more-roles {
@@ -627,7 +628,7 @@
 				&:nth-child(even) {
 					background: #F9F9F9;
 				}
-			
+
 				.role {
 					float: left;
 					width: 70%;
@@ -664,7 +665,7 @@
 				}
 			}
 		}
-		
+
 		#filter {
 			height: 300px;
 			background: #F6F6F6;
@@ -745,8 +746,3 @@
 
 	}
 }
-
-
-
-
-    

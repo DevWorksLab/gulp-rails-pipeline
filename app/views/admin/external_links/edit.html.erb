@@ -1,6 +1,13 @@
-<h1>Editing External Link</h1>
-
-<%= render 'form' %>
-
-<%= link_to 'Show', @external_link %> |
-<%= link_to 'Back', external_links_path %>
+<section class="content-header">
+  <h1>
+    Edit Link
+    <small>Update the link below</small>
+  </h1>
+  <ol class="breadcrumb">
+    <li><a href="#"><i class="fa fa-dashboard"></i> Root</a></li>
+    <li class="active">Index</li>
+  </ol>
+</section>
+<section class="content">
+  <%= render :partial => 'form' %>
+</section>

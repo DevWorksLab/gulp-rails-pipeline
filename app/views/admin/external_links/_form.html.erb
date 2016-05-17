@@ -8,19 +8,24 @@
       </div>
       <!-- /.box-header -->
       <!-- form start -->
-      <%= simple_form_for [:admin, @person] do |f| %>
+      <%= simple_form_for [:admin, @external_link] do |f| %>
         <div class="box-body">
           <div class="form-group">
-            <%= f.input :link_type, collection: ["Article", "", "Event"], input_html: {class: "form-control"} %>
-          </div>
-          <div class="form-group">
-            <%= f.input :first_name, placeholder: "Enter First Name", input_html: {class: "form-control"} %>
-          </div>
-          <div class="form-group">
-            <%= f.input :last_name, placeholder: "Enter Last Name", input_html: {class: "form-control"} %>
+            <%= f.input :link_type, collection: ["Article", "Event"], prompt: "Choose Link Type", input_html: {class: "form-control"} %>
           </div>
           <div class="form-group">
             <%= f.input :title, placeholder: "Enter Title", input_html: {class: "form-control"} %>
+          </div>
+          <div class="form-group">
+            <%= f.input :url, placeholder: "Enter Url", input_html: {class: "form-control"} %>
+          </div>
+          <div class="form-group">
+            <%= f.input :image, as: :file %>
+
+            <p class="help-block">Upload Background Image(Optional)</p>
+          </div>
+          <div class="box-footer">
+            <button type="submit" class="btn btn-primary">Submit</button>
           </div>
         </div>
       <% end %>

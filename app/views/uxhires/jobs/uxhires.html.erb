@@ -152,26 +152,26 @@
                 </h3>
               </div>
             <% end %>
-            <div class="related-box second">
-              <p>
-                Article
-              </p>
-              <h3>
-                How I accidentally <br>
-                became a UX <br>
-                Designer
-              </h3>
-            </div>
-            <div class="related-box third">
-              <p>
-                Events
-              </p>
-              <h3>
-                Leap Into UX: <br>
-                From Products to <br>
-                Portfolios
-              </h3>
-            </div>
+            <%= link_to @external_links.first.url do %>
+              <div class="related-box second">
+                <p>
+                  <%= @external_links.first.link_type %>
+                </p>
+                <h3>
+                  <%= @external_links.first.title %>
+                </h3>
+              </div>
+            <% end %>
+            <%= link_to @external_links.last.url do %>
+              <div class="related-box third", style="background: url(<%= @external_links.first.image_url %>)">
+                <p>
+                  <%= @external_links.last.link_type %>
+                </p>
+                <h3>
+                  <%= @external_links.last.title %>
+                </h3>
+              </div>
+            <% end %>
           </div>
         </div>
       </section>
@@ -185,7 +185,7 @@
                 <%= posting.title %>
               </h1>
               <p>
-                <%= strip_tags(posting.description).truncate(300) if posting.description %>
+                <%= sanitize(posting.description, tags: %w('&')).truncate(300).html_safe if posting.description %>
                 <%= link_to "More info.", uxhires_job_path(posting) %>
               </p>
             </div>

@@ -1,31 +1,73 @@
-<p id="notice"><%= notice %></p>
+<!-- Content Header (Page header) -->
+<section class="content-header">
+  <h1>
+    Link Index
+    <small>Current Links</small>
+  </h1>
+  <ol class="breadcrumb">
+    <li><a href="#"><i class="fa fa-dashboard"></i> Root</a></li>
+    <li class="active">Index</li>
+  </ol>
+</section>
 
-<h1>Listing External Links</h1>
+<!-- Main content -->
+<section class="content">
+  <!-- Your Page Content Here -->
+  <div class="row">
+    <div class="col-md-6">
+      <h2 class="page-header"></h2>
+    </div>
+    <div class="col-md-6">
+      <%= button_to new_admin_external_link_path, method: "get", class: "btn btn-block btn-default btn-lg" do %>
+        Add Link
+      <% end %>
+    </div>
+  </div>
+  <br>
 
-<table>
-  <thead>
-    <tr>
-      <th>Link type</th>
-      <th>Title</th>
-      <th>Url</th>
-      <th colspan="3"></th>
-    </tr>
-  </thead>
-
-  <tbody>
-    <% @external_links.each do |external_link| %>
-      <tr>
-        <td><%= external_link.link_type %></td>
-        <td><%= external_link.title %></td>
-        <td><%= external_link.url %></td>
-        <td><%= link_to 'Show', external_link %></td>
-        <td><%= link_to 'Edit', edit_external_link_path(external_link) %></td>
-        <td><%= link_to 'Destroy', external_link, method: :delete, data: { confirm: 'Are you sure?' } %></td>
-      </tr>
-    <% end %>
-  </tbody>
-</table>
-
-<br>
-
-<%= link_to 'New External link', new_admin_external_link_path %>
+  <p id="notice"><%= notice %></p>
+  <div class="row">
+    <div class="col-xs-12">
+      <div class="box">
+        <div class="box-header">
+          <h3 class="box-title">Link Table</h3>
+          <div class="box-tools">
+          </div>
+        </div><!-- /.box-header -->
+        <div class="box-body table-responsive no-padding">
+          <table class="table table-hover">
+            <tr>
+              <th>Link Type</th>
+              <th>Title</th>
+              <th>Url</th>
+              <th>Image</th>
+              <th>
+            </tr>
+            <% @external_links.each do |link| %>
+              <tr>
+                <% if link.link_type == "Article" %>
+                  <td><span class="label label-success">Article</span></td>
+                <% else %>
+                  <td><span class="label label-primary">Event</span></td>
+                <% end %>
+                <td><%= link.title %></td>
+                <td><%= link.url %></td>
+                <td><%= link_to "#{link.image_url}", link.image_url if link.image_url %></td>
+                <td>
+                  <%= link_to edit_admin_external_link_path(link) do %>
+                    <i class="fa fa-fw fa-pencil"></i>
+                  <% end %>
+                </td>
+                <td>
+                  <%= link_to admin_external_link_path(link), method: "destroy", data: {confirm: "Are You Sure You Want To Delete?"} do %>
+                    <i class="fa fa-fw fa-trash"></i>
+                  <% end %>
+                </td>
+              </tr>
+            <% end %>
+          </table>
+        </div><!-- /.box-body -->
+      </div><!-- /.box -->
+    </div>
+  </div>
+</section>

@@ -24,7 +24,7 @@ class Admin::ExternalLinksController < AdminController
     @external_link = ExternalLink.new(external_link_params)
 
     if @external_link.save
-      redirect_to admin_external_link_path(@external_link), notice: 'External link was successfully created.'
+      redirect_to admin_external_links_path, notice: 'External link was successfully created.'
     else
       render :new
     end
@@ -33,7 +33,7 @@ class Admin::ExternalLinksController < AdminController
   # PATCH/PUT /external_links/1
   def update
     if @external_link.update(external_link_params)
-      redirect_to admin_external_link_path(@external_link), notice: 'External link was successfully updated.'
+      redirect_to admin_external_links_path, notice: 'External link was successfully updated.'
     else
       render :edit
     end
@@ -53,6 +53,6 @@ class Admin::ExternalLinksController < AdminController
 
     # Only allow a trusted parameter "white list" through.
     def external_link_params
-      params.require(:external_link).permit(:link_type, :title, :url)
+      params.require(:external_link).permit(:link_type, :title, :url, :image)
     end
 end

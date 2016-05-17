@@ -5,17 +5,18 @@ class Uxhires::JobsController < ApplicationController
   def uxhires
     @open = @active.sample(4)
     @featured = @open.shift
+    @external_links = ExternalLink.take(2)
   end
 
   def index
     @jobs = @active.paginate(:page => params[:page], :per_page => 5)
 
-    
+
   end
 
   def job_show
     @job = Job.find(params[:id])
-    @open = @active.sample(4)
+    @open = @active.where("location LIKE ? OR title LIKE ?", @job.location, @job.title).sample(4)
     @featured = @open.shift
   end
 
