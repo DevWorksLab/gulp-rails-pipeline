@@ -23,7 +23,7 @@ class JobFilter
 
   def filter_by_role
     unless @params[:role].blank?
-      @jobs = @jobs.where("title LIKE ?", "%#{@params[:role]}%" )
+      @jobs = @jobs.where("role LIKE ?", "%#{@params[:role]}%" )
     end
     return @jobs
   end
