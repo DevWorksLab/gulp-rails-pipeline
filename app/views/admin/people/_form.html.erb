@@ -23,7 +23,7 @@
             <%= f.input :title, placeholder: "Enter Title", input_html: {class: "form-control"} %>
           </div>
           <div class="form-group">
-            <%= f.input :profile_pic, as: :file %>
+            <%= f.input :profile_pic, as: :file, required: @person.profile_pic_url ? false : true %>
 
             <p class="help-block">Upload Inner Profile Pic Here</p>
           </div>
@@ -49,7 +49,7 @@
             <%= f.input :skill_one_blurb, placeholder: "Enter Skill One Blurb", input_html: {class: "form-control"} %>
           </div>
           <div class="form-group">
-            <%= f.input :skill_one_icon, as: :file %>
+            <%= f.input :skill_one_icon, as: :file, required: @person.skill_one_icon_url ? false : true  %>
 
             <p class="help-block">Icon for Skill One.</p>
           </div>
@@ -60,7 +60,7 @@
             <%= f.input :skill_two_blurb, placeholder: "Enter Skill Two Blurb", input_html: {class: "form-control"} %>
           </div>
           <div class="form-group">
-            <%= f.input :skill_two_icon, as: :file %>
+            <%= f.input :skill_two_icon, as: :file, required: @person.skill_two_icon_url ? false : true %>
 
             <p class="help-block">Icon for Skill Two.</p>
           </div>
@@ -71,17 +71,17 @@
             <%= f.input :skill_three_blurb, placeholder: "Enter Skill Three Blurb", input_html: {class: "form-control"} %>
           </div>
           <div class="form-group">
-            <%= f.input :skill_three_icon, as: :file %>
+            <%= f.input :skill_three_icon, as: :file, required: @person.skill_three_icon_url ? false : true %>
 
             <p class="help-block">Icon for Skill Three.</p>
           </div>
           <div class="form-group">
-            <%= f.input :header_pic, as: :file, label: "Cover Photo" %>
+            <%= f.input :header_pic, as: :file, label: "Cover Photo", required: @person.header_pic_url ? false : true %>
 
             <p class="help-block">Upload Inner Banner Pic Here</p>
           </div>
           <div class="form-group">
-            <%= f.input :other_image, as: :file, label: "Second Photo" %>
+            <%= f.input :other_image, as: :file, label: "Second Photo", required: @person.other_image_url ? false : true %>
 
             <p class="help-block">Upload Inner Banner Pic Here</p>
           </div>
