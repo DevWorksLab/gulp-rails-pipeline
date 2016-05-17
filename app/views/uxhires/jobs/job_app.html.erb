@@ -33,7 +33,7 @@
 			<p>
 			<%= sanitize(@job.description.truncate(500), tags: %w(br h5 ul li)) %>
 			</p>
-			
+
 			<div class="job-app-form">
 				<%= simple_form_for :application, html: {}, url: uxhires_job_submit_app_path(@job) do |f| %>
 					<% @form["response"]["item"]["questions"]["question"].each do |question| %>
@@ -147,102 +147,5 @@
 
 	<section id="uxhires8", class=
 	"white">
-    <div class="section-center center wider">
-      <h2>
-        Next, check these
-      </h2>
-      <div class="related-container visible">
-        <div class="related-box first">
-          <p>
-            Open Position
-          </p>
-          <h3>
-            Senior UX <br>
-            Researcher (SF)
-          </h3>
-        </div>
-        <div class="related-box second">
-          <p>
-            Article
-          </p>
-          <h3>
-            How I accidentally <br>
-            became a UX <br>
-            Designer
-          </h3>
-        </div>
-        <div class="related-box third">
-          <p>
-            Events
-          </p>
-          <h3>
-            Leap Into UX: <br>
-            From Products to <br>
-            Portfolios
-          </h3>
-        </div>
-        <div class="related-box fourth">
-          <p>
-            GET YOUR COPY
-          </p>
-          <h3>
-            Reframe by <br>
-            Mona Patel
-          </h3>
-        </div>
-        <div class="related-box first">
-          <p>
-            Article
-          </p>
-          <h3>
-            21 Podcasts That <br>
-            Will Change Your <br>
-            Life
-          </h3>
-        </div>
-        <div class="related-box third">
-          <p>
-            FEATURED EMPLOYEE
-          </p>
-          <h3>
-            Andrew Forman<br>
-            Recruitment <br>
-            Coordinator
-          </h3>
-        </div>
-        <div class="related-box fourth">
-          <p>
-            GET YOUR COPY
-          </p>
-          <h3>
-            Reframe by <br>
-            Mona Patel
-          </h3>
-        </div>
-        <div class="related-box first">
-          <p>
-            Article
-          </p>
-          <h3>
-            21 Podcasts That <br>
-            Will Change Your <br>
-            Life
-          </h3>
-        </div>
-        <div class="related-box fifth">
-          <p>
-            FEATURED EMPLOYEE
-          </p>
-          <h3>
-            Andrew Forman<br>
-            Recruitment <br>
-            Coordinator
-          </h3>
-        </div>
-
-
-
-
-      </div>
-    </div>
+		<%= render :partial => "related_links" %>
   </section>
