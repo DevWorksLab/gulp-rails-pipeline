@@ -22,7 +22,6 @@ class CatsOne
         # description = job["description"]
         location = job["location"]
         hotness = job["is_hot"]  == "No" ? false : true
-
         # Do we need company and if so we need another call to get the name
         # lets try to limit calls by storing companies in DB
 
@@ -81,10 +80,18 @@ class CatsOne
     jobs = response["response"]["result"]
     jobs.each do |job|
       record = Job.find_by_catsone_id(job["id"])
+      if record.catsone_id == 7261167
+        binding.pry
+      end
+      role = job["extra_field196083"]
+      company_type = job["extra_field196089"]
       description = job["description"]
       public = job["public"]
-      status = job["status"].split(" ").first.downcase
-      record.update(status: status, description: description, public: public)
+      status = job["status"]
+      record.update(
+        status: status, description: description, public: public,
+        company_type: company_type, role: role
+        )
     end
   end
 

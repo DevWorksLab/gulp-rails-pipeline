@@ -34,13 +34,13 @@
 	  			FILTER BY
 	  		</h3>
 				<div class="select-wrapper">
-					<%= f.input :location, collection: @active.pluck(:location).uniq, prompt: "Location", label: false, required: false, input_html: { id: "loc" }%>
+					<%= f.input :location, collection: @active.pluck(:location).compact.uniq, prompt: "Location", label: false, required: false, input_html: { id: "loc" }%>
 	  		</div>
 	  		<div class="select-wrapper">
-					<%= f.input :role, collection: @active.pluck(:title).uniq, label: false, prompt: "Type of Role", required: false, input_html: { id: "type" } %>
+					<%= f.input :role, collection: @active.active.pluck(:role).compact.map{|role| role.split(', ')}.flatten.uniq, label: false, prompt: "Type of Role", required: false, input_html: { id: "type" } %>
 		  	</div>
 		  	<div class="select-wrapper">
-					<%= f.input :type, collection: @active.pluck(:company_type).uniq, label: false, prompt: "Type of Company", required: false, input_html: { id: "company" } %>
+					<%= f.input :type, collection: @active.pluck(:company_type).compact.uniq, label: false, prompt: "Type of Company", required: false, input_html: { id: "company" } %>
 		  	</div>
         <div class="input-wrapper">
 				  <%= f.input :keywords, placeholder: "Keywords", required: false, label: false %>
@@ -68,7 +68,7 @@
 						<%= job.title %>
 					</h3>
 					<p>
-						<%= "#{strip_tags(job.description).truncate(300)}" if job.description %>
+						<%= "#{sanitize(job.description, tags: %w('&')).truncate(300).html_safe}" if job.description %>
 						<%= link_to "More info.", uxhires_job_path(job) %>
 					</p>
 				</div>
@@ -89,69 +89,7 @@
       </div>
     </div>
     <div class="section-center center wider">
-      <h2>
-        Related Links
-      </h2>
-      <div class="related-container visible">
-        <div class="related-box first">
-          <p>
-            Open Position
-          </p>
-          <h3>
-            Senior UX <br>
-            Researcher (SF)
-          </h3>
-        </div>
-        <div class="related-box second">
-          <p>
-            Article
-          </p>
-          <h3>
-            How I accidentally <br>
-            became a UX <br>
-            Designer
-          </h3>
-        </div>
-        <div class="related-box third">
-          <p>
-            Events
-          </p>
-          <h3>
-            Leap Into UX: <br>
-            From Products to <br>
-            Portfolios
-          </h3>
-        </div>
-        <div class="related-box fourth">
-          <p>
-            GET YOUR COPY
-          </p>
-          <h3>
-            Reframe by <br>
-            Mona Patel
-          </h3>
-        </div>
-        <div class="related-box first">
-          <p>
-            Article
-          </p>
-          <h3>
-            21 Podcasts That <br>
-            Will Change Your <br>
-            Life
-          </h3>
-        </div>
-        <div class="related-box fifth">
-          <p>
-            FEATURED EMPLOYEE
-          </p>
-          <h3>
-            Andrew Forman<br>
-            Recruitment <br>
-            Coordinator
-          </h3>
-        </div>
-      </div>
+      <%= render :partial => 'related_links' %>
     </div>
   </section>
 

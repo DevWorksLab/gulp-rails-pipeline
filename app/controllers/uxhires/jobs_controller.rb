@@ -1,7 +1,7 @@
 class Uxhires::JobsController < ApplicationController
   before_action :active_jobs, only: [:uxhires, :index, :refine, :job_show, :job_app]
   before_action :set_nested_job, only: [:job_app, :apply]
-  before_action :set_external_links, only: [:job_show, :job_app, :index]
+  before_action :set_external_links, only: [:job_show, :job_app, :index, :refine]
 
   def uxhires
     @open = @active.sample(4)
@@ -10,6 +10,8 @@ class Uxhires::JobsController < ApplicationController
   end
 
   def index
+    @open = @active.sample(4)
+    @featured = @open.shift
     @jobs = @active.paginate(:page => params[:page], :per_page => 5)
   end
 
@@ -41,6 +43,8 @@ class Uxhires::JobsController < ApplicationController
   def refine
     filter = JobFilter.new(params: params[:search], jobs: @active)
     @jobs = filter.filter_result.paginate(:page => params[:page], :per_page => 5)
+    @open = @active.sample(4)
+    @featured = @open.shift
 
     render :index
   end
