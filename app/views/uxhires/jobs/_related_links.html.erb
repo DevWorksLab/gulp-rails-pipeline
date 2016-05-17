@@ -3,35 +3,38 @@
     Related Links
   </h2>
   <div class="related-container visible">
+    <%= link_to uxhires_job_path(@featured) do %>
     <div class="related-box first">
-      <p>
-        Open Position
-      </p>
-      <h3>
-        Senior UX <br>
-        Researcher (SF)
-      </h3>
-    </div>
-    <div class="related-box second">
-      <p>
-        Article
-      </p>
-      <h3>
-        How I accidentally <br>
-        became a UX <br>
-        Designer
-      </h3>
-    </div>
-    <div class="related-box third">
-      <p>
-        Events
-      </p>
-      <h3>
-        Leap Into UX: <br>
-        From Products to <br>
-        Portfolios
-      </h3>
-    </div>
+        <p>
+          Open Position
+        </p>
+        <h3>
+          <%= @featured.title %>
+          <br>
+          <%= @featured.location %>
+        </h3>
+      </div>
+    <% end %>
+    <%= link_to @external_links.first.url do %>
+      <div class="related-box second">
+        <p>
+          <%= @external_links.first.link_type %>
+        </p>
+        <h3>
+          <%= @external_links.first.title %>
+        </h3>
+      </div>
+    <% end %>
+    <%= link_to @external_links[1].url do %>
+      <div class="related-box third", style="background: url(<%= @external_links.first.image_url %>)">
+        <p>
+          <%= @external_links[1].link_type %>
+        </p>
+        <h3>
+          <%= @external_links[1].title %>
+        </h3>
+      </div>
+    <% end %>
     <%= link_to "http://www.readytoreframe.com/" do %>
       <div class="related-box fourth">
         <p>
@@ -43,25 +46,26 @@
         </h3>
       </div>
     <% end %>
-    <div class="related-box first">
-      <p>
-        Article
-      </p>
-      <h3>
-        21 Podcasts That <br>
-        Will Change Your <br>
-        Life
-      </h3>
-    </div>
-    <div class="related-box fifth">
-      <p>
-        FEATURED EMPLOYEE
-      </p>
-      <h3>
-        Andrew Forman<br>
-        Recruitment <br>
-        Coordinator
-      </h3>
-    </div>
+    <%= link_to @external_links.last.url do %>
+      <div class="related-box first">
+        <p>
+          <%= @external_links.last.link_type %>
+        </p>
+        <h3>
+          <%= @external_links.last.title %>
+        </h3>
+      </div>
+    <% end %>
+    <%= link_to person_path(@featured_person) do %>
+      <div class="related-box fifth">
+        <p>
+          FEATURED EMPLOYEE
+        </p>
+        <h3>
+          <%= @featured_person.full_name %><br>
+          <%= @featured_person.title %>
+        </h3>
+      </div>
+    <% end %>
   </div>
 </div>
