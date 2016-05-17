@@ -80,9 +80,6 @@ class CatsOne
     jobs = response["response"]["result"]
     jobs.each do |job|
       record = Job.find_by_catsone_id(job["id"])
-      if record.catsone_id == 7261167
-        binding.pry
-      end
       role = job["extra_field196083"]
       company_type = job["extra_field196089"]
       description = job["description"]
