@@ -11,16 +11,16 @@
 			<div class="nav-l">
 				<%= link_to "GO BACK TO VIEW ALL JOBS", uxhires_jobs_path %>
 			</div>
-			<div class="nav-r">
+			<!-- <div class="nav-r">
 				<a href="#", class="p-right">REGISTER</a>
 				<a href="#">LOG IN</a>
-			</div>
+			</div> -->
 			<div class="clear"></div>
 		</div>
 	</section>
 
 	<section id="uxhires-jobs2">
-		<div class="page-center">
+		<div class="page-center", style="max-width: 70%;">
 			<h1>
 				The Role
 			</h1>
@@ -69,17 +69,20 @@
 
 
 	<div class="more-roles">
+		<div class="left-col"></div>
 		<div class="left">
 			<a href="#">MORE ROLES LIKE THIS</a>
 		</div>
 		<div class="right">
 			<a href="#">LOCATION</a>
 		</div>
+		<div class="right-col"></div>
 	</div>
 
 	<section id="uxhires-jobs3">
 		<% @open.each do |job| %>
 			<div class="job-wrapper">
+				<div class="left-col"></div>
 				<div class="role">
 					<h3>
 						<%= job.title %>
@@ -94,6 +97,7 @@
 						<%= job.location %>
 					</p>
 				</div>
+				<div class="right-col"></div>
 			</div>
 		<% end %>
 	</section>

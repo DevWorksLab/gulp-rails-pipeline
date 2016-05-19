@@ -52,17 +52,20 @@
   </section>
 
   <div class="more-roles" id="job-bar">
-		<div class="left less">
+  	<div class="left-col"></div>
+		<div class="left">
 			<a href="#">JOB DESCRIPTION</a>
 		</div>
 		<div class="right">
 			<a href="#">LOCATION</a>
 		</div>
+		<div class="right-col"></div>
 	</div>
 
 	<section id="uxhires-jobs3">
 		<% @jobs.each do |job| %>
 			<div class="job-wrapper">
+				<div class="left-col"></div>
 				<div class="role">
 					<h3>
 						<%= job.title %>
@@ -77,6 +80,7 @@
 						<%= job.location %>
 					</p>
 				</div>
+				<div class="right-col"></div>
 			</div>
 		<% end %>
 	</section>
