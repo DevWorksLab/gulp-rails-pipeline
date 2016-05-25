@@ -31,7 +31,7 @@
 				</i>
 			</h3>
 			<p>
-			<%= sanitize(@job.description.truncate(500), tags: %w(br h5 ul li)) %>
+			<%= sanitize(@job.description.truncate(500), tags: %w(div strong br h5 h4 h3 h2 h1 span em p ul li a code pre ol input textarea label)) %>
 			</p>
 
 			<div class="job-app-form">
@@ -58,18 +58,7 @@
 				<% end %>
 			</div>
 
-			<!-- <%= simple_form_for @job, url: uxhires_job_submit_app_path(@job), method: "post" do |f| %>
-				<% @form["response"]["item"]["questions"]["question"].each do |question| %>
-					<div class="input-wrapper">
-						<label> <%= question["title"] %><label>
-						<p><%= question["comment"] %></p>
-						<%= parse_question_type(question) %>
-					</div>
-				<% end %>
-				<div class="submit-wrapper">
-					<%= f.submit "Apply" %>
-				</div>
-			<% end %> -->
+			
 
 			<!-- <h3>
 				Do you have enterprise/B2B experience?*
