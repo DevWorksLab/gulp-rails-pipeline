@@ -507,57 +507,60 @@
 			padding: 10rem 0;
 			background: white;
 
-			h1 {
-				color: #9CDB76;
-				font-size: 22px;
-			}
-			h3 {
-				font-size: 16px;
-			}
-			h5 {
-				color: #6A8D54;
-				font-size: 14px;
-			}
+			.page-center {
 
-			ul {
-				li {
+				h1 {
+					color: #9CDB76;
+					font-size: 22px;
+				}
+				h3 {
+					font-size: 16px;
+				}
+				h5 {
+					color: #6A8D54;
 					font-size: 14px;
 				}
-			}
+				
+				ul {
+					li {
+						font-size: 14px;
+					}
+				}
 
-			label {
-				font-family: "Sentinel A" , "Sentinel B";
-				font-size: 20px;
-				line-height: 37px;
-				font-weight: 300;
-				color: #42423f;
-			}
+				label {
+					font-family: "Sentinel A" , "Sentinel B";
+					font-size: 20px;
+					line-height: 37px;
+					font-weight: 300;
+					color: #42423f;
+				}
 
 
-			input[type="file"] {
-				font-size: 14px;
-				font-weight: 300;
+				input[type="file"] {
+					font-size: 14px;
+					font-weight: 300;
 
-				&.margin-b {
+					&.margin-b {
+						margin-bottom: 10px;
+					}
+				}
+
+				input[type="radio"] {
 					margin-bottom: 10px;
 				}
-			}
-
-			input[type="radio"] {
-				margin-bottom: 10px;
-			}
 
 
-			button {
-				outline: none;
-				border: none;
-				background: #8AD562;
-				color: white;
-				font-weight: 700;
-				font-size: 14px;
-				padding: 15px 20px;
-				border-radius: 3px;
-				margin-top: 3rem;
+				button {
+					outline: none;
+					border: none;
+					background: #8AD562;
+					color: white;
+					font-weight: 700;
+					font-size: 14px;
+					padding: 15px 20px;
+					border-radius: 3px;
+					margin-top: 3rem;
+				}
 			}
 
 			.form-wrapper {
