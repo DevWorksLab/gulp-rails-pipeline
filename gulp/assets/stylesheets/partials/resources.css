@@ -38,12 +38,13 @@
 
       h5 {
         color: white;
-        font-size: 1rem;
+        font-size: 11px;
       }
 
       h1 {
         color: white;
         font-size: 8rem;
+        font-weight: 400;
         line-height: 95px;
       }
     }
@@ -51,12 +52,12 @@
     .d-arrow-container {
       max-width: 135px;
       float: right;
-      transform: translate(-115px, 130px);
+      transform: translate(-115px, 225px);
     }
   }
 
   #resources2 {
-    height: 400px;
+    height: 420px;
     overflow: hidden;
 
     &.gray {
@@ -65,10 +66,11 @@
 
     img {
       position: relative;
-      top: 95px;
-      right: 0;
-      width: 472px;
+      top: 90px;
+      right: -50px;
+      width: 500px;
       height: auto;
+      max-width: none !important;
     }
 
     .bucket {
@@ -78,6 +80,34 @@
     .bucket-inner {
       padding-left: 0px;
       padding-right: 105px;
+
+      h3 {
+        color: #787574;
+        font-size: 25px;
+        font-family: "Gotham A,Gotham B,Helvetica,Arial,sans-serif";
+        font-weight: 700;
+        letter-spacing: 0;
+        margin-bottom: 25px;
+      }
+
+      p {
+        font-size: 18px;
+        line-height: 24px;
+      }
+
+      a {
+        color: #42423F; 
+        font-weight: 400;
+
+        .cta-arrow {
+          width: auto;
+          height: auto;
+          top: 0;
+          position: static;
+          right: 0;
+          padding-left: 35px;
+        }
+      }
     }
   }
 
@@ -87,7 +117,7 @@
   }
 
   #resources4 {
-    height: 600px;
+    height: 650px;
 
 
     #resources-book {
