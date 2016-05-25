@@ -315,6 +315,7 @@
 
 	.related-container {
 		width: 100%;
+		max-width: 1245px;
 		margin: 5rem auto 0;
 		overflow: hidden;
 		position: relative;
