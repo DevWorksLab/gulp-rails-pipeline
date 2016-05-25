@@ -181,6 +181,31 @@
     padding-left: 0;
     padding-right: 105px;
     min-width: 450px;
+
+    h3 {
+      font-weight: 700;
+      letter-spacing: 0;
+    }
+
+    p {
+
+      font-size: 18px;
+      line-height: 24px;
+
+      a {
+        color: #42423F; 
+        font-weight: 400;
+      }
+
+      .cta-arrow {
+        width: auto;
+        height: auto;
+        top: 0;
+        position: static;
+        right: 0;
+        padding-left: 35px;
+      }
+    }
   }
 
   #work-line {
