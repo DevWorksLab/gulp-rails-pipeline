@@ -5,7 +5,7 @@ every :day, at: "12:00am" do
   command "echo 'Begin cron tasks for #{Date.today.to_s}"
 end
 
-every 1.minute do
+every 4.hours do
   command "echo 'Updating Job Listings'"
   runner "Job.update_listings"
   runner "Job.update_descriptions"
