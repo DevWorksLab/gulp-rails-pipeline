@@ -47,6 +47,11 @@
 	}
 
 	.page-center {
+		max-width: 1000px;
+		margin-left: auto;
+		margin-right: auto;
+		padding: 0;
+
 		h2 {
 
 		}
@@ -315,7 +320,7 @@
 
 	.related-container {
 		width: 100%;
-		max-width: 1245px;
+		max-width: 1000px;
 		margin: 5rem auto 0;
 		overflow: hidden;
 		position: relative;
@@ -474,10 +479,11 @@
 				background: #F6F6F6;
 
 				.nav-l {
-					width: 50%;
 					height: 100%;
-					float: left;
 					padding-top: 3.5rem;
+					text-align: left;
+					max-width: 1000px;
+					margin: 0 auto;
 				}
 
 				.nav-r {
@@ -495,6 +501,7 @@
 					font-weight: 500;
 					font-size: 16px;
 					color: rgba(0, 0, 0, 0.65);
+					font-family: Gotham A, Gotham B;
 				}
 
 				.p-right {
@@ -638,30 +645,38 @@
 			background: #486F34;
 			height: 60px;
 
-			.left-col {
-				float: left;
-				width: 15%;
+			.section-center {
+				max-width: 1000px;
+				padding: 0;
 				height: 100%;
+				width: auto; 
+				margin: 0 auto;
 			}
+
+			// .left-col {
+			// 	float: left;
+			// 	width: 15%;
+			// 	height: 100%;
+			// }
 
 			.left {
 				float: left;
-				width: 45%;
+				width: 50%;
 				padding-top: 2rem;
 			}
 
 			.right {
 				float: left;
-				width: 30%;
+				width: 50%;
 				padding-top: 2rem;
-				padding-left: 5rem;
+				text-align: right;
 			}
 
-			.right-col {
-				float: left;
-				width: 10%;
-				height: 100%;
-			}
+			// .right-col {
+			// 	float: left;
+			// 	width: 10%;
+			// 	height: 100%;
+			// }
 
 			a {
 				color: white;
@@ -673,62 +688,67 @@
 		#uxhires-jobs3 {
 			background: #fff;
 
-			.job-wrapper {
-				height: 350px;
-				background: #fff;
+			.job-container {
+				width: 100%;
 
 				&:nth-child(even) {
 					background: #F9F9F9;
 				}
 
-				.left-col {
-					float: left; 
-					width: 15%;
-					height: 100%;
-				}
+				.job-wrapper {
+					height: 350px;
+					max-width: 1000px;
+					margin: 0 auto;
 
-				.role {
-					width: 45%;
-					float: left;
-					padding-top: 5rem;
-					height: 100%;
+					// .left-col {
+					// 	float: left; 
+					// 	width: 15%;
+					// 	height: 100%;
+					// }
 
-					h3 {
-						font-size: 24px;
-						font-family: "Sentinel A", "Sentinel B";
-						font-weight: 200;
-						line-height: 28px;
+					.role {
+						width: 50%;
+						float: left;
+						padding-top: 5rem;
+						height: 100%;
+
+						h3 {
+							font-size: 24px;
+							font-family: Sentinel A, Sentinel B;
+							font-weight: 200;
+							line-height: 28px;
+						}
+
+						p {
+							margin-top: 10px;
+							line-height: 24px;
+							font-size: 18px;
+						}
+
+						a {
+							text-decoration: underline;
+							font-weight: 700;
+						}
 					}
 
-					p {
-						margin-top: 10px;
-						line-height: 24px;
-						font-size: 18px;
+					.loc {
+						float: left;
+						width: 50%;
+						padding-top: 5rem;
+						height: 100%;
+						text-align: right;
+
+						p {
+							font-weight: 500;
+							font-size: 20px;
+						}
 					}
 
-					a {
-						text-decoration: underline;
-						font-weight: 700;
-					}
-				}
-
-				.loc {
-					float: left;
-					width: 30%;
-					padding-top: 5rem;
-					padding-left: 5rem;
-					height: 100%;
-
-					p {
-						font-weight: 500;
-						font-size: 20px;
-					}
-				}
-
-				.right-col {
-					float: left;
-					width: 10%;
-					height: 100%;
+					// .right-col {
+					// 	float: left;
+					// 	width: 10%;
+					// 	height: 100%;
+					// }
 				}
 			}
 		}
@@ -738,6 +758,14 @@
 			background: #F6F6F6;
 			padding-top: 3.5rem;
 
+			.page-center {
+				max-width: 1000px;
+				margin-left: auto;
+				margin-right: auto;
+				padding: 0;
+			}
+
+			    
 			h3 {
 				font-size: 16px;
 			}
@@ -809,7 +837,10 @@
 		}
 
 
-
+// .page-wrap {
+// 	max-width: 1200px;
+// 	margin: 0 auto;
+// }
 
 
 

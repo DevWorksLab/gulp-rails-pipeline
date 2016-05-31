@@ -3,6 +3,7 @@
 <%- content_for :body_id do %>uxhires-jobs<%- end %>
 <%- content_for :section_id do %>uxhires-jobs-wrapper<%- end %>
 
+<div class="page-wrap">
 	<section id="uxhires-jobs1">
 		<div class="logo-wrapper">
 		  <%= image_tag gulp_asset_path("/images/uxhires/uxhires-logo.png"), alt: "ux hires logo", style: "width: 250px;" %>
@@ -52,35 +53,39 @@
   </section>
 
   <div class="more-roles" id="job-bar">
-  	<div class="left-col"></div>
-		<div class="left">
-			<a href="#">JOB DESCRIPTION</a>
+  	<div class="section-center">
+	  	<div class="left-col"></div>
+			<div class="left">
+				<a href="#">JOB DESCRIPTION</a>
+			</div>
+			<div class="right">
+				<a href="#">LOCATION</a>
+			</div>
+			<div class="right-col"></div>
 		</div>
-		<div class="right">
-			<a href="#">LOCATION</a>
-		</div>
-		<div class="right-col"></div>
 	</div>
 
 	<section id="uxhires-jobs3">
 		<% @jobs.each do |job| %>
-			<div class="job-wrapper">
-				<div class="left-col"></div>
-				<div class="role">
-					<h3>
-						<%= job.title %>
-					</h3>
-					<p>
-						<%= "#{sanitize(job.description, tags: %w('&')).truncate(300).html_safe}" if job.description %>
-						<%= link_to "More info.", uxhires_job_path(job) %>
-					</p>
+			<div class="job-container">
+				<div class="job-wrapper">
+					<div class="left-col"></div>
+					<div class="role">
+						<h3>
+							<%= job.title %>
+						</h3>
+						<p>
+							<%= "#{sanitize(job.description, tags: %w('&')).truncate(300).html_safe}" if job.description %>
+							<%= link_to "More info.", uxhires_job_path(job) %>
+						</p>
+					</div>
+					<div class="loc">
+						<p>
+							<%= job.location %>
+						</p>
+					</div>
+					<div class="right-col"></div>
 				</div>
-				<div class="loc">
-					<p>
-						<%= job.location %>
-					</p>
-				</div>
-				<div class="right-col"></div>
 			</div>
 		<% end %>
 	</section>
@@ -96,8 +101,10 @@
       <%= render :partial => 'related_links' %>
     </div>
   </section>
+</div>
 
 
 		<!-- End body and section -->
 	</div>
 </section>
+
