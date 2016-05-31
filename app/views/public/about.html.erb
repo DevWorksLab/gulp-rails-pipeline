@@ -71,8 +71,10 @@
 
       <div class="about-banner about-img1">
         <div id="staff-link-wrapper">
-          <a class="staff-link" href="http://www.uxhires.com/hiretalent.php">Build Your Team</a>
-          <a class="staff-link" href="http://www.uxhires.com/gethired.php">Get Hired</a>
+          <%= link_to "Build Your Team", "/uxhires", class: "staff-link" %>
+          <%= link_to "Get Hired", uxhires_jobs_path, class: "staff-link" %>
+          <!-- <a class="staff-link" href="http://www.uxhires.com/hiretalent.php">Build Your Team</a> -->
+          <!-- <a class="staff-link" href="http://www.uxhires.com/gethired.php">Get Hired</a> -->
         </div>
       </div>
     </section>

@@ -30,7 +30,7 @@
     }
 
     .hero-text {
-      width: 60%;
+      max-width: 900px;
       margin: 0 auto;
       padding-top: 18%;
       position: relative;
@@ -44,15 +44,27 @@
       h1 {
         color: white;
         font-size: 8rem;
-        font-weight: 400;
+        font-weight: 700;
         line-height: 95px;
       }
     }
 
     .d-arrow-container {
-      max-width: 135px;
-      float: right;
-      transform: translate(-115px, 225px);
+      display: block;
+      width: 100%;
+      position: absolute;
+      bottom: -65px;
+      float: none;
+      max-width: none;
+      transform: none;
+
+      a {
+        width: 100%;
+        display: inline-block;
+        height: 100%;
+        width: 25%;
+        float: right;
+      }
     }
   }
 
@@ -84,7 +96,7 @@
       h3 {
         color: #787574;
         font-size: 25px;
-        font-family: "Gotham A,Gotham B,Helvetica,Arial,sans-serif";
+        font-family: Gotham A, Gotham B;
         font-weight: 700;
         letter-spacing: 0;
         margin-bottom: 25px;
@@ -181,7 +193,7 @@
   }
 
   .more-link {
-    font-family: "Gotham A", "Gotham B";
+    font-family: Gotham A, Gotham B;
     font-size: 2.8rem;
     color: $text-color;
     line-height: 37px;
