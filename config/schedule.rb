@@ -8,6 +8,7 @@ end
 every 4.hours do
   command "Updating Job Listings"
   runner "Job.update_listings"
+  runner "Job.update_descriptions"
   command "Finished updating listings"
 end
 
