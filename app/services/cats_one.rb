@@ -27,7 +27,6 @@ class CatsOne
 
         # Check if job is in DB
         if job = Job.find_by_catsone_id(catsone_id)
-          puts "UPDATE JOB"
           # update
           job.update(
             title: title,

@@ -1,15 +1,15 @@
 env :PATH, ENV['PATH']
-set :output, {:error => "log/cron_error_log.log", :standard => "log/cron_log.log"}
+set :output, {:error => "#{path}/log/cron_error_log.log", :standard => "#{path}/log/cron_log.log"}
 
 every :day, at: "12:00am" do
   command "echo 'Begin cron tasks for #{Date.today.to_s}"
 end
 
-every 4.hours do
-  command "Updating Job Listings"
+every 1.minute do
+  command "echo 'Updating Job Listings'"
   runner "Job.update_listings"
   runner "Job.update_descriptions"
-  command "Finished updating listings"
+  command "echo 'Finished updating listings'"
 end
 
 
