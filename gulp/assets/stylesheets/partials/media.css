@@ -247,7 +247,7 @@
 @media screen and (min-width: 320px) and (max-width: 700px) {
 
   .d-arrow-container {
-    transform: translate(-125px, 125px) !important;
+    // transform: translate(-125px, 125px) !important;
   }
 
 }
@@ -255,7 +255,7 @@
 @media screen and (min-width: 701px) and (max-width: 1060px) {
 
   .d-arrow-container {
-    transform: translate(-115px, 180px) !important;
+    // transform: translate(-115px, 180px) !important;
   }
 
 }
@@ -272,7 +272,7 @@
 @media screen and (min-width: 1061px) and (max-width: 1250px) {
 
   .d-arrow-container {
-    transform: translate(-115px, 160px) !important;
+    // transform: translate(-115px, 160px) !important;
   }
 }
 
@@ -914,6 +914,16 @@
   }
 }
 
+
+@media screen and (min-width: 1500px) {
+  #resources {
+    #resources1 {
+      .d-arrow-container {
+        // transform: translate(-115px, 105px);
+      }
+    }
+  }  
+}
 
 
 

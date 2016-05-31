@@ -30,7 +30,7 @@
     }
 
     .hero-text {
-      width: 60%;
+      max-width: 900px;
       margin: 0 auto;
       padding-top: 18%;
       position: relative;
@@ -44,15 +44,27 @@
       h1 {
         color: white;
         font-size: 8rem;
-        font-weight: 400;
+        font-weight: 700;
         line-height: 95px;
       }
     }
 
     .d-arrow-container {
-      max-width: 135px;
-      float: right;
-      transform: translate(-115px, 225px);
+      display: block;
+      width: 100%;
+      position: absolute;
+      bottom: -65px;
+      float: none;
+      max-width: none;
+      transform: none;
+
+      a {
+        width: 100%;
+        display: inline-block;
+        height: 100%;
+        width: 25%;
+        float: right;
+      }
     }
   }
 
