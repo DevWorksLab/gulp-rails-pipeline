@@ -193,7 +193,7 @@
   }
 
   .more-link {
-    font-family: "Gotham A", "Gotham B";
+    font-family: Gotham A, Gotham B;
     font-size: 2.8rem;
     color: $text-color;
     line-height: 37px;
