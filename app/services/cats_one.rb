@@ -18,7 +18,6 @@ class CatsOne
         catsone_id = job["item_id"]
         company = job["company"]
         title = job["title"]
-        status =  job["status"].split(' (').first.downcase
         # description = job["description"]
         location = job["location"]
         hotness = job["is_hot"]  == "No" ? false : true
@@ -31,7 +30,6 @@ class CatsOne
           job.update(
             title: title,
             catsone_id: catsone_id,
-            status: status,
             # description: description, in V2 api description is seperate call
             company_name: company,
             status: status,
