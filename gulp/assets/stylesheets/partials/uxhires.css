@@ -525,6 +525,10 @@
 				max-width: 1000px;
 				padding: 0;
 
+				&.sentinel {
+					font-family: Sentinel A, Sentinel B;
+				}
+
 				h1 {
 					color: #9CDB76;
 					font-size: 22px;
