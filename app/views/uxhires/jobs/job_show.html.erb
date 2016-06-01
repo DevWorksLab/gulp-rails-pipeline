@@ -20,7 +20,7 @@
 	</section>
 
 	<section id="uxhires-jobs2">
-		<div class="page-center", style="max-width: 70%;">
+		<div class="page-center">
 			<h1>
 				The Role
 			</h1>
@@ -67,35 +67,39 @@
 
 
 	<div class="more-roles">
-		<div class="left-col"></div>
-		<div class="left">
-			<a href="#">MORE ROLES LIKE THIS</a>
+		<div class="section-center">
+			<div class="left-col"></div>
+			<div class="left">
+				<a href="#">MORE ROLES LIKE THIS</a>
+			</div>
+			<div class="right">
+				<a href="#">LOCATION</a>
+			</div>
+			<div class="right-col"></div>
 		</div>
-		<div class="right">
-			<a href="#">LOCATION</a>
-		</div>
-		<div class="right-col"></div>
 	</div>
 
 	<section id="uxhires-jobs3">
 		<% @open.each do |job| %>
-			<div class="job-wrapper">
-				<div class="left-col"></div>
-				<div class="role">
-					<h3>
-						<%= job.title %>
-					</h3>
-					<p>
-						<%= "#{strip_tags(job.description).truncate(300)}" if job.description %>
-						<%= link_to "More info.", uxhires_job_path(job) %>
-					</p>
+			<div class="job-container">
+				<div class="job-wrapper">
+					<div class="left-col"></div>
+					<div class="role">
+						<h3>
+							<%= job.title %>
+						</h3>
+						<p>
+							<%= "#{strip_tags(job.description).truncate(300)}" if job.description %>
+							<%= link_to "More info.", uxhires_job_path(job) %>
+						</p>
+					</div>
+					<div class="loc">
+						<p>
+							<%= job.location %>
+						</p>
+					</div>
+					<div class="right-col"></div>
 				</div>
-				<div class="loc">
-					<p>
-						<%= job.location %>
-					</p>
-				</div>
-				<div class="right-col"></div>
 			</div>
 		<% end %>
 	</section>

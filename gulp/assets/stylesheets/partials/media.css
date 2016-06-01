@@ -926,7 +926,35 @@
 }
 
 
+@media screen and (max-width: 50em) {
+  footer {
+    #mc_embed_signup_scroll {
+      // display: block !important;
 
+      input {
+        display: block !important;
+        width: 100% !important;
+        margin: 0 !important;
+        float: none !important; 
+      }
+
+      // #mce-response {
+      //   display: block !important;
+      // }
+
+      .footer-sub {
+        float: none !important;
+        display: block !important;
+        margin: 0 !important;
+        width: 100% !important;
+
+        input {
+          width: 100% !important;
+        }
+      }
+    }
+  }
+}
 
 
 
