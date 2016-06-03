@@ -929,8 +929,8 @@
 @media screen and (max-width: 50em) {
   footer {
     #mc_embed_signup_scroll {
-      // display: block !important;
-
+/*      display: block !important;
+*/
       input {
         display: block !important;
         width: 100% !important;
@@ -938,9 +938,9 @@
         float: none !important; 
       }
 
-      // #mce-response {
-      //   display: block !important;
-      // }
+      /*#mce-response {
+       display: block !important;
+      }*/
 
       .footer-sub {
         float: none !important;
@@ -954,6 +954,19 @@
       }
     }
   }
+
+  #home1 {
+    height: auto !important;
+    min-height: 700px !important;
+
+    h1 {
+      font-size: 30px !important;
+      top: 15vh !important;
+      padding: 15px !important;
+    }
+  }
+
+
 }
 
 
