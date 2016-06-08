@@ -68,7 +68,7 @@ class CatsOne
     parse_jobs(jobs_arr)
   end
 
-  def apply
+  def apply_joborder  
     response = self.class.post('/apply_joborder', query: @options )
   end
 

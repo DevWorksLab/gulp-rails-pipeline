@@ -35,8 +35,10 @@ class Uxhires::JobsController < ApplicationController
     response = cats.apply_joborder
     if response["response"]["success"] == true
       #handle success notice
+      redirect_to root_path
     else
       #render error
+      redirect_to root_path
     end
   end
 
