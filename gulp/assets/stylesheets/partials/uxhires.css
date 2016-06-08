@@ -172,9 +172,11 @@
 		padding-left: 25px;
 
 		h3 {
-			font-weight: 400;
-			font-size: 2.5rem;
+			font-weight: 300;
+			font-size: 2.8rem;
 			text-align: left;
+			line-height: 40px;
+			letter-spacing: 0;
  		}
 
 	}
@@ -192,6 +194,11 @@
 			margin-top: 1rem;
 			padding-top: 10px;
 			padding-bottom: 0;
+			font-weight: 300;
+			font-size: 2.8rem;
+			text-align: left;
+			line-height: 40px;
+			letter-spacing: 0;
 	  }
 
 	  img {
@@ -515,6 +522,12 @@
 			background: white;
 
 			.page-center {
+				max-width: 1000px;
+				padding: 0;
+
+				&.sentinel {
+					font-family: Sentinel A, Sentinel B;
+				}
 
 				h1 {
 					color: #9CDB76;

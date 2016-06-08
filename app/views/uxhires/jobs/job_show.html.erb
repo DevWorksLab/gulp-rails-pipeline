@@ -20,7 +20,7 @@
 	</section>
 
 	<section id="uxhires-jobs2">
-		<div class="page-center", style="max-width: 70%;">
+		<div class="page-center sentinel">
 			<h1>
 				The Role
 			</h1>
@@ -30,9 +30,7 @@
 					<%= @job.location %>
 				</i>
 			</h3>
-			<p>
 			<%= sanitize( @job.description, tags: %w(div strong br h5 h4 h3 h2 h1 span em p ul li a code pre ol) ) %>
-			</p>
 			<!-- <p>
 				Our client is a 20-person, 2 year-old stealth startup building the next generation of data-driven, marketing-centric business applications. Based in New York City, they have a world class team and are funded by several premier investment firms and
 				have fortune 500 clients.
@@ -69,35 +67,39 @@
 
 
 	<div class="more-roles">
-		<div class="left-col"></div>
-		<div class="left">
-			<a href="#">MORE ROLES LIKE THIS</a>
+		<div class="section-center">
+			<div class="left-col"></div>
+			<div class="left">
+				<a href="#">MORE ROLES LIKE THIS</a>
+			</div>
+			<div class="right">
+				<a href="#">LOCATION</a>
+			</div>
+			<div class="right-col"></div>
 		</div>
-		<div class="right">
-			<a href="#">LOCATION</a>
-		</div>
-		<div class="right-col"></div>
 	</div>
 
 	<section id="uxhires-jobs3">
 		<% @open.each do |job| %>
-			<div class="job-wrapper">
-				<div class="left-col"></div>
-				<div class="role">
-					<h3>
-						<%= job.title %>
-					</h3>
-					<p>
-						<%= "#{strip_tags(job.description).truncate(300)}" if job.description %>
-						<%= link_to "More info.", uxhires_job_path(job) %>
-					</p>
+			<div class="job-container">
+				<div class="job-wrapper">
+					<div class="left-col"></div>
+					<div class="role">
+						<h3>
+							<%= job.title %>
+						</h3>
+						<p>
+							<%= "#{strip_tags(job.description).truncate(300)}" if job.description %>
+							<%= link_to "More info.", uxhires_job_path(job) %>
+						</p>
+					</div>
+					<div class="loc">
+						<p>
+							<%= job.location %>
+						</p>
+					</div>
+					<div class="right-col"></div>
 				</div>
-				<div class="loc">
-					<p>
-						<%= job.location %>
-					</p>
-				</div>
-				<div class="right-col"></div>
 			</div>
 		<% end %>
 	</section>

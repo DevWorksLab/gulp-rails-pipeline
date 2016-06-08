@@ -25,7 +25,7 @@
 
   #casestudy3 {
     height: 768px;
-    background-image: url("/assets/images/casestudies/trendsetter/photo_1.png");
+    background-image: url("/assets/images/casestudies/trendsetter/PHOTO_1.png");
     background-size: cover;
     width: 100%;
     background-repeat: no-repeat;
@@ -180,6 +180,7 @@
     text-align: center;
     margin-bottom: 140px;
     font-weight: 500;
+    font-family: Gotham A, Gotham B;
   }
 
 #jet2 {
