@@ -609,11 +609,12 @@
 				padding-top: 10px;
 
 				input {
-					padding: 9px 46px;
+					padding: 7px 5px;
 					font-size: 16px;
 					border-radius: 3px;
 					border: 1px solid #ccc;
 					margin-bottom: 10px;
+					width: 50%;
 
 					&.margin-r {
 						margin-right: 5px;
@@ -634,6 +635,8 @@
 					height: 100px;
 					margin-bottom: 20px;
 					margin-top: 10px;
+					padding: 10px;
+					font-size: 16px;
 				}
 
 				.submit-wrapper {

@@ -35,7 +35,7 @@
 			</p>
 
 			<div class="job-app-form">
-				<%= simple_form_for :application, html: {}, url: uxhires_job_submit_app_path(@job) do |f| %>
+				<%= simple_form_for :application, html: {id: "simple-job-app"}, url: uxhires_job_submit_app_path(@job) do |f| %>
 					<% @form["response"]["item"]["questions"]["question"].each do |question| %>
 						<%= parse_question_type(question) %>
 						<div class="input-wrapper">
@@ -53,7 +53,7 @@
 						</div>
 					<% end %>
 					<div class="submit-wrapper">
-						<%= f.submit "Apply", class: "submit" %>
+						<%= f.submit "Apply", class: "submit", id: "apply-btn" %>
 					</div>
 				<% end %>
 			</div>

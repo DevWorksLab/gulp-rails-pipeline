@@ -3,6 +3,8 @@ class Uxhires::JobsController < ApplicationController
   before_action :set_nested_job, only: [:job_app, :apply]
   before_action :set_external_links, only: [:job_show, :job_app, :index, :refine]
 
+  protect_from_forgery with: :null_session
+
   def uxhires
     @open = @active.sample(4)
     @featured = @open.shift
@@ -32,14 +34,21 @@ class Uxhires::JobsController < ApplicationController
   def apply
     params[:application].merge("id" => @job.catsone_id)
     cats = CatsOne.new(options: params[:application])
-    response = cats.apply_joborder
-    if response["response"]["success"] == true
-      #handle success notice
-      redirect_to root_path
+    @response = cats.apply_joborder
+    # @response = {"response" => {"success" => true}}
+    Rails.logger.warn @response.to_yaml
+    if @response["response"]["success"] == true
+      respond_to do |format|
+        format.json {render :json => @response}
+      end
     else
       #render error
-      redirect_to root_path
+      respond_to do |format|
+        format.json {render :json => @response}
+      end
     end
+
+
   end
 
   def refine
