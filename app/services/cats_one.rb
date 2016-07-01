@@ -32,7 +32,7 @@ class CatsOne
             catsone_id: catsone_id,
             # description: description, in V2 api description is seperate call
             company_name: company,
-            status: status,
+            # status: status,
             location: location,
             is_hot: hotness
             )
@@ -41,10 +41,10 @@ class CatsOne
           Job.create(
             title: title,
             catsone_id: catsone_id,
-            status: status,
+            # status: status,
             # description: description, in V2 api description is seperate call
             company_name: company,
-            status: status,
+            # status: status,
             location: location,
             is_hot: hotness
             )
@@ -68,7 +68,7 @@ class CatsOne
     parse_jobs(jobs_arr)
   end
 
-  def apply_joborder  
+  def apply_joborder
     response = self.class.post('/apply_joborder', query: @options )
   end
 
