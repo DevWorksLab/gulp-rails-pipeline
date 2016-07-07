@@ -45,17 +45,6 @@
 	&.white {
 		background: #fff;
 	}
-
-	.page-center {
-		max-width: 1000px;
-		margin-left: auto;
-		margin-right: auto;
-		padding: 0;
-
-		h2 {
-
-		}
-	}
 }
 
 .section-center {
@@ -547,6 +536,10 @@
 					}
 				}
 
+				span {
+					font-size: 16px;
+				}
+
 				label {
 					font-family: "Sentinel A" , "Sentinel B";
 					font-size: 20px;
@@ -567,6 +560,10 @@
 
 				input[type="radio"] {
 					margin-bottom: 10px;
+				}
+
+				input[type="checkbox"] {
+					display: block;
 				}
 
 
