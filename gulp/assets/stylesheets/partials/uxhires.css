@@ -678,11 +678,11 @@
         margin: 0 auto;
       }
 
-      // .left-col {
-      //   float: left;
-      //   width: 15%;
-      //   height: 100%;
-      // }
+      /*.left-col {
+        float: left;
+        width: 15%;
+        height: 100%;
+      }*/
 
       .left {
         float: left;
@@ -697,11 +697,11 @@
         text-align: right;
       }
 
-      // .right-col {
-      //   float: left;
-      //   width: 10%;
-      //   height: 100%;
-      // }
+      /*.right-col {
+        float: left;
+        width: 10%;
+        height: 100%;
+      }*/
 
       a {
         color: white;
@@ -860,15 +860,6 @@
         margin-left: -5px;
       }
     }
-
-
-// .page-wrap {
-//   max-width: 1200px;
-//   margin: 0 auto;
-// }
-
-
-
 
   }
 }
