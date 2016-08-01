@@ -1,6 +1,7 @@
 # service wrappper for CatsOne Api calls
 class CatsOne
   include HTTParty
+  require 'rest-client'
   require 'json'
   require 'open-uri'
   base_uri 'https://uxhires.catsone.com/api'
@@ -69,7 +70,7 @@ class CatsOne
   end
 
   def apply_joborder
-    response = self.class.post('/apply_joborder', query: @options, headers: @headers )
+    response = RestClient.post('https://uxhires.catsone.com/api/apply_joborder', @options, multipart: true)
   end
 
   def get_job_descriptions

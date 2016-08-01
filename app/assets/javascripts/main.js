@@ -243,7 +243,7 @@ $(document).ready(function(){
     //   // $(this).fadeToggle();
     //   $(this).text("Thank You!");
     // });
-
+    //
     // $("#simple-job-app").on("submit", function(e){
     //   e.preventDefault();
     //

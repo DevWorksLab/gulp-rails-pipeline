@@ -18,7 +18,6 @@ module FormHelper
       if question["type"] == "checkboxes"
         @input = "check_boxes"
       else
-        binding.pry
         @multipart = true
         @mime_type = 'application/pdf'
       end

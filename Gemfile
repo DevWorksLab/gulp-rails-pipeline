@@ -23,6 +23,7 @@ gem "mini_magick"
 
 # integrate catsone api
 gem 'httparty'
+gem 'rest-client'
 
 # schedule cron tasks
 gem 'whenever', :require => false

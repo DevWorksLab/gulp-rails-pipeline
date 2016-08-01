@@ -452,6 +452,18 @@
 	#uxhires-jobs-wrapper {
 		background: #F9F9F9;
 
+		.notice {
+			width: 100%;
+	    text-align: center;
+	    padding: 20px;
+	    position: absolute;
+	    z-index: 1000;
+	    color: white;
+	    font-size: 18px;
+	    top: 12%;
+	    font-weight: 600;
+		}
+
 		#uxhires-jobs1 {
 			background: #8AD562;
 			height: 100%;
@@ -529,7 +541,7 @@
 					color: #6A8D54;
 					font-size: 14px;
 				}
-				
+
 				ul {
 					li {
 						font-size: 14px;
@@ -623,7 +635,7 @@
 				}
 
 				input[type="file"] {
-					border: none; 
+					border: none;
 					padding: 10px 0;
 				}
 
@@ -662,7 +674,7 @@
 				max-width: 1000px;
 				padding: 0;
 				height: 100%;
-				width: auto; 
+				width: auto;
 				margin: 0 auto;
 			}
 
@@ -714,7 +726,7 @@
 					margin: 0 auto;
 
 					// .left-col {
-					// 	float: left; 
+					// 	float: left;
 					// 	width: 15%;
 					// 	height: 100%;
 					// }
@@ -778,7 +790,7 @@
 				padding: 0;
 			}
 
-			    
+
 			h3 {
 				font-size: 16px;
 			}

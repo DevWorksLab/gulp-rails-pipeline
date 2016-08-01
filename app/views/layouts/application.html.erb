@@ -16,12 +16,15 @@
 <!--[if lt IE 8]>
 <p class="browserupgrade">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
 <![endif]-->
-
   <div class="container hidden" id="<%= yield :container_id %>;">
 
     <section id="<%= yield :section_id %>" class="<%= yield :section_class %>" style="<%= yield :section_image %>;">
-
       <%= render partial: 'shared/nav' %>
+      <% if flash[:notice] %>
+        <div class="notice">
+          <%= flash[:notice] %>
+        </div>
+      <% end %>
 
       <%= yield %>
 

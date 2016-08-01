@@ -32,7 +32,6 @@ class Uxhires::JobsController < ApplicationController
   end
 
   def apply
-    binding.pry
     params[:application]["id"] = @job.catsone_id
     email = nil
     resume = nil
@@ -43,23 +42,29 @@ class Uxhires::JobsController < ApplicationController
     end
     params[:application]["email"] = email
     params[:application]["password"] = SecureRandom.hex(8)
-    binding.pry
     cats = CatsOne.new(options: params[:application])
     @response = cats.apply_joborder
     # @response = {"response" => {"success" => true}}
-    Rails.logger.warn @response.to_yaml
-    binding.pry
-    if @response["response"]["success"] == true
-      respond_to do |format|
-        format.json {render :json => @response}
-      end
-    else
-      #render error
-      respond_to do |format|
-        format.json {render :json => @response}
+    doc = Nokogiri::XML(@response).children
+    success = nil
+    message = nil
+    doc.each do |child|
+      child.attributes.each do |attribute|
+        if attribute[0] == "success" && attribute[1].value == "true"
+          message = "Your application has successfully be submitted!"
+          success = true
+        else
+          message = "There was a problem with your application"
+          success = false
+        end
       end
     end
-
+    flash[:notice] = message
+    if success
+      redirect_to uxhires_job_show_path(@job)
+    else
+      render 'job_app'
+    end
 
   end
 
