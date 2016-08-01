@@ -244,34 +244,34 @@ $(document).ready(function(){
     //   $(this).text("Thank You!");
     // });
 
-    $("#simple-job-app").on("submit", function(e){
-      e.preventDefault();
+    // $("#simple-job-app").on("submit", function(e){
+    //   e.preventDefault();
+    //
+    //   var form = $(this).attr( "enctype", "multipart/form-data" ).attr( "encoding", "multipart/form-data" );
+    //   var url = $(this).attr("action");
+    //   $.ajax({
+    //     type: "POST",
+    //     url: url,
+    //     data: new FormData(form),
+    //     dataType: "json",
+    //     processData: false,
+    //     contentType: ( "enctype", "multipart/form-data" ),
+    //     success: function(result){
+    //         console.log(result);
+    //         var $btn = $("#apply-btn");
+    //         if (result.response.success === true) {
+    //           $btn.fadeOut(700);
+    //           $btn.fadeIn(700);
+    //           $btn.val("Thank You!");
+    //           $btn.prop("disabled", true);
+    //         } else {
+    //           $btn.val("There was an error.");
+    //         }
+    //
+    //     }
+    //
+    // });
 
-
-      var url = $(this).attr("action");
-
-      $.ajax({
-        type: "POST",
-        url: url,
-        data: $(this).serialize(),
-        dataType: "json",
-        success: function(result){
-            console.log(result);
-            var $btn = $("#apply-btn");
-            if (result.response.success === true) {
-              $btn.fadeOut(700);
-              $btn.fadeIn(700);
-              $btn.val("Thank You!");
-              $btn.prop("disabled", true);
-            } else {
-              $btn.val("There was an error.");
-            }
-            
-        }
-
-    });
-
-    
 
 });
 

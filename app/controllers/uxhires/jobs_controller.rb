@@ -32,11 +32,23 @@ class Uxhires::JobsController < ApplicationController
   end
 
   def apply
-    params[:application].merge("id" => @job.catsone_id)
+    binding.pry
+    params[:application]["id"] = @job.catsone_id
+    email = nil
+    resume = nil
+    params[:application].each do |key, field|
+      if (field.class != ActionDispatch::Http::UploadedFile && !field.is_a?(Numeric) )  && field.include?("@")
+        email = field
+      end
+    end
+    params[:application]["email"] = email
+    params[:application]["password"] = SecureRandom.hex(8)
+    binding.pry
     cats = CatsOne.new(options: params[:application])
     @response = cats.apply_joborder
     # @response = {"response" => {"success" => true}}
     Rails.logger.warn @response.to_yaml
+    binding.pry
     if @response["response"]["success"] == true
       respond_to do |format|
         format.json {render :json => @response}

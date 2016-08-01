@@ -6,7 +6,7 @@ class CatsOne
   base_uri 'https://uxhires.catsone.com/api'
 
   def initialize(options: nil)
-    # @headers = {"Authorization" => 'Token ' + ENV['UXHIRES_CATSONE_TOKEN'], "Content-Type" => "application/json", "Accept" => "application/json"}
+    @headers = {"Content-Disposition" => "multipart/form-data"}
     @options = options
     @options[:transaction_code] = ENV['UXHIRES_CATSONE_TOKEN']
   end
@@ -69,7 +69,7 @@ class CatsOne
   end
 
   def apply_joborder
-    response = self.class.post('/apply_joborder', query: @options )
+    response = self.class.post('/apply_joborder', query: @options, headers: @headers )
   end
 
   def get_job_descriptions

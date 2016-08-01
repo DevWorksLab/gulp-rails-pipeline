@@ -35,7 +35,7 @@
 			</p>
 
 			<div class="job-app-form">
-				<%= simple_form_for :application, html: {id: "simple-job-app"}, url: uxhires_job_submit_app_path(@job) do |f| %>
+				<%= simple_form_for :application, html: {id: "simple-job-app"}, url: uxhires_job_submit_app_path(@job), html: {multipart: true} do |f| %>
 					<% @form["response"]["item"]["questions"]["question"].each do |question| %>
 						<%= parse_question_type(question) %>
 						<div class="input-wrapper">
@@ -47,6 +47,8 @@
 							<% end %>
 							<% if @input == "check_boxes" %>
 								<%= f.input @name.to_sym, as: @input.to_sym, collection: @answers, label: false %>
+							<% elsif @input == "file" %>
+								<%= f.input @name.to_sym, as: @input.to_sym, label: false, required: @required, input_html: {multipart: true, mime_type: 'application/pdf'} %>
 							<% else %>
 								<%= f.input @name.to_sym, as: @input.to_sym, label: false, required: @required %>
 							<% end %>
@@ -58,7 +60,7 @@
 				<% end %>
 			</div>
 
-			
+
 
 			<!-- <h3>
 				Do you have enterprise/B2B experience?*
