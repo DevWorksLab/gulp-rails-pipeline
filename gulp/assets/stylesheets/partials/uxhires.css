@@ -1,124 +1,124 @@
 #uxhires1 {
-	position: relative;
-	text-align: center;
-	width: 100%;
-	height: 100vh;
-	background-color: transparent;
-	background: url(/assets/images/uxhires/uxhiresbanner.png);
-	background-repeat: no-repeat;
-	background-size: cover;
-	min-height: 600px;
+  position: relative;
+  text-align: center;
+  width: 100%;
+  height: 100vh;
+  background-color: transparent;
+  background: url(/assets/images/uxhires/uxhiresbanner.png);
+  background-repeat: no-repeat;
+  background-size: cover;
+  min-height: 600px;
 
-	&.index {
-		background: #8AD562;
-		height: 100vh;
-	}
+  &.index {
+    background: #8AD562;
+    height: 100vh;
+  }
 
-	.logo-wrapper {
-		width: 100%;
-		margin-top: 12%;
-	}
+  .logo-wrapper {
+    width: 100%;
+    margin-top: 12%;
+  }
 
-	.heading {
-		width: 70%;
-		margin: 3rem auto 0;
+  .heading {
+    width: 70%;
+    margin: 3rem auto 0;
 
-		h1 {
-			color: #fff;
-			font-size: 5.5rem;
-			letter-spacing: 0;
-			line-height: 90px;
-			line-height: 9rem;
-			font-weight: 700;
-		}
+    h1 {
+      color: #fff;
+      font-size: 5.5rem;
+      letter-spacing: 0;
+      line-height: 90px;
+      line-height: 9rem;
+      font-weight: 700;
+    }
 
-		span {
-			text-decoration: underline;
-		}
-	}
+    span {
+      text-decoration: underline;
+    }
+  }
 }
 
 #uxhires2 {
-	height: 650px;
-	padding-top: 10%;
+  height: 650px;
+  padding-top: 10%;
 
-	&.white {
-		background: #fff;
-	}
+  &.white {
+    background: #fff;
+  }
 }
 
 .section-center {
-	width: 56pc;
-	margin-left: auto;
-	margin-right: auto;
-	padding-right: 25px;
-	padding-left: 25px;
+  width: 56pc;
+  margin-left: auto;
+  margin-right: auto;
+  padding-right: 25px;
+  padding-left: 25px;
 
-	&.center {
-		text-align: center;
-	}
+  &.center {
+    text-align: center;
+  }
 
-	&.hidden {
-		overflow: hidden;
-	}
+  &.hidden {
+    overflow: hidden;
+  }
 
-	&.wider {
-		width: 90%;
-	}
+  &.wider {
+    width: 90%;
+  }
 }
 
 #uxhires3 {
-	height: 700px;
-	padding-top: 7%;
-	background: #F9F9F9;
-	overflow: hidden;
+  height: 700px;
+  padding-top: 7%;
+  background: #F9F9F9;
+  overflow: hidden;
 
-	h2 {
-		text-align: center;
-	}
+  h2 {
+    text-align: center;
+  }
 
-	.uxwrapper {
-		float: left;
-		width: 33.333333%;
-		padding: 0 3rem;
+  .uxwrapper {
+    float: left;
+    width: 33.333333%;
+    padding: 0 3rem;
 
-		.ux-img {
-			width: 300px;
-		}
+    .ux-img {
+      width: 300px;
+    }
 
-		.ux-head {
-			color: #6C8143;
-			margin-top: 3rem;
-			font-size: 12px;
-			text-transform: uppercase;
-			font-weight: 500;
-			text-align: center;
-		}
+    .ux-head {
+      color: #6C8143;
+      margin-top: 3rem;
+      font-size: 12px;
+      text-transform: uppercase;
+      font-weight: 500;
+      text-align: center;
+    }
 
-		.ux-subhead {
-			margin: 0.7rem auto;
-			font-size: 1.4rem;
-			font-family: "Sentinel A", "Sentinel B";
-			text-align: center;
-			font-size: 16px;
-			line-height: 24px;
-			font-weight: 200;
-		}
+    .ux-subhead {
+      margin: 0.7rem auto;
+      font-size: 1.4rem;
+      font-family: "Sentinel A", "Sentinel B";
+      text-align: center;
+      font-size: 16px;
+      line-height: 24px;
+      font-weight: 200;
+    }
 
-		a {
-			font-weight: 600;
-			color: rgba(0, 0, 0, 0.75);
-			text-decoration: underline;
-		}
-	}
+    a {
+      font-weight: 600;
+      color: rgba(0, 0, 0, 0.75);
+      text-decoration: underline;
+    }
+  }
 }
 
 #uxhires4{
-	height: 700px;
-	overflow: hidden;
-	position: relative;
+  height: 700px;
+  overflow: hidden;
+  position: relative;
 
-	& img {
+  & img {
     position: absolute;
     top: 7rem;
     right: 0px;
@@ -126,85 +126,85 @@
   }
 
   .section-center {
-		width: 56pc;
-		margin-left: auto;
-		margin-right: auto;
-		padding-right: 25px;
-		padding-left: 25px;
+    width: 56pc;
+    margin-left: auto;
+    margin-right: auto;
+    padding-right: 25px;
+    padding-left: 25px;
 
-		.bucket-inner {
-			h3 {
-				font-size: 40px;
-				letter-spacing: 0px;
-			}
-		}
-	}
+    .bucket-inner {
+      h3 {
+        font-size: 40px;
+        letter-spacing: 0px;
+      }
+    }
+  }
 
-	a {
-		font-weight: 600;
-		color: rgba(0, 0, 0, 0.75);
-		text-decoration: underline;
-	}
+  a {
+    font-weight: 600;
+    color: rgba(0, 0, 0, 0.75);
+    text-decoration: underline;
+  }
 }
 
 #uxhires5 {
-	height: 500px;
-	background: #F9F9F9;
-	overflow: hidden;
-	padding-top: 5%;
+  height: 500px;
+  background: #F9F9F9;
+  overflow: hidden;
+  padding-top: 5%;
 
-	.section-center {
-		width: 56pc;
-		margin-left: auto;
-		margin-right: auto;
-		padding-right: 25px;
-		padding-left: 25px;
+  .section-center {
+    width: 56pc;
+    margin-left: auto;
+    margin-right: auto;
+    padding-right: 25px;
+    padding-left: 25px;
 
-		h3 {
-			font-weight: 300;
-			font-size: 2.8rem;
-			text-align: left;
-			line-height: 40px;
-			letter-spacing: 0;
- 		}
+    h3 {
+      font-weight: 300;
+      font-size: 2.8rem;
+      text-align: left;
+      line-height: 40px;
+      letter-spacing: 0;
+     }
 
-	}
+  }
 
   .contain-testimonial {
-  	width: 56pc;
-  	margin: 0 auto;
-  	text-align: left;
+    width: 56pc;
+    margin: 0 auto;
+    text-align: left;
 
-	  p {
-			font-style: italic;
-			display: inline-block;
-			padding-right: 25px;
-			border-right: 3px solid #EBECED;
-			margin-top: 1rem;
-			padding-top: 10px;
-			padding-bottom: 0;
-			font-weight: 300;
-			font-size: 2.8rem;
-			text-align: left;
-			line-height: 40px;
-			letter-spacing: 0;
-	  }
+    p {
+      font-style: italic;
+      display: inline-block;
+      padding-right: 25px;
+      border-right: 3px solid #EBECED;
+      margin-top: 1rem;
+      padding-top: 10px;
+      padding-bottom: 0;
+      font-weight: 300;
+      font-size: 2.8rem;
+      text-align: left;
+      line-height: 40px;
+      letter-spacing: 0;
+    }
 
-	  img {
-	  	display: inline-block;
-	  	padding-left: 25px;
-	  	width: 135px;
-	  	transform: translateY(10px);
-	  }
-	}
+    img {
+      display: inline-block;
+      padding-left: 25px;
+      width: 135px;
+      transform: translateY(10px);
+    }
+  }
 }
 
 #uxhires6 {
-	height: 700px;
-	overflow: hidden;
-	position: relative;
+  height: 700px;
+  overflow: hidden;
+  position: relative;
 
-	& img {
+  & img {
     position: absolute;
     top: 9rem;
     right: 0px;
@@ -212,213 +212,213 @@
   }
 
   .bucket-inner {
-  	padding-top: 160px;
+    padding-top: 160px;
 
-  	h3 {
-  		font-size: 40px;
-  		letter-spacing: 0px;
-  	}
+    h3 {
+      font-size: 40px;
+      letter-spacing: 0px;
+    }
   }
 
   a {
-		font-weight: 600;
-		color: rgba(0, 0, 0, 0.75);
-		text-decoration: underline;
-	}
+    font-weight: 600;
+    color: rgba(0, 0, 0, 0.75);
+    text-decoration: underline;
+  }
 }
 
 #uxhires7 {
-	height: 500px;
-	background: #F9F9F9;
-	overflow: hidden;
-	padding-top: 10%;
+  height: 500px;
+  background: #F9F9F9;
+  overflow: hidden;
+  padding-top: 10%;
 
-	.section-center {
-		width: 56pc;
-		margin-left: auto;
-		margin-right: auto;
-		padding-right: 25px;
-		padding-left: 25px;
+  .section-center {
+    width: 56pc;
+    margin-left: auto;
+    margin-right: auto;
+    padding-right: 25px;
+    padding-left: 25px;
 
-		h3 {
-			font-weight: 400;
-			font-size: 2.5rem;
-			text-align: left;
- 		}
+    h3 {
+      font-weight: 400;
+      font-size: 2.5rem;
+      text-align: left;
+     }
 
-	}
+  }
 
   .contain-testimonial {
-  	width: 56pc;
-  	margin: 0 auto;
-  	text-align: left;
+    width: 56pc;
+    margin: 0 auto;
+    text-align: left;
 
-	  p {
-	  	font-style: italic;
-	  	display: inline-block;
-	  	padding-right: 5rem;
-	  	border-right: 1.5px solid #EBECED;
-	  	margin-top: 1rem;
-			padding-top: 10px;
-			padding-bottom: 0;
-	  }
+    p {
+      font-style: italic;
+      display: inline-block;
+      padding-right: 5rem;
+      border-right: 1.5px solid #EBECED;
+      margin-top: 1rem;
+      padding-top: 10px;
+      padding-bottom: 0;
+    }
 
-	  img {
-	  	display: inline-block;
-	  	padding-left: 5rem;
-	  	width: 135px;
-	  }
-	}
+    img {
+      display: inline-block;
+      padding-left: 5rem;
+      width: 135px;
+    }
+  }
 }
 
 #uxhires8 {
-	height: 500px;
-	padding-top: 8%;
-	position: relative;
+  height: 500px;
+  padding-top: 8%;
+  position: relative;
 
-	&.white {
-		background: #fff;
-	}
+  &.white {
+    background: #fff;
+  }
 
-	.paginate {
-		text-align: center;
-		position: absolute;
-		top: 0;
-		display: block;
-		width: 100%;
-		padding-top: 4rem;
+  .paginate {
+    text-align: center;
+    position: absolute;
+    top: 0;
+    display: block;
+    width: 100%;
+    padding-top: 4rem;
 
-		.float-wrap {
-			overflow: hidden;
-			margin: 0 auto;
-			text-align: center;
-			display: inline-block;
+    .float-wrap {
+      overflow: hidden;
+      margin: 0 auto;
+      text-align: center;
+      display: inline-block;
 
-			span, em, a {
-				border: 1px solid #ECEEEF;
-				font-size: 16px;
-				padding: 8px 15px;
-				float: left;
-				color: #526B35;
-			}
+      span, em, a {
+        border: 1px solid #ECEEEF;
+        font-size: 16px;
+        padding: 8px 15px;
+        float: left;
+        color: #526B35;
+      }
 
-			.current {
-				background: #9CCC65;
-				color: white;
-			}
-		}
-	}
+      .current {
+        background: #9CCC65;
+        color: white;
+      }
+    }
+  }
 
-	h2 {
-		font-size: 4rem;
-		color: #787574;
-	}
+  h2 {
+    font-size: 4rem;
+    color: #787574;
+  }
 
-	.related-container {
-		width: 100%;
-		max-width: 1000px;
-		margin: 5rem auto 0;
-		overflow: hidden;
-		position: relative;
-		height: 35rem;
+  .related-container {
+    width: 100%;
+    max-width: 1000px;
+    margin: 5rem auto 0;
+    overflow: hidden;
+    position: relative;
+    height: 35rem;
 
-		&.visible {
-			overflow: visible;
-		}
+    &.visible {
+      overflow: visible;
+    }
 
-		.related-box {
-			width: 33.333333%;
-			float: left;
-			height: 100%;
-			padding: 0 2rem;
+    .related-box {
+      width: 33.333333%;
+      float: left;
+      height: 100%;
+      padding: 0 2rem;
 
-			&.first {
-				background: #485F2E;
-			}
+      &.first {
+        background: #485F2E;
+      }
 
-			&.second {
-				background: #9CCC66;
-			}
+      &.second {
+        background: #9CCC66;
+      }
 
-			&.third {
-				background-image: url("/assets/images/uxhires/leap-into-ux.png");
-				background-repeat: no-repeat;
-				background-size: cover;
-				background-position: 0 -75px;
-				clear: none;
-			}
+      &.third {
+        background-image: url("/assets/images/uxhires/leap-into-ux.png");
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-position: 0 -75px;
+        clear: none;
+      }
 
-			&.fourth {
-				background: #ccc;
-			}
+      &.fourth {
+        background: #ccc;
+      }
 
-			&.fifth {
-				background: #eee;
-				margin-bottom: 15rem;
-			}
+      &.fifth {
+        background: #eee;
+        margin-bottom: 15rem;
+      }
 
-			p {
-				color: white;
-		    font-weight: 500;
-		    font-size: 12px;
-		    font-family: "Gotham A", "Gotham B";
-				text-align: left;
-				width: 90%;
-				margin: 10rem auto 0;
-			}
+      p {
+        color: white;
+        font-weight: 500;
+        font-size: 12px;
+        font-family: "Gotham A", "Gotham B";
+        text-align: left;
+        width: 90%;
+        margin: 10rem auto 0;
+      }
 
-			h3 {
-				color: white;
-		    font-weight: 700;
-		    font-size: 25px;
-		    line-height: 32px;
-		    font-family: "Gotham A", "Gotham B";
-				text-align: left;
-				width: 90%;
-				margin: 1rem auto 0;
-			}
-		}
-	}
+      h3 {
+        color: white;
+        font-weight: 700;
+        font-size: 25px;
+        line-height: 32px;
+        font-family: "Gotham A", "Gotham B";
+        text-align: left;
+        width: 90%;
+        margin: 1rem auto 0;
+      }
+    }
+  }
 }
 
 #uxhires9 {
-	height: auto;
-	background: #F9F9F9;
+  height: auto;
+  background: #F9F9F9;
 
-	.job-listing {
-		margin-bottom: 5rem;
+  .job-listing {
+    margin-bottom: 5rem;
 
-		&:last-child {
-			padding-bottom: 10rem;
-		}
-	}
+    &:last-child {
+      padding-bottom: 10rem;
+    }
+  }
 
-	h3 {
-		color: #AFE093;
-		text-transform: uppercase;
-		font-size: 1.4rem;
-	}
+  h3 {
+    color: #AFE093;
+    text-transform: uppercase;
+    font-size: 1.4rem;
+  }
 
-	h1 {
-		font-weight: 200;
-		margin-bottom: 1rem;
-		font-family: "Sentinel A", "Sentinel B";
-		font-size: 24px;
-		line-height: 28px;
-	}
+  h1 {
+    font-weight: 200;
+    margin-bottom: 1rem;
+    font-family: "Sentinel A", "Sentinel B";
+    font-size: 24px;
+    line-height: 28px;
+  }
 
-	p {
-		margin-top: 0;
-		font-size: 18px;
-		line-height: 24px;
-	}
+  p {
+    margin-top: 0;
+    font-size: 18px;
+    line-height: 24px;
+  }
 
-	a {
-		font-weight: 600;
-		color: rgba(0, 0, 0, 0.75);
-		text-decoration: underline;
-		font-size: 18px;
-	}
+  a {
+    font-weight: 600;
+    color: rgba(0, 0, 0, 0.75);
+    text-decoration: underline;
+    font-size: 18px;
+  }
 }
 
 .green-lead {
@@ -427,7 +427,7 @@
   line-height: 40px;
 
   &.m-bottom {
-  	margin-bottom: 7rem;
+    margin-bottom: 7rem;
   }
 }
 
@@ -435,12 +435,12 @@
 //UX hires jobs
 #uxhires-jobs {
 
-	.nav-toggle span, .nav-toggle span:after, .nav-toggle span:before {
+  .nav-toggle span, .nav-toggle span:after, .nav-toggle span:before {
     background: $white;
   }
 
   nav li>a:before {
-  	background-color: #fff;
+    background-color: #fff;
   }
 
   p {
@@ -449,426 +449,426 @@
     line-height: 37px;
   }
 
-	#uxhires-jobs-wrapper {
-		background: #F9F9F9;
-
-		.notice {
-			width: 100%;
-	    text-align: center;
-	    padding: 20px;
-	    position: absolute;
-	    z-index: 1000;
-	    color: white;
-	    font-size: 18px;
-	    top: 12%;
-	    font-weight: 600;
-		}
-
-		#uxhires-jobs1 {
-			background: #8AD562;
-			height: 100%;
-			width: 100%;
-			position: relative;
-			text-align: center;
-			min-height: 600px;
-			margin: -30px 0;
-
-			.logo-wrapper {
-				width: 100%;
-				margin-top: 12%;
-				padding-bottom: 2rem;
-			}
-
-			.view-jobs {
-				display: block;
-				height: 180px;
-				padding-top: 4rem;
-				margin-top: 10rem;
-				background: #F6F6F6;
-
-				.nav-l {
-					height: 100%;
-					padding-top: 3.5rem;
-					text-align: left;
-					max-width: 1000px;
-					margin: 0 auto;
-				}
-
-				.nav-r {
-					width: 50%;
-					height: 100%;
-					float: right;
-					padding-top: 3.5rem;
-				}
-
-				.clear {
-					clear: both;
-				}
-
-				a {
-					font-weight: 500;
-					font-size: 16px;
-					color: rgba(0, 0, 0, 0.65);
-					font-family: Gotham A, Gotham B;
-				}
-
-				.p-right {
-					padding-right: 5rem;
-				}
-			}
-		}
-
-		#uxhires-jobs2 {
-			padding: 10rem 0;
-			background: white;
-
-			.page-center {
-				max-width: 1000px;
-				padding: 0;
-
-				&.sentinel {
-					font-family: Sentinel A, Sentinel B;
-				}
-
-				h1 {
-					color: #9CDB76;
-					font-size: 22px;
-				}
-				h3 {
-					font-size: 16px;
-				}
-				h5 {
-					color: #6A8D54;
-					font-size: 14px;
-				}
-
-				ul {
-					li {
-						font-size: 14px;
-					}
-				}
-
-				span {
-					font-size: 16px;
-				}
-
-				label {
-					font-family: "Sentinel A" , "Sentinel B";
-					font-size: 20px;
-					line-height: 37px;
-					font-weight: 300;
-					color: #42423f;
-				}
-
-
-				input[type="file"] {
-					font-size: 14px;
-					font-weight: 300;
-
-					&.margin-b {
-						margin-bottom: 10px;
-					}
-				}
-
-				input[type="radio"] {
-					margin-bottom: 10px;
-				}
-
-				input[type="checkbox"] {
-					display: block;
-				}
-
-
-				button {
-					outline: none;
-					border: none;
-					background: #8AD562;
-					color: white;
-					font-weight: 700;
-					font-size: 14px;
-					padding: 15px 20px;
-					border-radius: 3px;
-					margin-top: 3rem;
-				}
-			}
-
-			.form-wrapper {
-				width: 50%;
-
-				input[type="text"] {
-					padding: 5px 10px;
-					font-size: 16px;
-					border-radius: 3px;
-					border: 1px solid #ccc;
-					margin-bottom: 10px;
-					width: 44%;
-
-					&.margin-r {
-						margin-right: 5px;
-					}
-
-					&.full {
-						width: 90%;
-					}
-				}
-			}
-
-			.job-app-form {
-				width: 75%;
-				padding-top: 10px;
-
-				input {
-					padding: 7px 5px;
-					font-size: 16px;
-					border-radius: 3px;
-					border: 1px solid #ccc;
-					margin-bottom: 10px;
-					width: 50%;
-
-					&.margin-r {
-						margin-right: 5px;
-					}
-
-					&.full {
-						width: 90%;
-					}
-				}
-
-				input[type="file"] {
-					border: none;
-					padding: 10px 0;
-				}
-
-				textarea {
-					width: 100%;
-					height: 100px;
-					margin-bottom: 20px;
-					margin-top: 10px;
-					padding: 10px;
-					font-size: 16px;
-				}
-
-				.submit-wrapper {
-					.submit {
-						outline: none;
-						border: none;
-						background: #8AD562;
-						color: white;
-						font-weight: 700;
-						font-size: 14px;
-						padding: 15px 20px;
-						border-radius: 3px;
-						margin-top: 3rem;
-					}
-				}
-			}
-
-		}
-
-		.more-roles {
-			overflow: hidden;
-			background: #486F34;
-			height: 60px;
-
-			.section-center {
-				max-width: 1000px;
-				padding: 0;
-				height: 100%;
-				width: auto;
-				margin: 0 auto;
-			}
-
-			// .left-col {
-			// 	float: left;
-			// 	width: 15%;
-			// 	height: 100%;
-			// }
-
-			.left {
-				float: left;
-				width: 50%;
-				padding-top: 2rem;
-			}
-
-			.right {
-				float: left;
-				width: 50%;
-				padding-top: 2rem;
-				text-align: right;
-			}
-
-			// .right-col {
-			// 	float: left;
-			// 	width: 10%;
-			// 	height: 100%;
-			// }
-
-			a {
-				color: white;
-				font-weight: 600;
-				font-size: 16px;
-			}
-		}
-
-		#uxhires-jobs3 {
-			background: #fff;
-
-			.job-container {
-				width: 100%;
-
-				&:nth-child(even) {
-					background: #F9F9F9;
-				}
-
-				.job-wrapper {
-					height: 350px;
-					max-width: 1000px;
-					margin: 0 auto;
-
-					// .left-col {
-					// 	float: left;
-					// 	width: 15%;
-					// 	height: 100%;
-					// }
-
-					.role {
-						width: 50%;
-						float: left;
-						padding-top: 5rem;
-						height: 100%;
-
-						h3 {
-							font-size: 24px;
-							font-family: Sentinel A, Sentinel B;
-							font-weight: 200;
-							line-height: 28px;
-						}
-
-						p {
-							margin-top: 10px;
-							line-height: 24px;
-							font-size: 18px;
-						}
-
-						a {
-							text-decoration: underline;
-							font-weight: 700;
-						}
-					}
-
-					.loc {
-						float: left;
-						width: 50%;
-						padding-top: 5rem;
-						height: 100%;
-						text-align: right;
-
-						p {
-							font-weight: 500;
-							font-size: 20px;
-						}
-					}
-
-					// .right-col {
-					// 	float: left;
-					// 	width: 10%;
-					// 	height: 100%;
-					// }
-				}
-			}
-		}
-
-		#filter {
-			height: 300px;
-			background: #F6F6F6;
-			padding-top: 3.5rem;
-
-			.page-center {
-				max-width: 1000px;
-				margin-left: auto;
-				margin-right: auto;
-				padding: 0;
-			}
-
-
-			h3 {
-				font-size: 16px;
-			}
-
-			.select-wrapper {
-				background: white url(/assets/images/uxhires/down-arrow.png) no-repeat 94% 13px;
-				height: 4
-				0px;
-				overflow: hidden;
-				width: 240px;
-				-webkit-border-radius: 5px;
-				-moz-border-radius: 5px;
-				border-radius: 5px;
-				display: inline-block;
-				color: rgba(0,0,0,0.85);
-				margin-right: 3rem;
-				border: 1px solid #ccc;
-				-webkit-appearance: none;
-
-
-				select {
-					background: transparent;
-					border: none;
-					font-size: 14px;
-					font-weight: 500;
-					height: 40px;
-					padding: 10px;
-					width: 268px;
-					color: rgba(0, 0, 0, 0.65);
-					-webkit-appearance: none;
-				}
-			}
-
-			.input-wrapper {
-				display: inline-block;
-
-				input {
-					margin-top: 2rem;
-					width: 42rem;
-					padding: 10px;
-					border-radius: 3px;
-					outline: none;
-					border: 1px solid #ccc;
-					color: rgba(0, 0, 0, 0.8);
-					font-size: 16px;
-				}
-
-				input[type="submit"] {
-					background: #9CCC65;
-				}
-
-				input[type="file"] {
-					font-size: 14px;
-					font-weight: 300;
-				}
-			}
-
-			button {
-				padding: 10px 20px;
-				background: #8AD562;
-				color: white;
-				outline: none;
-				border: 1px solid #ccc;
-				border-radius: 3px;
-				font-size: 16px;
-				font-weight: 600;
-				margin-left: -5px;
-			}
-		}
+  #uxhires-jobs-wrapper {
+    background: #F9F9F9;
+
+    .notice {
+      width: 100%;
+      text-align: center;
+      padding: 20px;
+      position: absolute;
+      z-index: 1000;
+      color: white;
+      font-size: 18px;
+      top: 12%;
+      font-weight: 600;
+    }
+
+    #uxhires-jobs1 {
+      background: #8AD562;
+      height: 100%;
+      width: 100%;
+      position: relative;
+      text-align: center;
+      min-height: 600px;
+      margin: -30px 0;
+
+      .logo-wrapper {
+        width: 100%;
+        margin-top: 12%;
+        padding-bottom: 2rem;
+      }
+
+      .view-jobs {
+        display: block;
+        height: 180px;
+        padding-top: 4rem;
+        margin-top: 10rem;
+        background: #F6F6F6;
+
+        .nav-l {
+          height: 100%;
+          padding-top: 3.5rem;
+          text-align: left;
+          max-width: 1000px;
+          margin: 0 auto;
+        }
+
+        .nav-r {
+          width: 50%;
+          height: 100%;
+          float: right;
+          padding-top: 3.5rem;
+        }
+
+        .clear {
+          clear: both;
+        }
+
+        a {
+          font-weight: 500;
+          font-size: 16px;
+          color: rgba(0, 0, 0, 0.65);
+          font-family: Gotham A, Gotham B;
+        }
+
+        .p-right {
+          padding-right: 5rem;
+        }
+      }
+    }
+
+    #uxhires-jobs2 {
+      padding: 10rem 0;
+      background: white;
+
+      .page-center {
+        max-width: 1000px;
+        padding: 0;
+
+        &.sentinel {
+          font-family: Sentinel A, Sentinel B;
+        }
+
+        h1 {
+          color: #9CDB76;
+          font-size: 22px;
+        }
+        h3 {
+          font-size: 16px;
+        }
+        h5 {
+          color: #6A8D54;
+          font-size: 14px;
+        }
+
+        ul {
+          li {
+            font-size: 14px;
+          }
+        }
+
+        span {
+          font-size: 16px;
+        }
+
+        label {
+          font-family: "Sentinel A" , "Sentinel B";
+          font-size: 20px;
+          line-height: 37px;
+          font-weight: 300;
+          color: #42423f;
+        }
+
+
+        input[type="file"] {
+          font-size: 14px;
+          font-weight: 300;
+
+          &.margin-b {
+            margin-bottom: 10px;
+          }
+        }
+
+        input[type="radio"] {
+          margin-bottom: 10px;
+        }
+
+        input[type="checkbox"] {
+          display: block;
+        }
+
+
+        button {
+          outline: none;
+          border: none;
+          background: #8AD562;
+          color: white;
+          font-weight: 700;
+          font-size: 14px;
+          padding: 15px 20px;
+          border-radius: 3px;
+          margin-top: 3rem;
+        }
+      }
+
+      .form-wrapper {
+        width: 50%;
+
+        input[type="text"] {
+          padding: 5px 10px;
+          font-size: 16px;
+          border-radius: 3px;
+          border: 1px solid #ccc;
+          margin-bottom: 10px;
+          width: 44%;
+
+          &.margin-r {
+            margin-right: 5px;
+          }
+
+          &.full {
+            width: 90%;
+          }
+        }
+      }
+
+      .job-app-form {
+        width: 75%;
+        padding-top: 10px;
+
+        input {
+          padding: 7px 5px;
+          font-size: 16px;
+          border-radius: 3px;
+          border: 1px solid #ccc;
+          margin-bottom: 10px;
+          width: 50%;
+
+          &.margin-r {
+            margin-right: 5px;
+          }
+
+          &.full {
+            width: 90%;
+          }
+        }
+
+        input[type="file"] {
+          border: none;
+          padding: 10px 0;
+        }
+
+        textarea {
+          width: 100%;
+          height: 100px;
+          margin-bottom: 20px;
+          margin-top: 10px;
+          padding: 10px;
+          font-size: 16px;
+        }
+
+        .submit-wrapper {
+          .submit {
+            outline: none;
+            border: none;
+            background: #8AD562;
+            color: white;
+            font-weight: 700;
+            font-size: 14px;
+            padding: 15px 20px;
+            border-radius: 3px;
+            margin-top: 3rem;
+          }
+        }
+      }
+
+    }
+
+    .more-roles {
+      overflow: hidden;
+      background: #486F34;
+      height: 60px;
+
+      .section-center {
+        max-width: 1000px;
+        padding: 0;
+        height: 100%;
+        width: auto;
+        margin: 0 auto;
+      }
+
+      // .left-col {
+      //   float: left;
+      //   width: 15%;
+      //   height: 100%;
+      // }
+
+      .left {
+        float: left;
+        width: 50%;
+        padding-top: 2rem;
+      }
+
+      .right {
+        float: left;
+        width: 50%;
+        padding-top: 2rem;
+        text-align: right;
+      }
+
+      // .right-col {
+      //   float: left;
+      //   width: 10%;
+      //   height: 100%;
+      // }
+
+      a {
+        color: white;
+        font-weight: 600;
+        font-size: 16px;
+      }
+    }
+
+    #uxhires-jobs3 {
+      background: #fff;
+
+      .job-container {
+        width: 100%;
+
+        &:nth-child(even) {
+          background: #F9F9F9;
+        }
+
+        .job-wrapper {
+          height: 350px;
+          max-width: 1000px;
+          margin: 0 auto;
+
+          // .left-col {
+          //   float: left;
+          //   width: 15%;
+          //   height: 100%;
+          // }
+
+          .role {
+            width: 50%;
+            float: left;
+            padding-top: 5rem;
+            height: 100%;
+
+            h3 {
+              font-size: 24px;
+              font-family: Sentinel A, Sentinel B;
+              font-weight: 200;
+              line-height: 28px;
+            }
+
+            p {
+              margin-top: 10px;
+              line-height: 24px;
+              font-size: 18px;
+            }
+
+            a {
+              text-decoration: underline;
+              font-weight: 700;
+            }
+          }
+
+          .loc {
+            float: left;
+            width: 50%;
+            padding-top: 5rem;
+            height: 100%;
+            text-align: right;
+
+            p {
+              font-weight: 500;
+              font-size: 20px;
+            }
+          }
+
+          // .right-col {
+          //   float: left;
+          //   width: 10%;
+          //   height: 100%;
+          // }
+        }
+      }
+    }
+
+    #filter {
+      height: 300px;
+      background: #F6F6F6;
+      padding-top: 3.5rem;
+
+      .page-center {
+        max-width: 1000px;
+        margin-left: auto;
+        margin-right: auto;
+        padding: 0;
+      }
+
+
+      h3 {
+        font-size: 16px;
+      }
+
+      .select-wrapper {
+        background: white url(/assets/images/uxhires/down-arrow.png) no-repeat 94% 13px;
+        height: 4
+        0px;
+        overflow: hidden;
+        width: 240px;
+        -webkit-border-radius: 5px;
+        -moz-border-radius: 5px;
+        border-radius: 5px;
+        display: inline-block;
+        color: rgba(0,0,0,0.85);
+        margin-right: 3rem;
+        border: 1px solid #ccc;
+        -webkit-appearance: none;
+
+
+        select {
+          background: transparent;
+          border: none;
+          font-size: 14px;
+          font-weight: 500;
+          height: 40px;
+          padding: 10px;
+          width: 268px;
+          color: rgba(0, 0, 0, 0.65);
+          -webkit-appearance: none;
+        }
+      }
+
+      .input-wrapper {
+        display: inline-block;
+
+        input {
+          margin-top: 2rem;
+          width: 42rem;
+          padding: 10px;
+          border-radius: 3px;
+          outline: none;
+          border: 1px solid #ccc;
+          color: rgba(0, 0, 0, 0.8);
+          font-size: 16px;
+        }
+
+        input[type="submit"] {
+          background: #9CCC65;
+        }
+
+        input[type="file"] {
+          font-size: 14px;
+          font-weight: 300;
+        }
+      }
+
+      button {
+        padding: 10px 20px;
+        background: #8AD562;
+        color: white;
+        outline: none;
+        border: 1px solid #ccc;
+        border-radius: 3px;
+        font-size: 16px;
+        font-weight: 600;
+        margin-left: -5px;
+      }
+    }
 
 
 // .page-wrap {
-// 	max-width: 1200px;
-// 	margin: 0 auto;
+//   max-width: 1200px;
+//   margin: 0 auto;
 // }
 
 
 
 
-	}
+  }
 }
