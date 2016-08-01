@@ -725,11 +725,11 @@
           max-width: 1000px;
           margin: 0 auto;
 
-          // .left-col {
+          /*// .left-col {
           //   float: left;
           //   width: 15%;
           //   height: 100%;
-          // }
+          // }*/
 
           .role {
             width: 50%;
@@ -769,11 +769,11 @@
             }
           }
 
-          // .right-col {
+          /*// .right-col {
           //   float: left;
           //   width: 10%;
           //   height: 100%;
-          // }
+          // }*/
         }
       }
     }
