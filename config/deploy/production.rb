@@ -59,5 +59,5 @@ server 'motivatedesign.devworkslab.com',
     keys: %w(/home/railsapps/.ssh/id_rsa),
     forward_agent: false,
     auth_methods: %w(password),
-    password: '645vvtsa'
+    password: '2ca2cbda'
   }
