@@ -31,20 +31,21 @@
             <h2 class="lead-text" style="text-transform:uppercase;"><%= @person.first_name %> <%= @person.last_name %>, <%= @person.title %></h2>
             <p><%= @person.bio %></p>
             <div class="grey-social-icon">
-               
+              <% unless @person.email.blank? %>
                 <%= link_to "mailto:"+ @person.email do %>
-                    <%= image_tag gulp_asset_path('/images/misc/circle_icons/icon_email2.svg'), alt: "Email Icon", width: "20", height: "auto" %>
-                  <%- end %>
-                  <%- if @person.linkedin %>
-                    <%= link_to @person.linkedin, target: "_blank" do %>
-                      <%= image_tag gulp_asset_path('/images/misc/circle_icons/icon_linkedin2.svg'), alt: "Linkedin Icon", width: "20", height: "auto" %>
-                    <%- end %>
-                  <%- end %>
-                  <%- if @person.twitter %>
-                    <%= link_to @person.twitter, target: "_blank" do %>
-                      <%= image_tag gulp_asset_path('/images/misc/circle_icons/icon_twitter2.svg'), alt: "Twitter Icon", width: "20", height: "auto" %>
-                    <%- end %>
-                  <%- end %>
+                  <%= image_tag gulp_asset_path('/images/misc/circle_icons/icon_email2.svg'), alt: "Email Icon", width: "20", height: "auto" %>
+                <%- end %>
+              <% end %>
+              <%- unless @person.linkedin.blank? %>
+                <%= link_to @person.linkedin, target: "_blank" do %>
+                  <%= image_tag gulp_asset_path('/images/misc/circle_icons/icon_linkedin2.svg'), alt: "Linkedin Icon", width: "20", height: "auto" %>
+                <%- end %>
+              <%- end %>
+              <%- unless @person.twitter.blank? %>
+                <%= link_to @person.twitter, target: "_blank" do %>
+                  <%= image_tag gulp_asset_path('/images/misc/circle_icons/icon_twitter2.svg'), alt: "Twitter Icon", width: "20", height: "auto" %>
+                <%- end %>
+              <%- end %>
 
             </div>
         </section>

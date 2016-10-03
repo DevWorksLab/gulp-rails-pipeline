@@ -1,0 +1,115 @@
+<%- content_for :page_title do %>UxHires<%- end %>
+<%- content_for :meta_desc do %>Through research, design and staffing, we work with clients to solve brand, product or service problems and create delightful user experiences.<%- end %>
+<%- content_for :body_id do %>uxhires-jobs<%- end %>
+<%- content_for :section_id do %>uxhires-jobs-wrapper<%- end %>
+
+	<section id="uxhires-jobs1">
+		<div class="logo-wrapper">
+		  <%= image_tag gulp_asset_path("/images/uxhires/uxhires-logo.png"), alt: "ux hires logo", style: "width: 250px;" %>
+		</div>
+		<div class="view-jobs">
+			<div class="nav-l">
+				<%= link_to "GO BACK TO VIEW ALL JOBS", uxhires_jobs_path %>
+			</div>
+			<!-- <div class="nav-r">
+				<a href="#", class="p-right">REGISTER</a>
+				<a href="#">LOG IN</a>
+			</div> -->
+			<div class="clear"></div>
+		</div>
+	</section>
+
+	<section id="uxhires-jobs2">
+		<div class="page-center sentinel">
+			<h1>
+				The Role
+			</h1>
+			<h3>
+				<%= @job.title %> |
+				<i>
+					<%= @job.location %>
+				</i>
+			</h3>
+			<%= sanitize( @job.description, tags: %w(div strong br h5 h4 h3 h2 h1 span em p ul li a code pre ol) ) %>
+			<!-- <p>
+				Our client is a 20-person, 2 year-old stealth startup building the next generation of data-driven, marketing-centric business applications. Based in New York City, they have a world class team and are funded by several premier investment firms and
+				have fortune 500 clients.
+			</p>
+			<p>
+				With founders hailing from Google, Facebook and a big data pioneer company, (which was acquired), our client has extensive experience applying complex technologies to solve real business challenges. Their work is fueled by a genuine passion for user experience and creating software that drives revenue and employee success.
+				Everyone on their team loves hard systems/performance & algorithmic problems, and when considering new team members are looking for people with similar interests.
+			</p>
+			<h5>
+				ABOUT YOU
+			</h5>
+			<p>
+				You are passionate about finding new ways to allow users to consume information and enjoy making complex data look easy and intuitive. You are a self-starter with original ideas and fresh approaches, and can turn them into something useful, valuable and beautiful. You have strong knowledge of user experience and user interface design processes and methodologies, and are excellent at developing interactive prototypes which can be quickly tested by users and presented to teammates for feedback and direction. Most importantly, you show great empathy for your audience and grasp the importance of business goals. You think about the big picture, the brand, and most importantly, the user - from concept to execution.
+			</p>
+			<h5>
+				YOU WILL BE
+			</h5>
+			<ul>
+				<li>
+					working closely with the Head of Product Design and a lean team of engineers to shape ideas and create prototypes
+				</li>
+				<li>
+					responsible for organizing and conducting user research and studies to discover and validate product concepts
+				</li>
+				<li>
+					conducting user research and integrating findings into design iterations
+				</li>
+			</ul> -->
+			<button>
+				<%= link_to "APPLY NOW", uxhires_job_apply_path(@job) %>
+			</button>
+		</div>
+	</section>
+
+
+	<div class="more-roles">
+		<div class="section-center">
+			<div class="left-col"></div>
+			<div class="left">
+				<a href="#">MORE ROLES LIKE THIS</a>
+			</div>
+			<div class="right">
+				<a href="#">LOCATION</a>
+			</div>
+			<div class="right-col"></div>
+		</div>
+	</div>
+
+	<section id="uxhires-jobs3">
+		<% @open.each do |job| %>
+			<div class="job-container">
+				<div class="job-wrapper">
+					<div class="left-col"></div>
+					<div class="role">
+						<h3>
+							<%= job.title %>
+						</h3>
+						<p>
+							<%= "#{strip_tags(job.description).truncate(300)}" if job.description %>
+							<%= link_to "More info.", uxhires_job_path(job) %>
+						</p>
+					</div>
+					<div class="loc">
+						<p>
+							<%= job.location %>
+						</p>
+					</div>
+					<div class="right-col"></div>
+				</div>
+			</div>
+		<% end %>
+	</section>
+
+	<section id="uxhires8", class=
+	"white">
+		<%= render :partial => "related_links" %>
+  </section>
+
+
+		<!-- End body and section -->
+	</div>
+</section>

@@ -1,0 +1,31 @@
+<div class="row">
+  <!-- left column -->
+  <div class="col-md-12">
+    <!-- general form elements -->
+    <div class="box box-primary">
+      <div class="box-header with-border">
+        <h3 class="box-title">Form</h3>
+      </div>
+      <!-- /.box-header -->
+      <!-- form start -->
+      <%= simple_form_for [:admin, @external_link] do |f| %>
+        <div class="box-body">
+          <div class="form-group">
+            <%= f.input :link_type, collection: ["Article", "Event"], prompt: "Choose Link Type", input_html: {class: "form-control"} %>
+          </div>
+          <div class="form-group">
+            <%= f.input :title, placeholder: "Enter Title", input_html: {class: "form-control"} %>
+          </div>
+          <div class="form-group">
+            <%= f.input :url, placeholder: "Enter Url", input_html: {class: "form-control"} %>
+          </div>
+          <div class="form-group">
+            <%= f.input :image, as: :file %>
+
+            <p class="help-block">Upload Background Image(Optional)</p>
+          </div>
+          <div class="box-footer">
+            <button type="submit" class="btn btn-primary">Submit</button>
+          </div>
+        </div>
+      <% end %>

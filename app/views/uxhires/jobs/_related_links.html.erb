@@ -1,0 +1,71 @@
+<div class="section-center center wider">
+  <h2>
+    Related Links
+  </h2>
+  <div class="related-container visible">
+    <%= link_to uxhires_job_path(@featured) do %>
+    <div class="related-box first">
+        <p>
+          Open Position
+        </p>
+        <h3>
+          <%= @featured.title %>
+          <br>
+          <%= @featured.location %>
+        </h3>
+      </div>
+    <% end %>
+    <%= link_to @external_links.first.url do %>
+      <div class="related-box second">
+        <p>
+          <%= @external_links.first.link_type %>
+        </p>
+        <h3>
+          <%= @external_links.first.title %>
+        </h3>
+      </div>
+    <% end %>
+    <%= link_to @external_links[1].url do %>
+      <div class="related-box third", style="background: url(<%= @external_links.first.image_url %>)">
+        <p>
+          <%= @external_links[1].link_type %>
+        </p>
+        <h3>
+          <%= @external_links[1].title %>
+        </h3>
+      </div>
+    <% end %>
+    <%= link_to "http://www.readytoreframe.com/" do %>
+      <div class="related-box fourth">
+        <p>
+          GET YOUR COPY
+        </p>
+        <h3>
+          Reframe by <br>
+          Mona Patel
+        </h3>
+      </div>
+    <% end %>
+    <%= link_to @external_links.last.url do %>
+      <div class="related-box first">
+        <p>
+          <%= @external_links.last.link_type %>
+        </p>
+        <h3>
+          <%= @external_links.last.title %>
+        </h3>
+      </div>
+    <% end %>
+    <%= link_to person_path(@featured_person) do %>
+      <div class="related-box fifth">
+        <p>
+          FEATURED EMPLOYEE
+        </p>
+        <h3>
+          <%= @featured_person.full_name %><br>
+          <%= @featured_person.title %>
+        </h3>
+      </div>
+    <% end %>
+  </div>
+</div>

@@ -15,6 +15,14 @@ module.exports = {
       imagePath: '/assets/images' // Used by the image-url helper
     }
   },
+  css: {
+    src: sourceFiles + "/stylesheets/**/*.{css}",
+    dest: publicAssets + "/stylesheets",
+    settings: {
+      indentedSyntax: true, // Enable .sass syntax!
+      imagePath: '/assets/images' // Used by the image-url helper
+    }
+  },
   js: {
     src: sourceFiles + "/javascripts/**/*.{js}",
     dest: publicAssets + "/javascripts",

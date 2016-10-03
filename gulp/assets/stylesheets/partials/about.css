@@ -143,6 +143,16 @@
         opacity: .9;
       } 
 
+      .text {
+        float: left;
+      }
+
+      .arrow {
+        float: right;
+        padding-top: 20px;
+        padding-right: 10px;
+      }
+
 	}
 
 	.about-img1 {
@@ -275,5 +285,7 @@
     background-color: #42423f;
     visibility: visible;
   }
+
+
 
 }

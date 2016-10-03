@@ -38,31 +38,35 @@
   </div>
 
   <%- @people.each do |person| %>
+    <% path = (person.bio.blank? || person.bio.nil?) ? "#comingsoon" : person_path(person)  %>
     <div class="third h-mbottom50">
       <div class="people-image">
-        <%= link_to person_path(person) do %>
+        <%= link_to path do %>
           <!-- photo -->
           <%= image_tag person.profile_pic.url, class: "persons-photo", alt: person.first_name %>
         <%- end %>
       </div>
-      <h3><%= person.first_name%> <%= person.last_name%></h3>
-      <p class="small-text"><span><%= person.title%></span></p>
-      <div class="people-icons">
-          <%= link_to "mailto:"+ person.email do %>
-            <%= image_tag gulp_asset_path('/images/misc/circle_icons/icon_email.svg'), alt: "Email Icon", width: "20", height: "auto" %>
-          <%- end %>
-          <%- if person.linkedin %>
+      <%= link_to path do %>
+        <h3><%= person.first_name%> <%= person.last_name%></h3>
+        <p class="small-text"><span><%= person.title%></span></p>
+        <div class="people-icons">
+          <% unless person.email.blank? %>
+            <%= link_to "mailto:"+ person.email do %>
+              <%= image_tag gulp_asset_path('/images/misc/circle_icons/icon_email.svg'), alt: "Email Icon", width: "20", height: "auto" %>
+            <%- end %>
+          <% end %>
+          <% unless person.linkedin.blank? %>
             <%= link_to person.linkedin, target: "_blank" do %>
               <%= image_tag gulp_asset_path('/images/misc/circle_icons/icon_linkedin.svg'), alt: "Linkedin Icon", width: "20", height: "auto" %>
             <%- end %>
           <%- end %>
-          <%- if person.twitter %>
+          <%- unless person.twitter.blank? %>
             <%= link_to person.twitter, target: "_blank" do %>
               <%= image_tag gulp_asset_path('/images/misc/circle_icons/icon_twitter.svg'), alt: "Twitter Icon", width: "20", height: "auto" %>
             <%- end %>
           <%- end %>
-
-      </div>
+        </div>
+      <% end %>
     </div>
   <%- end %>
 

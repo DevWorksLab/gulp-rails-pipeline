@@ -1,6 +1,6 @@
 class Job < ActiveRecord::Base
 
-  scope :active, -> { where(status: "active", public: true) }
+  scope :active, -> { where(status: ["Active (1)", "Active (2)"], public: true).order("status asc") }
 
 
   def self.update_listings
@@ -17,7 +17,7 @@ class Job < ActiveRecord::Base
     job_array = jobs.each_slice(50).to_a
     job_array.each do |cluster|
       puts cluster
-      cats = CatsOne.new(options: {id: cluster, result: "normal"})
+      cats = CatsOne.new(options: {id: cluster, result: "extended"})
       api_response = cats.get_job_descriptions
     end
   end

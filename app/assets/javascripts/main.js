@@ -234,4 +234,8 @@ $(document).ready(function(){
 
       svgeezy.init(false, 'png');
 
+
+
+    /***************** Job apply to thank you ******************/
+
 });

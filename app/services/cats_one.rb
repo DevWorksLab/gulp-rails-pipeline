@@ -1,12 +1,13 @@
 # service wrappper for CatsOne Api calls
 class CatsOne
   include HTTParty
+  require 'rest-client'
   require 'json'
   require 'open-uri'
   base_uri 'https://uxhires.catsone.com/api'
 
   def initialize(options: nil)
-    # @headers = {"Authorization" => 'Token ' + ENV['UXHIRES_CATSONE_TOKEN'], "Content-Type" => "application/json", "Accept" => "application/json"}
+    @headers = {"Content-Disposition" => "multipart/form-data"}
     @options = options
     @options[:transaction_code] = ENV['UXHIRES_CATSONE_TOKEN']
   end
@@ -18,25 +19,21 @@ class CatsOne
         catsone_id = job["item_id"]
         company = job["company"]
         title = job["title"]
-        status =  job["status"].split(' (').first.downcase
         # description = job["description"]
         location = job["location"]
         hotness = job["is_hot"]  == "No" ? false : true
-
         # Do we need company and if so we need another call to get the name
         # lets try to limit calls by storing companies in DB
 
         # Check if job is in DB
         if job = Job.find_by_catsone_id(catsone_id)
-          puts "UPDATE JOB"
           # update
           job.update(
             title: title,
             catsone_id: catsone_id,
-            status: status,
             # description: description, in V2 api description is seperate call
             company_name: company,
-            status: status,
+            # status: status,
             location: location,
             is_hot: hotness
             )
@@ -45,10 +42,10 @@ class CatsOne
           Job.create(
             title: title,
             catsone_id: catsone_id,
-            status: status,
+            # status: status,
             # description: description, in V2 api description is seperate call
             company_name: company,
-            status: status,
+            # status: status,
             location: location,
             is_hot: hotness
             )
@@ -72,8 +69,8 @@ class CatsOne
     parse_jobs(jobs_arr)
   end
 
-  def apply
-    response = self.class.post('/apply_joborder', query: @options )
+  def apply_joborder
+    response = RestClient.post('https://uxhires.catsone.com/api/apply_joborder', @options, multipart: true)
   end
 
   def get_job_descriptions
@@ -81,10 +78,15 @@ class CatsOne
     jobs = response["response"]["result"]
     jobs.each do |job|
       record = Job.find_by_catsone_id(job["id"])
+      role = job["extra_field196083"]
+      company_type = job["extra_field196089"]
       description = job["description"]
       public = job["public"]
-      status = job["status"].split(" ").first.downcase
-      record.update(status: status, description: description, public: public)
+      status = job["status"]
+      record.update(
+        status: status, description: description, public: public,
+        company_type: company_type, role: role
+        )
     end
   end
 

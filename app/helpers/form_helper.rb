@@ -15,7 +15,12 @@ module FormHelper
     elsif question_type == "__content__"
       @name = [ 'field', question["id"] ].join("_")
       @answers = question["answers"]["answer"].map{|answer| answer.values}
-      @input = "check_boxes" if question["type"] == "checkboxes"
+      if question["type"] == "checkboxes"
+        @input = "check_boxes"
+      else
+        @multipart = true
+        @mime_type = 'application/pdf'
+      end
     end
     @for = ["application", @name].join("_")
     @required_class = @required == true ? 'required' : "optional"

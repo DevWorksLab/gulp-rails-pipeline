@@ -1,7 +1,7 @@
 /*hover states*/
 
 /* Shutter Out Horizontal */
-.hvr-shutter-out-horizontal {
+/*.hvr-shutter-out-horizontal {
   display: inline-block;
   vertical-align: middle;
   transform: translateZ(0);
@@ -74,10 +74,10 @@
 
 .hvr-shutter-out-horizontal-two:focus  {
     color: #fff;
-}
+}*/
 
 /* Icon Back */
-.hvr-icon-back {
+/*.hvr-icon-back {
   display: inline-block;
   vertical-align: middle;
   transform: translateZ(0);
@@ -100,10 +100,10 @@
 .hvr-icon-back:hover:before, .hvr-icon-back:focus:before, .hvr-icon-back:active:before {
 
   transform: translateX(-4px);
-}
+}*/
 
 /* Icon Forward */
-.hvr-icon-forward {
+/*.hvr-icon-forward {
   display: inline-block;
   vertical-align: middle;
   transform: translateZ(0);
@@ -127,10 +127,10 @@
 }
 .hvr-icon-forward:hover:before, .hvr-icon-forward:focus:before, .hvr-icon-forward:active:before {
   transform: translateX(6px);
-}
+}*/
 
 /* Icon Forward */
-.hvr-icon-forward-mint {
+/*.hvr-icon-forward-mint {
   display: inline-block;
   vertical-align: middle;
   transform: translateZ(0);
@@ -155,10 +155,10 @@
 }
 .hvr-icon-forward-mint:hover:before, .hvr-icon-forward-mint:focus:before, .hvr-icon-forward-mint:active:before {
   transform: translateX(6px);
-}
+}*/
 
 /* Effect 12: circle */
-.cl-effect-12 a::before,
+/*.cl-effect-12 a::before,
 .cl-effect-12 a::after {
     position: absolute;
     top: 50%;
@@ -213,7 +213,7 @@ nav li #logo-anchor:hover:before {
 
 #logo:hover{
   animation: rotate 2s linear;
-}
+}*/
 
 /*@-webkit-keyframes rotate {
     from { transform: rotateX(-360deg)}

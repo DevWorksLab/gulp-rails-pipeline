@@ -11,6 +11,10 @@
       height: 439px;
       background-color: $orange;
       min-height: 439px;
+
+      a {
+        display: inline-block;
+      }
   }
 
   p {

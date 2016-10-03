@@ -27,16 +27,20 @@ Rails.application.routes.draw do
     resources :people do
       get 'activate', to: 'people#toggle_activation', as: :toggle_activation
     end
+    resources :external_links
   end
 
   namespace :uxhires do
     root 'jobs#uxhires'
     get '/refine', to: 'jobs#refine', as: :refine
-    resources :jobs do
+    resources :jobs, except: [:show] do
       get 'apply', to: 'jobs#job_app', as: :apply
       post 'apply', to: 'jobs#apply', as: :submit_app
     end
 
+    get '/jobs/:id', to: 'jobs#job_show', as: :job_show
+
   end
+
 
 end

@@ -3,18 +3,19 @@
 <%- content_for :body_id do %>uxhires-jobs<%- end %>
 <%- content_for :section_id do %>uxhires-jobs-wrapper<%- end %>
 
+<div class="page-wrap">
 	<section id="uxhires-jobs1">
 		<div class="logo-wrapper">
-		  <%= image_tag gulp_asset_path("/images/uxhires/uxhireslogo.svg"), alt: "ux hires logo", style: "width: 250px;" %>
+		  <%= image_tag gulp_asset_path("/images/uxhires/uxhires-logo.png"), alt: "ux hires logo", style: "width: 250px;" %>
 		</div>
 		<div class="view-jobs">
 			<div class="nav-l">
-				<%= link_to "VIEW ALL JOBS", uxhires_jobs_path %>
+				<%= link_to "VIEW ALL JOBS", "#job-bar" %>
 			</div>
-			<div class="nav-r">
+			<!-- <div class="nav-r">
 				<a href="#", class="p-right">REGISTER</a>
 				<a href="#">LOG IN</a>
-			</div>
+			</div> -->
 			<div class="clear"></div>
 		</div>
 	</section>
@@ -29,20 +30,22 @@
 
   <section id="filter">
   	<div class="page-center">
-			<%= simple_form_for :search, url: uxhires_refine_path, method: "get" do |f| %>
+			<%= simple_form_for :search, url: uxhires_refine_path(:anchor => "job-bar"), method: "get" do |f| %>
 	  		<h3>
 	  			FILTER BY
 	  		</h3>
 				<div class="select-wrapper">
-					<%= f.input :location, collection: @active.pluck(:location).uniq, prompt: "Location", label: false, required: false, input_html: { id: "loc" }%>
+					<%= f.input :location, collection: @active.pluck(:location).compact.uniq, prompt: "Location", label: false, required: false, input_html: { id: "loc" }%>
 	  		</div>
 	  		<div class="select-wrapper">
-					<%= f.input :role, collection: @active.pluck(:title).uniq, label: false, prompt: "Type of Role", required: false, input_html: { id: "type" } %>
+					<%= f.input :role, collection: @active.active.pluck(:role).compact.map{|role| role.split(', ')}.flatten.uniq, label: false, prompt: "Type of Role", required: false, input_html: { id: "type" } %>
 		  	</div>
 		  	<div class="select-wrapper">
-					<%= f.input :type, collection: @active.pluck(:company_type).uniq, label: false, prompt: "Type of Company", required: false, input_html: { id: "company" } %>
+					<%= f.input :type, collection: @active.pluck(:company_type).compact.uniq, label: false, prompt: "Type of Company", required: false, input_html: { id: "company" } %>
 		  	</div>
-				<%= f.input :keywords, placeholder: "Keywords", required: false, label: false %>
+        <div class="input-wrapper">
+				  <%= f.input :keywords, placeholder: "Keywords", required: false, label: false %>
+        </div>
 
 	  		<button>Search</button>
 			<% end %>
@@ -50,106 +53,58 @@
   </section>
 
   <div class="more-roles" id="job-bar">
-		<div class="left less">
-			<a href="#">JOB DESCRIPTION</a>
-		</div>
-		<div class="right">
-			<a href="#">LOCATION</a>
+  	<div class="section-center">
+	  	<div class="left-col"></div>
+			<div class="left">
+				<a href="#">JOB DESCRIPTION</a>
+			</div>
+			<div class="right">
+				<a href="#">LOCATION</a>
+			</div>
+			<div class="right-col"></div>
 		</div>
 	</div>
 
 	<section id="uxhires-jobs3">
 		<% @jobs.each do |job| %>
-			<div class="job-wrapper">
-				<div class="role">
-					<h3>
-						<%= job.title %>
-					</h3>
-					<p>
-						<%= "#{strip_tags(job.description).truncate(300)}" if job.description %>
-						<%= link_to "More info.", uxhires_job_path(job) %>
-					</p>
-				</div>
-				<div class="loc">
-					<p>
-						<%= job.location %>
-					</p>
+			<div class="job-container">
+				<div class="job-wrapper">
+					<div class="left-col"></div>
+					<div class="role">
+						<h3>
+							<%= job.title %>
+						</h3>
+						<p>
+							<%= "#{sanitize(job.description, tags: %w('&')).truncate(300).html_safe}" if job.description %>
+							<%= link_to "More info.", uxhires_job_path(job) %>
+						</p>
+					</div>
+					<div class="loc">
+						<p>
+							<%= job.location %>
+						</p>
+					</div>
+					<div class="right-col"></div>
 				</div>
 			</div>
 		<% end %>
-		<%= will_paginate @jobs,:container => false,:params => {:anchor => "job-bar"} %>
 	</section>
 
 	<section id="uxhires8", class=
 	"white">
-    <div class="section-center center wider">
-      <h2>
-        Related Links
-      </h2>
-      <div class="related-container visible">
-        <div class="related-box first">
-          <p>
-            Open Position
-          </p>
-          <h3>
-            Senior UX <br>
-            Researcher (SF)
-          </h3>
-        </div>
-        <div class="related-box second">
-          <p>
-            Article
-          </p>
-          <h3>
-            How I accidentally <br>
-            became a UX <br>
-            Designer
-          </h3>
-        </div>
-        <div class="related-box third">
-          <p>
-            Events
-          </p>
-          <h3>
-            Leap Into UX: <br>
-            From Products to <br>
-            Portfolios
-          </h3>
-        </div>
-        <div class="related-box fourth">
-          <p>
-            GET YOUR COPY
-          </p>
-          <h3>
-            Reframe by <br>
-            Mona Patel
-          </h3>
-        </div>
-        <div class="related-box first">
-          <p>
-            Article
-          </p>
-          <h3>
-            21 Podcasts That <br>
-            Will Change Your <br>
-            Life
-          </h3>
-        </div>
-        <div class="related-box fifth">
-          <p>
-            FEATURED EMPLOYEE
-          </p>
-          <h3>
-            Andrew Forman<br>
-            Recruitment <br>
-            Coordinator
-          </h3>
-        </div>
+    <div class="paginate">
+      <div class="float-wrap">
+        <%= will_paginate @jobs,:container => false, :previous_label => image_tag(gulp_asset_path("/images/uxhires/double-left-arrows.png")), :next_label => image_tag(gulp_asset_path("/images/uxhires/double-right-arrows.png")), :params => {:anchor => "job-bar"} %>
       </div>
     </div>
+    <div class="section-center center wider">
+      <%= render :partial => 'related_links' %>
+    </div>
   </section>
+</div>
 
 
 		<!-- End body and section -->
 	</div>
 </section>
+

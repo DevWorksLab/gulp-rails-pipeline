@@ -16,28 +16,28 @@ class JobFilter
 
   def filter_by_location
     unless @params[:location].blank?
-      @jobs = @jobs.where("location LIKE ?", @params[:location] )
+      @jobs = @jobs.where("location LIKE ?", "%#{@params[:location]}%" )
     end
     return @jobs
   end
 
   def filter_by_role
     unless @params[:role].blank?
-      @jobs = @jobs.where("title LIKE ?", @params[:role] )
+      @jobs = @jobs.where("role LIKE ?", "%#{@params[:role]}%" )
     end
     return @jobs
   end
 
   def filter_by_company_type
     unless @params[:company_type].blank?
-      @jobs = @jobs.where("company_type LIKE ?", @params[:company_type] )
+      @jobs = @jobs.where("company_type LIKE ?", "%#{@params[:company_type]}%" )
     end
     return @jobs
   end
 
   def filter_by_description
     unless @params[:keywords].blank?
-      @jobs = @jobs.where("description LIKE ?", @params[:keywords] )
+      @jobs = @jobs.where("description LIKE ?", "%#{@params[:keywords]}%" )
     end
     return @jobs
   end

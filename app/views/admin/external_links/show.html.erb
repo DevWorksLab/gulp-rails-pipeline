@@ -1,0 +1,19 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Link type:</strong>
+  <%= @external_link.link_type %>
+</p>
+
+<p>
+  <strong>Title:</strong>
+  <%= @external_link.title %>
+</p>
+
+<p>
+  <strong>Url:</strong>
+  <%= @external_link.url %>
+</p>
+
+<%= link_to 'Edit', edit_external_link_path(@external_link) %> |
+<%= link_to 'Back', external_links_path %>

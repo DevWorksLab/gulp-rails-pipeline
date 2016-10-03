@@ -5,16 +5,16 @@
 
 	<section id="uxhires-jobs1">
 		<div class="logo-wrapper">
-		  <%= image_tag gulp_asset_path("/images/uxhires/uxhireslogo.svg"), alt: "ux hires logo", style: "width: 250px;" %>
+		  <%= image_tag gulp_asset_path("/images/uxhires/uxhires-logo.png"), alt: "ux hires logo", style: "width: 250px;" %>
 		</div>
 		<div class="view-jobs">
 			<div class="nav-l">
-				<a href="#">GO BACK TO VIEW ALL JOBS</a>
+				<a href="/uxhires/jobs">GO BACK TO VIEW ALL JOBS</a>
 			</div>
-			<div class="nav-r">
+			<!-- <div class="nav-r">
 				<a href="#", class="p-right">REGISTER</a>
 				<a href="#">LOG IN</a>
-			</div>
+			</div> -->
 			<div class="clear"></div>
 		</div>
 	</section>
@@ -30,42 +30,37 @@
 					<%= @job.location %>
 				</i>
 			</h3>
-			<%= strip_tags( @job.description ).truncate(1000) %>
+			<p>
+			<%= sanitize(@job.description.truncate(500), tags: %w(div strong br h5 h4 h3 h2 h1 span em p ul li a code pre ol input textarea label)) %>
+			</p>
 
-			<%= simple_form_for :application, url: uxhires_job_submit_app_path(@job) do |f| %>
-				<% @form["response"]["item"]["questions"]["question"].each do |question| %>
-					<%= parse_question_type(question) %>
-					<div class="input-wrapper">
-						<label for=<%= @for %> class=<%= @required_class %>>
-							<%= @label %>
-						<label>
-						<% if @comment %>
-							<p><%= @comment %></p>
-						<% end %>
-						<% if @input == "check_boxes" %>
-							<%= f.input @name.to_sym, as: @input.to_sym, collection: @answers, label: false %>
-						<% else %>
-							<%= f.input @name.to_sym, as: @input.to_sym, label: false, required: @required %>
-						<% end %>
-					</div>
-				<% end %>
-				<div class="submit-wrapper">
-					<%= f.submit "Apply" %>
-				</div>
-			<% end %>
-
-			<!-- <%= simple_form_for @job, url: uxhires_job_submit_app_path(@job), method: "post" do |f| %>
-				<% @form["response"]["item"]["questions"]["question"].each do |question| %>
-					<div class="input-wrapper">
-						<label> <%= question["title"] %><label>
-						<p><%= question["comment"] %></p>
+			<div class="job-app-form">
+				<%= simple_form_for :application, html: {id: "simple-job-app"}, url: uxhires_job_submit_app_path(@job), html: {multipart: true} do |f| %>
+					<% @form["response"]["item"]["questions"]["question"].each do |question| %>
 						<%= parse_question_type(question) %>
+						<div class="input-wrapper">
+							<label for=<%= @for %> class=<%= @required_class %>>
+								<%= @label %>
+							<label>
+							<% if @comment %>
+								<p><%= @comment %></p>
+							<% end %>
+							<% if @input == "check_boxes" %>
+								<%= f.input @name.to_sym, as: @input.to_sym, collection: @answers, label: false %>
+							<% elsif @input == "file" %>
+								<%= f.input @name.to_sym, as: @input.to_sym, label: false, required: @required, input_html: {multipart: true, mime_type: 'application/pdf'} %>
+							<% else %>
+								<%= f.input @name.to_sym, as: @input.to_sym, label: false, required: @required %>
+							<% end %>
+						</div>
+					<% end %>
+					<div class="submit-wrapper">
+						<%= f.submit "Apply", class: "submit", id: "apply-btn" %>
 					</div>
 				<% end %>
-				<div class="submit-wrapper">
-					<%= f.submit "Apply" %>
-				</div>
-			<% end %> -->
+			</div>
+
+
 
 			<!-- <h3>
 				Do you have enterprise/B2B experience?*
@@ -143,102 +138,5 @@
 
 	<section id="uxhires8", class=
 	"white">
-    <div class="section-center center wider">
-      <h2>
-        Next, check these
-      </h2>
-      <div class="related-container visible">
-        <div class="related-box first">
-          <p>
-            Open Position
-          </p>
-          <h3>
-            Senior UX <br>
-            Researcher (SF)
-          </h3>
-        </div>
-        <div class="related-box second">
-          <p>
-            Article
-          </p>
-          <h3>
-            How I accidentally <br>
-            became a UX <br>
-            Designer
-          </h3>
-        </div>
-        <div class="related-box third">
-          <p>
-            Events
-          </p>
-          <h3>
-            Leap Into UX: <br>
-            From Products to <br>
-            Portfolios
-          </h3>
-        </div>
-        <div class="related-box fourth">
-          <p>
-            GET YOUR COPY
-          </p>
-          <h3>
-            Reframe by <br>
-            Mona Patel
-          </h3>
-        </div>
-        <div class="related-box first">
-          <p>
-            Article
-          </p>
-          <h3>
-            21 Podcasts That <br>
-            Will Change Your <br>
-            Life
-          </h3>
-        </div>
-        <div class="related-box third">
-          <p>
-            FEATURED EMPLOYEE
-          </p>
-          <h3>
-            Andrew Forman<br>
-            Recruitment <br>
-            Coordinator
-          </h3>
-        </div>
-        <div class="related-box fourth">
-          <p>
-            GET YOUR COPY
-          </p>
-          <h3>
-            Reframe by <br>
-            Mona Patel
-          </h3>
-        </div>
-        <div class="related-box first">
-          <p>
-            Article
-          </p>
-          <h3>
-            21 Podcasts That <br>
-            Will Change Your <br>
-            Life
-          </h3>
-        </div>
-        <div class="related-box fifth">
-          <p>
-            FEATURED EMPLOYEE
-          </p>
-          <h3>
-            Andrew Forman<br>
-            Recruitment <br>
-            Coordinator
-          </h3>
-        </div>
-
-
-
-
-      </div>
-    </div>
+		<%= render :partial => "related_links" %>
   </section>
