@@ -19,11 +19,11 @@
 
           <a href="http://www.forbes.com/sites/yec/2014/12/09/4-ways-to-help-your-startup-survive-and-grow/"><%= image_tag gulp_asset_path('/images/people/mona_patel/forbes.png'), alt: "NYCDA_logo", width: "98", alt: "forbes", data: {constrained: "true"} %></a>&nbsp;
 
-          <a href="http://www.huffingtonpost.com/mona-patel/women-business-when-lean-_b_5622364.html"><%= image_tag gulp_asset_path('/images/people/mona_patel/hbr-category.png'), title: "harvard_business_review", style: "width:80px;", data: {constrained: "true"} %></a>&nbsp;
+          <a href="https://hbr.org/2015/08/tough-love-performance-reviews-in-10-minutes"><%= image_tag gulp_asset_path('/images/people/mona_patel/hbr-category.png'), title: "harvard_business_review", style: "width:80px;", data: {constrained: "true"} %></a>&nbsp;
 
           <a href="http://time.com/3754512/3-ways-find-forgotten-innovation/"><%= image_tag gulp_asset_path('/images/people/mona_patel/timelogo.png'), width: "56", alt: "timelogo", data: {constrained: "true"} %></a>
 
-          <a href="http://time.com/3754512/3-ways-find-forgotten-innovation/"><%= image_tag gulp_asset_path('/images/people/mona_patel/inc-logo.png'), alt: "inc logo", style: "width:80px;", data: {constrained: "true"} %></a>
+          <a href="http://www.inc.com/mona-patel/how-to-design-a-perfect-office.html"><%= image_tag gulp_asset_path('/images/people/mona_patel/inc-logo.png'), alt: "inc logo", style: "width:80px;", data: {constrained: "true"} %></a>
         </div>
         <h3 class="mona-left-header">Memberships and Affiliations</h3>
 
@@ -40,8 +40,7 @@
         <div class="page-center">
           <div class="two-thirds"><hr></div>
           <div class="third">
-            <a class="third-button width-auto" href="http://time.com/money/4053985/mona-patel-best-advice-entrepreneur/" target=
-            "_blank">Mona's Latest Article</a>
+            <%= link_to "Mona's Latest Article", MonaArticle.find_or_create_by(id: 1).url, class: "third-button width-auto", target: "_blank" %>
           </div>
         </div>
 
@@ -107,7 +106,7 @@
           <div class="half h-txtcenter">
             <h3 class="small-header content-center">Videos</h3>
             <p><a href="https://vimeo.com/103815936">The Lean Agency</a></p>
-            <p><a href="https://vimeo.com/73880261">Designing Fresh Perspectives</a></p>
+            <p><a href="https://vimeo.com/73880261">Designing Fresh Experiences</a></p>
             <p><a href="https://vimeo.com/124552163">Why Isn't Innovation Happening</a></p>
             <p><a href="https://youtu.be/IXBggb1-RgM">Disruptive Thinking</a></p>
           </div>

@@ -28,6 +28,7 @@ Rails.application.routes.draw do
       get 'activate', to: 'people#toggle_activation', as: :toggle_activation
     end
     resources :external_links
+    resources :mona_articles
   end
 
   namespace :uxhires do

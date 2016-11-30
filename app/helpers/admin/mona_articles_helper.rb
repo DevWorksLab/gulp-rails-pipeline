@@ -1,0 +1,2 @@
+module Admin::MonaArticlesHelper
+end

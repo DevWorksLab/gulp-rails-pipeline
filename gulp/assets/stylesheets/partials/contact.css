@@ -37,7 +37,8 @@
     left: 0;
     right: 0;
     text-transform: none;
-    font-family: Gotham-Bold;
+    /*font-family: Gotham-Bold;*/
+    font-weight: bold;
     font-size: 40px;
     font-size: 4rem;
     color: #fff;
@@ -125,7 +126,7 @@
       opacity: 1;
     }
 
-    .contact-form-page input:focus { 
+    .contact-form-page input:focus {
       outline: none !important;
       border-color: rgba(113, 158, 206, 0.7);
       box-shadow: 0 0 6px #719ECE;
@@ -143,11 +144,3 @@
   }
 
 }
-
-
-
-
-
-
-
-
