@@ -53,7 +53,7 @@
     margin: 0;
     width: 16.66666%;
     float: left;
-    
+
     & p {
       font-family: "Gotham A", "Gotham B";
       font-size: 3.6em;
@@ -101,11 +101,11 @@
     .overlay-wrapper:hover .overlay, .overlay-wrapper:focus img {
       transform: scale(1.1);
     }
-    
+
     .overlay-wrapper:hover .overlay, .overlay-wrapper:focus .overlay {
       filter: alpha(opacity=1);
       opacity: 1;
-      z-index: 9; 
+      z-index: 9;
     }
 
     .overlay-wrapper:hover img, .overlay-wrapper:focus img {
@@ -133,7 +133,7 @@
     letter-spacing: .81px;
     line-height: 12px;
     text-transform: uppercase;
-    text-decoration: none;  
+    text-decoration: none;
     font-weight: 500;
   }
 
@@ -167,6 +167,7 @@
     width: 219px;
     text-align: center;
     font-style: normal;
+    font-family: "Gotham A", "Gotham B";
   }
 
   .work-button:hover {
@@ -193,7 +194,7 @@
       line-height: 24px;
 
       a {
-        color: #42423F; 
+        color: #42423F;
         font-weight: 500;
       }
 

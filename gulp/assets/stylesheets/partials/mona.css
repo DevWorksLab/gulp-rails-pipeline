@@ -1,5 +1,5 @@
 #mona {
-	
+
 	#mona1 {
 		height: 600px;
     background-image: url("/assets/images/people/mona_patel/MonaLead.jpg");
@@ -27,7 +27,7 @@
 	}
 
 	.third-button {
-    font-family: Gotham;
+    font-family: 'Gotham A','Gotham B';
     border-radius: 1px;
     background-color: #6BC7BC;
     font-size: 11px;

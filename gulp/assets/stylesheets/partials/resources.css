@@ -3,7 +3,7 @@
   .nav-toggle span, .nav-toggle span:after, .nav-toggle span:before {
     background: $white;
   }
-  
+
   .h-dark-bgcolor {
     background: #F9F9F9;
   }
@@ -108,7 +108,7 @@
       }
 
       a {
-        color: #42423F; 
+        color: #42423F;
         font-weight: 400;
 
         .cta-arrow {
@@ -189,7 +189,7 @@
       left: 40px;
       text-transform: uppercase;
     }
-  
+
   }
 
   .more-link {
@@ -204,7 +204,7 @@
     letter-spacing: .81px;
     line-height: 12px;
     text-transform: uppercase;
-    text-decoration: none;  
+    text-decoration: none;
     font-weight: 500;
   }
 
@@ -225,6 +225,7 @@
     width: 176px;
     margin: 0 auto;
     font-weight: 500;
+    font-family: "Gotham A", "Gotham B";
   }
 
   #buy-now:hover {

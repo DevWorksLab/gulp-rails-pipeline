@@ -436,6 +436,7 @@
 
     #buy-now-more-link {
       margin: 20px auto;
+      font-family: "Gotham A", "Gotham B";
     }
 
     #home5 img {
@@ -922,7 +923,7 @@
         // transform: translate(-115px, 105px);
       }
     }
-  }  
+  }
 }
 
 
@@ -935,7 +936,7 @@
         display: block !important;
         width: 100% !important;
         margin: 0 !important;
-        float: none !important; 
+        float: none !important;
       }
 
       /*#mce-response {
@@ -968,7 +969,3 @@
 
 
 }
-
-
-
-

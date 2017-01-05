@@ -44,6 +44,10 @@ a:focus {
     outline: none;
 }
 
+.gotham {
+  font-family: 'Gotham A','Gotham B';
+}
+
 .container {
   overflow: auto;
 
