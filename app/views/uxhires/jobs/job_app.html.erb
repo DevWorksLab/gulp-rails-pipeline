@@ -25,13 +25,15 @@
 				The Role
 			</h1>
 			<h3>
-				<%= @job.title %> |
+				<%= @job.title rescue nil %> |
 				<i>
-					<%= @job.location %>
+					<%= @job.location rescue nil %>
 				</i>
 			</h3>
 			<p>
-			<%= sanitize(@job.description.truncate(500), tags: %w(div strong br h5 h4 h3 h2 h1 span em p ul li a code pre ol input textarea label)) %>
+			<% if @job.description %>
+				<%= sanitize(@job.description.truncate(500), tags: %w(div strong br h5 h4 h3 h2 h1 span em p ul li a code pre ol input textarea label)) %>
+			<% end %>
 			</p>
 
 			<div class="job-app-form">
