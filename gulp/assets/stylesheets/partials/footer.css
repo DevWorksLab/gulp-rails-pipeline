@@ -63,7 +63,8 @@ footer {
     text-align: center;
     font-style: normal;
     border: 0;
-    font-family: Gotham-Medium;
+    /*font-family: Gotham-Medium;*/
+    font-family: 'Gotham A', 'Gotham B';
     font-size: 8.39px;
     color: #FFFFFF;
     letter-spacing: 0.57px;
@@ -78,4 +79,3 @@ footer {
   }
 
 }
-

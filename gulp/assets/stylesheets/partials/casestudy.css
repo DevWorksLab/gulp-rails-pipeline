@@ -1,5 +1,5 @@
 #casestudies {
-  
+
   #casestudy1 {
     width: 100%;
     height: 768px;
@@ -130,7 +130,7 @@
   .offerings {
     padding: 0;
   }
-  
+
 
   .offerings li {
     font-size: 1.0rem;
@@ -161,7 +161,7 @@
   #work-design .offerings li:before {
     color: $design;
   }
-  
+
   #work-reframe .offerings li:before {
     color: $reframe;
   }
@@ -180,7 +180,7 @@
     text-align: center;
     margin-bottom: 140px;
     font-weight: 500;
-    font-family: Gotham A, Gotham B;
+    font-family: 'Gotham A', 'Gotham B';
   }
 
 #jet2 {
@@ -214,7 +214,7 @@
     position: static;
     margin: 0 auto;
     display: block;
-    padding-top: 90px; 
+    padding-top: 90px;
   }
 
   #jet-img2 {
@@ -231,7 +231,7 @@
     position: static;
     margin: 0 auto;
     display: block;
-    padding-top: 160px; 
+    padding-top: 160px;
   }
 
   #phhhoto-img1 {

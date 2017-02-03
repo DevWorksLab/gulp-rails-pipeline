@@ -80,7 +80,8 @@
 
   .menu-wrapper ul li a {
     color: #fff;
-    font-family: Gotham-Medium;
+    font-family: "Gotham A", "Gotham B";
+    /*font-family: Gotham-Medium;*/
     font-size: 25px;
     text-transform: uppercase;
     font-weight: 600;

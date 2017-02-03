@@ -46,7 +46,7 @@
     width: 100%;
     display: inline-block;
     margin-top: 60px;
-    font-family: Gotham A, Gotham B;
+    font-family: 'Gotham A', 'Gotham B';
 
   }
 
@@ -188,7 +188,7 @@
         opacity: 1;
       }
 
-      input:focus { 
+      input:focus {
         outline: none !important;
         border-color: rgba(113, 158, 206, 0.7);
         box-shadow: 0 0 6px #719ECE;

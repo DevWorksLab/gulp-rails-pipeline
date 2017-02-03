@@ -80,7 +80,8 @@
     .contact-form-page label {
       cursor: pointer;
       display: block;
-      font-family: Gotham-Light;
+      /*font-family: Gotham-Light;*/
+      font-family: 'Gotham A', 'Gotham B';
       font-style: normal;
       text-transform: uppercase;
       color: #4a4a4a;
@@ -107,7 +108,8 @@
     .contact-form-page input[type="submit"] {
       background-color: #6cc8b9;
       border: 0 none;
-      font-family: Gotham-Medium;
+      /*font-family: Gotham-Medium;*/
+      font-family: 'Gotham A', 'Gotham B';
       font-size: 9px;
       line-height: 2px;
       font-style: normal;
@@ -136,7 +138,8 @@
   form h2 {
     padding-left: 28px;
     text-transform: uppercase;
-    font-family: Gotham-Book;
+    font-family: 'Gotham A', 'Gotham B';
+    /*font-family: Gotham-Book;*/
     font-weight: 500;
     font-size: 1.4rem;
     line-height: 22px;
