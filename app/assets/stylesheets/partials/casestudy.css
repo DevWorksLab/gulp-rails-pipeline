@@ -1,0 +1,267 @@
+#casestudies {
+
+  #casestudy1 {
+    width: 100%;
+    height: 768px;
+    background-color: $grey4;
+
+    .motivate-header {
+      margin-top: 100px;
+      text-align: center;
+
+      h1 {
+        font-size: 4.0rem;
+        color: $greydark;
+        letter-spacing: 1px;
+        line-height: 50px;
+      }
+    }
+  }
+
+  #casestudy2 {
+    height: auto;
+    padding-bottom: 60px;
+  }
+
+  #casestudy3 {
+    height: 768px;
+    background-image: url("/assets/images/casestudies/trendsetter/PHOTO_1.png");
+    background-size: cover;
+    width: 100%;
+    background-repeat: no-repeat;
+  }
+
+  #casestudy4 {
+    height: 850px;
+  }
+
+  #casestudy5 {
+    height: auto;
+    padding-bottom: 40px;
+  }
+
+  #casestudy6 {
+    height: auto;
+  }
+
+  p {
+    font-family: "Sentinel A", "Sentinel B";
+    font-size: 2.8rem;
+    color: #42423F;
+    line-height: 37px;
+  }
+
+  .tiny-header {
+    font-size: 12px;
+    letter-spacing: 1.5px;
+    line-height: 19px;
+  }
+
+  #hero-iphone {
+    position: relative;
+    left: 0;
+    top: 20px;
+    right: 0;
+    margin: 0 auto;
+    width: 330px;
+    height: auto;
+  }
+
+  #iphone1 {
+    width: 300px;
+    height: auto;
+    position: relative;
+    top: 237px;
+    right: -28%;
+    padding: 10px;
+  }
+
+  #iphone2 {
+    width: 300px;
+    height: auto;
+    position: relative;
+    top: 237px;
+    right: -28%;
+    padding: 10px;
+  }
+
+  #iphones {
+    margin-top: 80px;
+    margin-bottom: 40px;
+    img {
+    padding-bottom: 20px;
+    padding-left: 10px;
+    }
+  }
+
+
+  #browser1 {
+    position: relative;
+    top: 40px;
+    width: 900px;
+    right: 0;
+    left: 0;
+    margin: 0 auto;
+  }
+
+  #browser2 {
+    position: relative;
+    bottom: 380px;
+    width: 500px;
+    left: -123px;
+  }
+
+  .text-spacing1 {
+    padding-top: 248px;
+  }
+
+  .text-spacing2 {
+    padding-top: 140px;
+  }
+
+  .text-spacing3 {
+    padding-top: 570px;
+  }
+
+  .text-spacing4 {
+    padding-top: 40px;
+  }
+
+  .offerings {
+    padding: 0;
+  }
+
+
+  .offerings li {
+    font-size: 1.0rem;
+    color: #787574;
+    letter-spacing: 1.5px;
+    line-height: 13px;
+    list-style-type: circle;
+    display: inline;
+    text-transform: uppercase;
+    padding-right: 10px;
+    white-space: nowrap;
+  }
+
+  .offerings li:before {
+    content: "•";
+    font-size: 2.3rem;
+    vertical-align: middle;
+  }
+
+  #work-staffing .offerings li:before {
+    color: $staffing;
+  }
+
+  #work-research .offerings li:before {
+    color: $research;
+  }
+
+  #work-design .offerings li:before {
+    color: $design;
+  }
+
+  #work-reframe .offerings li:before {
+    color: $reframe;
+  }
+
+  .more-link {
+    background-color: $reframe;
+    font-size: 1.2rem;
+    line-height: 16px;
+    letter-spacing: 1px;
+    color: $white;
+    text-transform: uppercase;
+    padding: 30px;
+    white-space: nowrap;
+    display: inline-block;
+    width: 335px;
+    text-align: center;
+    margin-bottom: 140px;
+    font-weight: 500;
+    font-family: 'Gotham A', 'Gotham B';
+  }
+
+#jet2 {
+    height: 550px;
+  }
+
+  #jet3 {
+    height: 768px;
+    background-image: url("/assets/images/casestudies/jet/jet-bg2.png");
+    background-size: cover;
+    width: 100%;
+    background-repeat: no-repeat;
+  }
+
+  #jet4 {
+    height: 850px;
+  }
+
+  .jet5 {
+    .text-spacing3 {
+      padding-top: 760px;
+    }
+  }
+
+  #jet6 {
+    height: auto;
+  }
+
+  #jet-img1 {
+    width: 940px;
+    position: static;
+    margin: 0 auto;
+    display: block;
+    padding-top: 90px;
+  }
+
+  #jet-img2 {
+    position: relative;
+    top: 40px;
+    width: 900px;
+    right: 0;
+    left: 0;
+    margin: 0 auto;
+  }
+
+  #jet-img3 {
+    width: 70%;
+    position: static;
+    margin: 0 auto;
+    display: block;
+    padding-top: 160px;
+  }
+
+  #phhhoto-img1 {
+    position: static;
+    margin: 0 auto;
+    display: block;
+    padding-top: 20px;
+  }
+
+  #phhhoto-img3 {
+    position: static;
+    margin: 0 auto;
+    display: block;
+    padding-top: 40px;
+  }
+
+  #phhhoto-img5 {
+    width: 100%;
+  }
+
+  .phhhoto4 {
+    .text-spacing2 {
+      padding-top: 40px;
+    }
+  }
+
+  .phhhoto5 {
+    .text-spacing3 {
+      padding-top: 300px;
+    }
+  }
+
+}

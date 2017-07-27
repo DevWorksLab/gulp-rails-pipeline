@@ -1,0 +1,97 @@
+AllCops:
+  Exclude:
+    - db/schema.rb
+  TargetRubyVersion: 2.1
+  TargetRailsVersion: 4.2
+
+Layout/ExtraSpacing:
+  Enabled: true
+Layout/IndentHash:
+  EnforcedStyle: consistent
+Layout/MultilineMethodCallIndentation:
+  EnforcedStyle: indented
+Layout/MultilineOperationIndentation:
+  EnforcedStyle: aligned
+Layout/SpaceAroundOperators:
+  AllowForAlignment: false
+Layout/SpaceBeforeFirstArg:
+  AllowForAlignment: false
+
+Lint/AmbiguousBlockAssociation:
+  Enabled: false
+
+Metrics/AbcSize:
+  Enabled: false
+  Max: 40
+Metrics/BlockLength:
+  Enabled: false
+Metrics/BlockNesting:
+  Enabled: false
+  Max: 50
+Metrics/ClassLength:
+  Enabled: false
+Metrics/CyclomaticComplexity:
+  Enabled: false
+Metrics/LineLength:
+  Max: 120
+  Exclude:
+    - bin/*
+    - db/seeds.rb
+    - db/migrate/*
+    - config/application.rb
+    - config/initializers/*
+    - config/environments/*
+    - spec/support/mocks/*
+Metrics/MethodLength:
+  Max: 50
+  Exclude:
+    - lib/app/utils.rb
+    - spec/**/*
+Metrics/ModuleLength:
+  Exclude:
+    - spec/**/*
+Metrics/PerceivedComplexity:
+  Enabled: false
+
+Rails:
+  Enabled: true
+Rails/FindEach:
+  Enabled: false
+Rails/HasAndBelongsToMany:
+  Enabled: false
+Rails/Output:
+  Exclude:
+    - lib/app/utils.rb
+Rails/OutputSafety:
+  Exclude:
+    - app/helpers/application_helper.rb
+Rails/SkipsModelValidations:
+  Enabled: false
+
+Style/ClassAndModuleChildren:
+  Enabled: false
+Style/ConditionalAssignment:
+  Enabled: true
+Style/Documentation:
+  Enabled: false
+Style/EachWithObject:
+  Enabled: false
+Style/Encoding:
+  Enabled: true
+Style/FormatString:
+  Enabled: true
+  EnforcedStyle: format
+Style/FrozenStringLiteralComment:
+  Enabled: false
+Style/GuardClause:
+  Enabled: false
+Style/StringLiterals:
+  EnforcedStyle: single_quotes
+Style/TernaryParentheses:
+  Exclude:
+    - db/migrate/*
+    - config/initializers/*
+Style/WordArray:
+  Exclude:
+    - lib/app/utils.rb
+  EnforcedStyle: percent

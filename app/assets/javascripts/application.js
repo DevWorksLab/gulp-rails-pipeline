@@ -6,7 +6,5 @@
 //
 //= require jquery
 //= require jquery_ujs
-//
-// Pull compiled from /public/assets/javascripts
-//= require waypointspackage
 //= require global
+//= require waypointspackage
